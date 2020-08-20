@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Tsuda Laboratory</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="Style/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;
+  background-color: white;
+    color: black;}
+
+.dark-mode {
+    background-color:#121212;
+    color: white;
+  }
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-tsudalabblue w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Tsuda<br>Laboratory</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="#introduction" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Introduction</a> 
+    <a href="#research" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Research</a> 
+    <a href="#members" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Members</a> 
+    <a href="#publications" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Publications</a> 
+    <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact Us</a> 
+    <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Links</a> 
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Language</a>
+    <a onclick="darkMode()" class="w3-bar-item w3-button w3-hover-white">Toggle dark mode</a>
+    <!-- Rounded switch -->
+    <a class="w3-bar-item">Dark mode   <label class="switch">
+      <input type="checkbox" onclick="darkMode()">
+      <span class="slider round"></span>
+    </label></a>
+
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-tsudalabblue w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-tsudalabblue w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Tsuda Laboratory</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="introduction">
+    <h1 class="w3-jumbo"><b>Spaceflight Mechanics and Exploration Systems Laboratory</b></h1>
+    <h1 class="w3-xxxlarge w3-text-tsudalabblue"><b>Introduction.</b></h1>
+    <hr style="width:50px;border:5px solid #333366" class="w3-round">
+    <p>The Spaceflight Mechanics and Exploration Systems Laboratory (Tsuda Laboratory) is affiliated with The
+      Graduate University for Advanced Studies, SOKENDAI and the Institute of Space and Astronautical Science
+      (ISAS). We conduct unique research and project activities in ISAS.
+      Our research focuses on the application of Astrodynamics (Space Flight Mechanics) to real exploration
+      missions. These include, but are not limited to, orbital design of deep space exploration satellites and
+      probes, research of Solar System exploration methods and guidance, navigation and control systems for
+      spacecraft. We carry out experimental and analytical approaches to spacecraft system design.
+    </p>
+   
+  </div>
+  
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="Images/hayabusa2.jpg" style="width:100%" onclick="onClick(this)" alt="Hayabusa 2">
+      <img src="Images/touchdown.jpg" style="width:100%" onclick="onClick(this)" alt="Seconds after Ryugu Touchdown">
+      <img src="Images/shugo_pre_2020_v1.jpg" style="width:100%" onclick="onClick(this)" alt="Lab Members">
+    </div>
+
+    <div class="w3-half">
+      <img src="Images/haya_controlroom.jpg" style="width:100%" onclick="onClick(this)" alt="Hayabusa 2 Operations">
+      <img src="Images/ryugu_surface.jpg" style="width:100%" onclick="onClick(this)" alt="Surface of Ryugu">
+      <img src="Images/haya2_lidar.jpg" style="width:100%" onclick="onClick(this)" alt="Render of Haya 2 sensors">
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <div class="w3-container" style="margin-top:80px" ">
+    <p>The research topics are always aimed at the connection between actual engineering applications and
+      theoretical approaches to the problems. Some of these research projects carried out together with the
+      laboratory students are:
+    </p>
+    <ul>
+      <li>Development of a 10cm class microsatellite 'Cubesat'.</li>
+      <li>Deployment experiment of a Solar Sail using Sounding Rockets and Balloons.</li>
+      <li>Asteroid probe spacecraft 'Hayabusa'.</li>
+      <li>Small Solar Power Sail Demonstrator spacecraft 'IKAROS' (Interplanetary Kite-craft Accelerated by
+        Radiation Of the Sun).</li>
+      <li>Asteroid probe spacecraft 'Hayabusa 2'.</li>
+    </ul>
+    <p>In the laboratory, you can engage in practical research and development through projects with ISAS.</p>
+    <p>Students belonging to the Tsuda Laboratory are working in collaboration with the Kawaguchi Laboratory and
+      Kawakatsu Laboratory of the University of Tokyo and SOKENDAI. Research consultations with diverse professional
+      researchers, engineers, and staff at the Institute for Space and Astronautical Science is easily available for
+      all students. This environment allow students to not only conduct research, but also be actively involved in
+      ISAS projects and the creation and design of future missions of the agency. This experience is unique to
+      students in ISAS, and not easy to come by at other University laboratories.
+    </p>
+   
+  </div>
+
+  
+
+   <!-- Members -->
+   <div class="w3-container" id="members" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-tsudalabblue"><b>Members.</b></h1>
+    <hr style="width:50px;border:5px solid #333366" class="w3-round">
+    <p>The best team in the world.</p>
+    <p>We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+    incididunt ut labore et quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+    <h1 class="w3-xlarge w3-text-tsudalabblue"><b>Current Members:</b></h1>
+  </div>
+
+  <!-- The Team -->
+  <div class="w3-row-padding">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="Member/Pics/TsudaYuichi.jpg" alt="Yuichi Tsuda" style="width:100%">
+        <div class="w3-container">
+          <h3>Prof. Yuichi Tsuda</h3>
+          <p class="w3-opacity">Professor & Hayabusa 2 Project Manager</p>
+          <p>Professor, University of Advanced Studies.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="Member/Pics/Takao_2020_v1.jpg" alt="Yuki Takao" style="width:100%">
+        <div class="w3-container">
+          <h3>Yuki Takao</h3>
+          <p class="w3-opacity">JSPS Postdoc</p>
+          <p>I like baksetball.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="Member/Pics/NoImages.jpg" alt="Miwa Fukazawa" style="width:100%">
+        <div class="w3-container">
+          <h3>Miwa Fukazawa</h3>
+          <p class="w3-opacity">Secretary</p>
+          <p>Makes our life easier!.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col m2 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="Member/Pics/KashiokaShuya.jpg" alt="Shuya Kashioka" style="width:100%">
+        <div class="w3-container">
+          <h3>Shuya Kashioka</h3>
+          <p class="w3-opacity">D3 / The Graduate University for Advanced Studies, SOKENDAI</p>
+          <p>I play with very dark images.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m2 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="Member/Pics/RogerGRamon_2020_v1.jpg" alt="Roger Gutierrez Ramon" style="width:100%">
+        <div class="w3-container">
+          <h3>Roger Gutierrez Ramon</h3>
+          <p class="w3-opacity">D1 / The Graduate University for Advanced Studies, SOKENDAI</p>
+          <p>Hi!.</p>
+        </div>
+      </div>
+    </div>    
+    <div class="w3-col m2 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="Member/Pics/OhiraGenki_M2_ver3.jpg" alt="Genki Ohira" style="width:100%">
+        <div class="w3-container">
+          <h3>Genki Ohira</h3>
+          <p class="w3-opacity">D1 / The Graduate University for Advanced Studies, SOKENDAI</p>
+          <p>I make silly faces in pictures.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m2 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="Member/Pics/YamakawaMaiko.jpg" alt="Maiko Yamakawa" style="width:100%">
+        <div class="w3-container">
+          <h3>Maiko Yamakawa</h3>
+          <p class="w3-opacity">M2 / The Graduate University for Advanced Studies, SOKENDAI</p>
+          <p>I create super cool craters.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m2 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="Member/Pics/NamikiKaoru_2020_v1.jpg" alt="Kaoru Namiki" style="width:100%">
+        <div class="w3-container">
+          <h3>Kaoru Namiki</h3>
+          <p class="w3-opacity">M1 / The Graduate University for Advanced Studies, SOKENDAI</p>
+          <p>I am new!.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-container" style="margin-top:75px">
+    <h1 class="w3-xlarge w3-text-tsudalabblue"><b>Past Members:</b></h1>
+  </div>
+
+
+
+  <div class="w3-row-padding">
+    <div class="w3-col m2 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="Member/Pics/ManelCaballero.jpg" alt="Manel Caballero" style="width:100%">
+        <div class="w3-container">
+          <h3>Manel Caballero</h3>
+          <p class="w3-opacity">Short-term International Student</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m2 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="Member/Pics/KadokuraMiyuki.jpg" alt="Miyuki Kadokura" style="width:100%">
+        <div class="w3-container">
+          <h3>Miyuki Kadokura</h3>
+          <p class="w3-opacity">Special Joint Researcher</p>
+        </div>
+      </div>
+    </div>    
+    <div class="w3-col m2 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="Member/Pics/AlessandroLatino.jpg" alt="Alessandro Latino" style="width:100%">
+        <div class="w3-container">
+          <h3>Alessandro Latino</h3>
+          <p class="w3-opacity">Short-term International Student</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m2 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="Member/Pics/DanielVillegasPinto.jpg" alt="Daniel Villegas Pinto" style="width:100%">
+        <div class="w3-container">
+          <h3>Daniel Villegas Pinto</h3>
+          <p class="w3-opacity">Short-term International Student</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m2 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="Member/Pics/GiacomoAcciarini.jpg" alt="Giacomo Acciarini" style="width:100%">
+        <div class="w3-container">
+          <h3>Giacomo Acciarini</h3>
+          <p class="w3-opacity">Short-term International Student</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m2 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="Member/Pics/TommasoPino.jpg" alt="Tommaso Pino" style="width:100%">
+        <div class="w3-container">
+          <h3>Tommaso Pino</h3>
+          <p class="w3-opacity">Short-term International Student</p>
+        </div>
+      </div>
+    </div>
+   </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col m2 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="Member/Pics/StefaniaSoldini.jpg" alt="Stefania Soldini" style="width:100%">
+        <div class="w3-container">
+          <h3>Stefania Soldini</h3>
+          <p class="w3-opacity">JSPS Postdoc</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m2 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="Member/Pics/NoImages.jpg" alt="Coleen Madlinger" style="width:100%">
+        <div class="w3-container">
+          <h3>Coleen Madlinger</h3>
+          <p class="w3-opacity">MIT-JAPAN Short-term Training Program</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="w3-container" id="publications" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-tsudalabblue"><b>Publications.</b></h1>
+    <hr style="width:50px;border:5px solid #30305b" class="w3-round">
+    <h1>Invited Talks / Keynote Lectures</h1>
+        <ul>
+          <b>2016</b>
+          <li>津田雄一，はやぶさ２における宇宙工学の役割 6th UNISEC Takumi Conference, 2016.2.29. (Invited)</li>
+          <li>津田雄一，小惑星探査機はやぶさ２の航法誘導技術と地球スイングバイ運用，第3回制御部門マルチシンポジウム(MSCS2016)，名古屋・南山大学，2016.3.7．(Invited) </li>
+          <li>津田雄一, はやぶさ２の技術と運用状況，日本航空宇宙学会北部支部講演会，札幌・北海道大学，2016.3.9. (Invited)</li>
+          <li>Tsuda,. Y., Yoshikawa, M., Takanao, S., Watanabe, S., Hayabusa2 – Round Trip Exploration to Near-Earth
+            Asteroid ‘Ryugu’, Misasa International Symposium 2016 (Frontiers in Earth and Planetary Materials Research,
+            S4-01, Misasa, 2016.3.10. (Invited)</li>
+          <b>2015</b>
+          <li>津田雄一，小惑星探査機はやぶさ２のミッション・開発成果・初期運用状況，深宇宙探査学シンポジウム，柏，2015.3.10. （Invited）</li>
+          <li>津田雄一，はやぶさ２の深宇宙航行技術，第132回日本航海学会春季講演会， 横浜，2015.5.29，（Keynote）</li>
+          <b>2013</b>
+          <li>津田雄一，小天体探査の工学的側面：はやぶさ２と将来計画（英題：Engineering Aspect of Small Body Exploration -Hayabusa2 and
+            Future），日本地球惑星科学連合2013年大会（Japan Geoscience Union Meeting 2013）, U07-11，幕張，2013.5.19.（Invited）</li>
+          <b>2011</b>
+          <li>Tsuda, Y., Mori, O., Funase, R., Sawada, H., Yamamoto, T., Saiki, T., Endo, T. and Kawaguchi, J., Flight
+            Result of IKAROS Deep Space Solar Sail Demonstrator, 9th Low Cost Planetary Missions Conference, APL,
+            Laurel, MD, USA, 2011.6.21. (Invited)</li>
+          <li>Tsuda, Y., Mori, O., Funase, R., Sawada, H., Yamamoto, T., Saiki, T., Endo, T., Yonekura, K., Hoshino, H.
+            and Kawaguchi, J., Achievement of IKAROS – Japanese Interplanetary Deep Space Solar Sail Demonstration
+            Mission, 7th IAA Symposium on Realistic Near-Term Advanced Scientific Space Missions, Aosta, Italy,
+            2011.7.12. (Invited)</li>
+          <b>2010</b>
+          <li>Tsuda, Y., Mori, O., Funase, R., Saiki, T., Sawada, H., Yamamoto, T., Endo, T., Kawaguchi, J., Minamiono,
+            H., Yonekura, K. and Hoshino, H., Initial Flight Result of IKAROS and Perspective to Future Deep Space
+            Missions by Solar Power Sail Technology, European Planetary Science Conference, MT6, 2010.9.20, Rome.
+            (Invited)</li>
+          <b>2009</b>
+          <li>Tsuda, Y., Hayabusa-2 Mission Design and System Engineering, Invited Talk, International Workshop on Small
+            Body Exploration by Physical Interactions, 2009.10.20, Tokyo, Japan. (Invited)</li>
+          <b>2006</b>
+          <li>津田雄一, M-Vロケット・サブペイロードによる小型衛星打ち上げについて，日本機械学会2006年度年次大会，F07-3，熊本大学，2006.9.（Keynote）</li>
+        </ul>
+  </div>
+  
+   <!-- Packages / Pricing Tables -->
+  <div class="w3-container" id="packages" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Packages.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Some text our prices. Lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure</p>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-half w3-margin-bottom">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
+        <li class="w3-padding-16">Floorplanning</li>
+        <li class="w3-padding-16">10 hours support</li>
+        <li class="w3-padding-16">Photography</li>
+        <li class="w3-padding-16">20% furniture discount</li>
+        <li class="w3-padding-16">Good deals</li>
+        <li class="w3-padding-16">
+          <h2>$ 199</h2>
+          <span class="w3-opacity">per room</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+        </li>
+      </ul>
+    </div>
+        
+    <div class="w3-half">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-red w3-xlarge w3-padding-32">Pro</li>
+        <li class="w3-padding-16">Floorplanning</li>
+        <li class="w3-padding-16">50 hours support</li>
+        <li class="w3-padding-16">Photography</li>
+        <li class="w3-padding-16">50% furniture discount</li>
+        <li class="w3-padding-16">GREAT deals</li>
+        <li class="w3-padding-16">
+          <h2>$ 249</h2>
+          <span class="w3-opacity">per room</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-red w3-padding-large w3-hover-black">Sign Up</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Contact -->
+  <div class="w3-container" id="contact" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Contact.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Do you want us to style your home? Fill out the form and fill me in with the details :) We love meeting new people!</p>
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Message</label>
+        <input class="w3-input w3-border" type="text" name="Message" required>
+      </div>
+      <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>
+    </form>  
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Toggle Dark mode
+function darkMode() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+} 
+
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+	$('body').addClass('dark')
+}
+
+
+</script>
+
+</body>
+</html>
+
