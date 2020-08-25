@@ -6,15 +6,17 @@
 <link rel="stylesheet" href="Style/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 <style>
-body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
-body {font-size:16px;
-  background-color: white;
-    color: black;}
-
-.dark-mode {
-    background-color:#121212;
-    color: white;
+body,h1,h2,h3,h4,h5 {font-size:16px; font-family: "Poppins", sans-serif}
+body {
+  background-color: var(--theme-background-color);
+    color:  var(--theme-font-color);
   }
+
+body.dark-mode img {
+  filter: brightness(.8) contrast(1.2);
+}
+
+
 .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
 .w3-half img:hover{opacity:1}
 </style>
@@ -23,7 +25,7 @@ body {font-size:16px;
 
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-tsudalabblue w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft w3-hover-white" style="width:100%;font-size:22px">Close Menu</a>
   <div class="w3-container">
     <h3 class="w3-padding-64"><b>Tsuda<br>Laboratory</b></h3>
   </div>
@@ -33,12 +35,18 @@ body {font-size:16px;
     <a href="#research" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Research</a> 
     <a href="#members" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Members</a> 
     <a href="#publications" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Publications</a> 
-    <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact Us</a> 
-    <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Links</a> 
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Language</a>
-    <a onclick="darkMode()" class="w3-bar-item w3-button w3-hover-white">Toggle dark mode</a>
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact Us</a> 
+    <a href="#links" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Links</a> 
+    <div class="w3-dropdown-hover w3-mobile">
+     <button class="w3-bar-item w3-button w3-hover-white">Language: <img class="w3-image-menu" src="Style/english_language.png" alt="English"><i class="fa fa-caret-down"></i></button>
+      <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+              <a href="homepage_JA.html" class="w3-bar-item w3-button w3-mobile w3-hover-white">日本語: <img class="w3-image-menu"  src="Style/japan_language.png" alt="日本語"> </a>
+              <a href="homepage_EN.html" class="w3-bar-item w3-button w3-mobile w3-hover-white">English: <img class="w3-image-menu" src="Style/english_language.png" alt="English"></a>
+            </div>
+    </div>
     <!-- Rounded switch -->
-    <a class="w3-bar-item">Dark mode   <label class="switch">
+    <a class="w3-bar-item">Dark mode   
+      <label class="switch">
       <input type="checkbox" onclick="darkMode()">
       <span class="slider round"></span>
     </label></a>
@@ -48,7 +56,7 @@ body {font-size:16px;
 
 <!-- Top menu on small screens -->
 <header class="w3-container w3-top w3-hide-large w3-tsudalabblue w3-xlarge w3-padding">
-  <a href="javascript:void(0)" class="w3-button w3-tsudalabblue w3-margin-right" onclick="w3_open()">☰</a>
+  <a href="javascript:void(0)" class="w3-button w3-tsudalabblue w3-margin-right w3-hover-white" onclick="w3_open()">☰</a>
   <span>Tsuda Laboratory</span>
 </header>
 
@@ -62,7 +70,7 @@ body {font-size:16px;
   <div class="w3-container" style="margin-top:80px" id="introduction">
     <h1 class="w3-jumbo"><b>Spaceflight Mechanics and Exploration Systems Laboratory</b></h1>
     <h1 class="w3-xxxlarge w3-text-tsudalabblue"><b>Introduction.</b></h1>
-    <hr style="width:50px;border:5px solid #333366" class="w3-round">
+    <hr style="width:50px;border:5px solid var(--main-color)" class="w3-round">
     <p>The Spaceflight Mechanics and Exploration Systems Laboratory (Tsuda Laboratory) is affiliated with The
       Graduate University for Advanced Studies, SOKENDAI and the Institute of Space and Astronautical Science
       (ISAS). We conduct unique research and project activities in ISAS.
@@ -122,12 +130,21 @@ body {font-size:16px;
    
   </div>
 
-  
+  <!-- Research -->
+  <div class="w3-container" id="research" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-tsudalabblue"><b>Research.</b></h1>
+    <hr style="width:50px;border:5px solid var(--main-color)" class="w3-round">
+    <p>We research space.</p>
+    <p>We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+    incididunt ut labore et quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+  </div>
 
    <!-- Members -->
    <div class="w3-container" id="members" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-tsudalabblue"><b>Members.</b></h1>
-    <hr style="width:50px;border:5px solid #333366" class="w3-round">
+    <hr style="width:50px;border:5px solid var(--main-color)" class="w3-round">
     <p>The best team in the world.</p>
     <p>We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
     dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
@@ -310,23 +327,23 @@ body {font-size:16px;
   <!-- Services -->
   <div class="w3-container" id="publications" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-tsudalabblue"><b>Publications.</b></h1>
-    <hr style="width:50px;border:5px solid #30305b" class="w3-round">
-    <h1>Invited Talks / Keynote Lectures</h1>
+    <hr style="width:50px;border:5px solid var(--main-color)" class="w3-round">
+    <h1 class="w3-xlarge w3-text-tsudalabblue"><b>Invited Talks / Keynote Lectures:</b></h1>
         <ul>
-          <b>2016</b>
+          <h1 class="w3-large w3-text-tsudalabblue"><b>2016</b></h1>
           <li>津田雄一，はやぶさ２における宇宙工学の役割 6th UNISEC Takumi Conference, 2016.2.29. (Invited)</li>
           <li>津田雄一，小惑星探査機はやぶさ２の航法誘導技術と地球スイングバイ運用，第3回制御部門マルチシンポジウム(MSCS2016)，名古屋・南山大学，2016.3.7．(Invited) </li>
           <li>津田雄一, はやぶさ２の技術と運用状況，日本航空宇宙学会北部支部講演会，札幌・北海道大学，2016.3.9. (Invited)</li>
           <li>Tsuda,. Y., Yoshikawa, M., Takanao, S., Watanabe, S., Hayabusa2 – Round Trip Exploration to Near-Earth
             Asteroid ‘Ryugu’, Misasa International Symposium 2016 (Frontiers in Earth and Planetary Materials Research,
             S4-01, Misasa, 2016.3.10. (Invited)</li>
-          <b>2015</b>
+            <h1 class="w3-large w3-text-tsudalabblue"><b>2015</b></h1>
           <li>津田雄一，小惑星探査機はやぶさ２のミッション・開発成果・初期運用状況，深宇宙探査学シンポジウム，柏，2015.3.10. （Invited）</li>
           <li>津田雄一，はやぶさ２の深宇宙航行技術，第132回日本航海学会春季講演会， 横浜，2015.5.29，（Keynote）</li>
-          <b>2013</b>
+          <h1 class="w3-large w3-text-tsudalabblue"><b>2013</b></h1>
           <li>津田雄一，小天体探査の工学的側面：はやぶさ２と将来計画（英題：Engineering Aspect of Small Body Exploration -Hayabusa2 and
             Future），日本地球惑星科学連合2013年大会（Japan Geoscience Union Meeting 2013）, U07-11，幕張，2013.5.19.（Invited）</li>
-          <b>2011</b>
+            <h1 class="w3-large w3-text-tsudalabblue"><b>2011</b></h1>
           <li>Tsuda, Y., Mori, O., Funase, R., Sawada, H., Yamamoto, T., Saiki, T., Endo, T. and Kawaguchi, J., Flight
             Result of IKAROS Deep Space Solar Sail Demonstrator, 9th Low Cost Planetary Missions Conference, APL,
             Laurel, MD, USA, 2011.6.21. (Invited)</li>
@@ -334,68 +351,23 @@ body {font-size:16px;
             and Kawaguchi, J., Achievement of IKAROS – Japanese Interplanetary Deep Space Solar Sail Demonstration
             Mission, 7th IAA Symposium on Realistic Near-Term Advanced Scientific Space Missions, Aosta, Italy,
             2011.7.12. (Invited)</li>
-          <b>2010</b>
+            <h1 class="w3-large w3-text-tsudalabblue"><b>2010</b></h1>
           <li>Tsuda, Y., Mori, O., Funase, R., Saiki, T., Sawada, H., Yamamoto, T., Endo, T., Kawaguchi, J., Minamiono,
             H., Yonekura, K. and Hoshino, H., Initial Flight Result of IKAROS and Perspective to Future Deep Space
             Missions by Solar Power Sail Technology, European Planetary Science Conference, MT6, 2010.9.20, Rome.
             (Invited)</li>
-          <b>2009</b>
+            <h1 class="w3-large w3-text-tsudalabblue"><b>2009</b></h1>
           <li>Tsuda, Y., Hayabusa-2 Mission Design and System Engineering, Invited Talk, International Workshop on Small
             Body Exploration by Physical Interactions, 2009.10.20, Tokyo, Japan. (Invited)</li>
-          <b>2006</b>
+            <h1 class="w3-large w3-text-tsudalabblue"><b>2006</b></h1>
           <li>津田雄一, M-Vロケット・サブペイロードによる小型衛星打ち上げについて，日本機械学会2006年度年次大会，F07-3，熊本大学，2006.9.（Keynote）</li>
         </ul>
   </div>
-  
-   <!-- Packages / Pricing Tables -->
-  <div class="w3-container" id="packages" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Packages.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>Some text our prices. Lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure</p>
-  </div>
-
-  <div class="w3-row-padding">
-    <div class="w3-half w3-margin-bottom">
-      <ul class="w3-ul w3-light-grey w3-center">
-        <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
-        <li class="w3-padding-16">Floorplanning</li>
-        <li class="w3-padding-16">10 hours support</li>
-        <li class="w3-padding-16">Photography</li>
-        <li class="w3-padding-16">20% furniture discount</li>
-        <li class="w3-padding-16">Good deals</li>
-        <li class="w3-padding-16">
-          <h2>$ 199</h2>
-          <span class="w3-opacity">per room</span>
-        </li>
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
-        </li>
-      </ul>
-    </div>
-        
-    <div class="w3-half">
-      <ul class="w3-ul w3-light-grey w3-center">
-        <li class="w3-red w3-xlarge w3-padding-32">Pro</li>
-        <li class="w3-padding-16">Floorplanning</li>
-        <li class="w3-padding-16">50 hours support</li>
-        <li class="w3-padding-16">Photography</li>
-        <li class="w3-padding-16">50% furniture discount</li>
-        <li class="w3-padding-16">GREAT deals</li>
-        <li class="w3-padding-16">
-          <h2>$ 249</h2>
-          <span class="w3-opacity">per room</span>
-        </li>
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-red w3-padding-large w3-hover-black">Sign Up</button>
-        </li>
-      </ul>
-    </div>
-  </div>
-  
+   
   <!-- Contact -->
   <div class="w3-container" id="contact" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Contact.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <h1 class="w3-xxxlarge  w3-text-tsudalabblue"><b>Contact us.</b></h1>
+    <hr style="width:50px;border:5px solid var(--main-color)" class="w3-round">
     <p>Do you want us to style your home? Fill out the form and fill me in with the details :) We love meeting new people!</p>
     <form action="/action_page.php" target="_blank">
       <div class="w3-section">
@@ -410,9 +382,90 @@ body {font-size:16px;
         <label>Message</label>
         <input class="w3-input w3-border" type="text" name="Message" required>
       </div>
-      <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>
+      <button type="submit" class="w3-button w3-block w3-padding-large w3-tsudalabblue-button w3-margin-bottom">Send Message</button>
     </form>  
   </div>
+
+  <!-- Packages / Pricing Tables -->
+  <div class="w3-container" id="links" style="margin-top:75px">
+    <h1 class="w3-xxxlarge  w3-text-tsudalabblue"><b>Links.</b></h1>
+    <hr style="width:50px;border:5px solid var(--main-color)" class="w3-round">
+    <div class="w3-col m2 w3-margin-bottom">
+      <div class="w3-row-padding">
+        <a target="_blank" rel="noopener noreferrer"  href="http://www.isas.jaxa.jp/sokendai/">
+        <div class="w3-card-2 w3-light-grey">
+          <img src="Member/Pics/NoImages.jpg" alt="SOKENDAI at ISAS" style="width:100%">
+          <div class="w3-container w3-center">
+            <p>SOKENDAI, Department of Space and Astronautical Science</p>
+          </div>
+        </div>   
+      </a> 
+    </div>
+  </div>
+  <div class="w3-col m2 w3-margin-bottom">
+    <div class="w3-row-padding">
+      <a target="_blank" rel="noopener noreferrer"  href="http://www.jaxa.jp/">
+        <div class="w3-card-2 w3-light-grey">
+        <img src="Member/Pics/NoImages.jpg" alt="JAXA" style="width:100%">
+        <div class="w3-container w3-center">
+          <p>Japan Aerospace Exploration Agency (JAXA)</p>
+        </div>
+      </div>   
+    </a> 
+  </div>
+</div>
+<div class="w3-col m2 w3-margin-bottom">
+  <div class="w3-row-padding">
+    <a target="_blank" rel="noopener noreferrer" href="http://www.isas.jaxa.jp/">
+      <div class="w3-card-2 w3-light-grey">
+      <img src="Member/Pics/NoImages.jpg" alt="ISAS" style="width:100%">
+      <div class="w3-container w3-center">
+        <p>Institute of Space and Astronautical Science (ISAS)</p>
+      </div>
+    </div>   
+  </a> 
+</div>
+</div>
+<div class="w3-col m2 w3-margin-bottom">
+  <div class="w3-row-padding">
+    <a target="_blank" rel="noopener noreferrer"  href="http://www.hayabusa2.jaxa.jp/">
+      <div class="w3-card-2 w3-light-grey">
+      <img src="Member/Pics/NoImages.jpg" alt="Hayabusa 2" style="width:100%">
+      <div class="w3-container w3-center">
+        <p>Hayabusa 2 Mission</p>
+      </div>
+    </div>   
+  </a> 
+</div>
+</div>
+<div class="w3-col m2 w3-margin-bottom">
+  <div class="w3-row-padding">
+    <a target="_blank" rel="noopener noreferrer"  href="http://www.hayabusa.isas.jaxa.jp/kawalab/?lang=en">
+      <div class="w3-card-2 w3-light-grey">
+      <img src="Member/Pics/NoImages.jpg" alt="Kawaguchi Lab" style="width:100%">
+      <div class="w3-container w3-center">
+        <p>Kawaguchi Laboratory of The University of Tokyo</p>
+      </div>
+    </div>   
+  </a> 
+</div>
+</div>
+<div class="w3-col m2 w3-margin-bottom">
+  <div class="w3-row-padding">
+    <a target="_blank" rel="noopener noreferrer" href="http://kawakatsu.isas.jaxa.jp/"">
+      <div class="w3-card-2 w3-light-grey">
+      <img src="Member/Pics/NoImages.jpg" alt="Kawakatsu Lab" style="width:100%">
+      <div class="w3-container w3-center">
+        <p>Kawakatsu Laboratory of The University of Tokyo</p>
+      </div>
+    </div>   
+  </a> 
+</div>
+</div>
+
+  </div>
+
+
 
 <!-- End page content -->
 </div>
@@ -421,6 +474,9 @@ body {font-size:16px;
 <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
 
 <script>
+
+var darkModeBool = false;
+
 // Script to open and close sidebar
 function w3_open() {
   document.getElementById("mySidebar").style.display = "block";
@@ -441,13 +497,41 @@ function onClick(element) {
 }
 
 // Toggle Dark mode
-function darkMode() {
-  var element = document.body;
-  element.classList.toggle("dark-mode");
-} 
+const toggleSwitch = document.querySelector('.switch input[type="checkbox"]');
 
+function switchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark'); //add this
+    }
+    else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light'); //add this
+    }    
+}
+
+toggleSwitch.addEventListener('change', switchTheme, false);
+
+
+// Check for user preference
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-	$('body').addClass('dark')
+  document.documentElement.setAttribute('data-theme', 'dark');
+  toggleSwitch.checked = true;
+} else {
+  document.documentElement.setAttribute('data-theme', 'light');
+  toggleSwitch.checked = false;
+}
+
+// Check for stored user preference
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    toggleSwitch.checked = false;
+
+    if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
+    }
 }
 
 
