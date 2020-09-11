@@ -40,6 +40,45 @@ body.dark-mode img {
 p.thick {
   font-weight: bold;
 }
+
+  /* Overla Image */
+  .container {
+    position: relative;
+    width: 50%;
+  }
+  
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+  }
+  
+  .container:hover .overlay {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
 </style>
 
 
@@ -61,13 +100,13 @@ p.thick {
     <a href="#introduction" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Introduction</a> 
     <a href="#research" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Research</a> 
     <a href="#members" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Members</a> 
-    <div class="w3-dropdown-hover w3-mobile">
+    <div class="w3-dropdown-hover w3-mobile" href="#publications">
       <button href="#publications" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Publications <i class="fas fa-caret-down"></i></button>
        <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
-               <a href="#journalArticles" class="w3-bar-item w3-button w3-mobile w3-hover-white">Journal Articles </a>
-               <a href="#conferenceProceedingsIntl" class="w3-bar-item w3-button w3-mobile w3-hover-white">Conference Proceedings (International)</a>
-               <a href="#conferenceProceedingsJapan" class="w3-bar-item w3-button w3-mobile w3-hover-white">Conference Proceedings (Japan) </a>
-               <a href="#invitedTalks" class="w3-bar-item w3-button w3-mobile w3-hover-white">Invited Talks / Keynote Lectures</a>
+               <a href="#journalArticles" onclick="w3_close()" class="w3-bar-item w3-button w3-mobile w3-hover-white">Journal Articles </a>
+               <a href="#conferenceProceedingsIntl" onclick="w3_close()" class="w3-bar-item w3-button w3-mobile w3-hover-white">Conference Proceedings (International)</a>
+               <a href="#conferenceProceedingsJapan" onclick="w3_close()" class="w3-bar-item w3-button w3-mobile w3-hover-white">Conference Proceedings (Japan) </a>
+               <a href="#invitedTalks" onclick="w3_close()" class="w3-bar-item w3-button w3-mobile w3-hover-white">Invited Talks / Keynote Lectures</a>
              </div>
      </div>
     <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact Us</a> 
@@ -175,6 +214,14 @@ p.thick {
     dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
     incididunt ut labore et quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     </p>
+    <div class="container">
+      <a target="_blank" rel="noopener noreferrer"  href="Research/research_EN.html">
+      <img src="Images/hayabusa2.jpg" alt="Astrodynamics" class="image">
+      <div class="overlay">
+        <div class="text">Astrodynamics</div>
+      </div>
+    </a>
+    </div>
   </div>
 
    <!-- Members -->
@@ -360,7 +407,8 @@ p.thick {
   <div class="w3-container" id="publications" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-tsudalabblue"><b>Publications.</b></h1>
     <hr style="width:50px;border:5px solid var(--main-color)" class="w3-round">
-      <h1 class="w3-xlarge w3-text-tsudalabblue" id="journalArticles"><b>Journal Articles.</b></h1>
+      <button type="button" class="w3-xlarge w3-text-tsudalabblue collapsible" id="journalArticles"><b>Journal Articles.</b></button>
+      <div class="content">
       <button type="button" class="w3-large w3-text-tsudalabblue collapsible">2016</button>
       <div class="content">
         <ul>
@@ -587,8 +635,9 @@ p.thick {
         1999.</li>
       </ul>
       </div>
-      
-    <h1 class="w3-xlarge w3-text-tsudalabblue" id="conferenceProceedingsIntl"><b>Conference Proceedings (International).</b></h1>
+    </div>
+    <button type="button" class="w3-xlarge w3-text-tsudalabblue collapsible" id="conferenceProceedingsIntl"><b>Conference Proceedings (International).</b></button>
+    <div class="content">
     <ul>
       <h1 class="w3-large w3-text-tsudalabblue"><b>2017</b></h1>
       <li>Tsuda, Y., Ono, G., Generalized Attitude Dynamics Model for Angular Momentum Stabilized Sail, 4th
@@ -757,6 +806,7 @@ p.thick {
         Capturing Tumbling Objects in Space, The 22nd International Symposium on Space Technology and Science,
         2000-s-14, Morioka, Japan, 2000.5.</li>
     </ul>
+  </div>
    <h1 class="w3-xlarge w3-text-tsudalabblue" id="conferenceProceedingsJapan"><b>Conference Proceedings (Japan).</b></h1>
    <ul>
     <h1 class="w3-large w3-text-tsudalabblue"><b>2017</b></h1>
@@ -1023,7 +1073,7 @@ p.thick {
 </div>
 <div class="w3-col m3 w3-margin-bottom">
   <div class="w3-row-padding">
-    <a target="_blank" rel="noopener noreferrer" href="http://kawakatsu.isas.jaxa.jp/"">
+    <a target="_blank" rel="noopener noreferrer" href="http://kawakatsu.isas.jaxa.jp/">
       <div class="w3-card-2 w3-light-grey">
       <img src="Images/kawakatsu_logo.png" alt="Kawakatsu Lab" style="width:100%">
       <div class="w3-container w3-center">
