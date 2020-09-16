@@ -130,9 +130,8 @@ p.thick {
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
-
   <!-- Back floating button -->
-  <a href="../../homepage_EN.html#research" onclick="w3_close()" class="w3-button w3-tsudalabblue-button" id="myBtn" title="Go back to main Research page"><i class="fa fa-arrow-left"></i> Back to Research</a> 
+  <a href="../../homepage_EN.html#research" onclick="w3_close()" class="w3-button w3-tsudalabblue-button w3-floating-button" id="myBtn" title="Go back to main Research page"><i class="fa fa-arrow-left"></i> Back to Research</a> 
 
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:340px;margin-right:40px">
@@ -168,6 +167,9 @@ Suspendisse ultrices orci ipsum, lacinia pulvinar tellus laoreet quis. Nam biben
     </p>
    
   </div>
+
+</div>
+
 
 
 <!-- W3.CSS Container -->
@@ -249,7 +251,7 @@ for (i = 0; i < coll.length; i++) {
 }
 
 //Get the button:
-mybutton = document.getElementById("myBtn");
+mybutton = document.getElementById("myBtnTop");
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
