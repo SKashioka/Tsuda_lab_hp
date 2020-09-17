@@ -75,14 +75,14 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-col.s1{width:8.33333%}.w3-col.s2{width:16.66666%}.w3-col.s3{width:24.99999%}.w3-col.s4{width:33.33333%}
 .w3-col.s5{width:41.66666%}.w3-col.s6{width:49.99999%}.w3-col.s7{width:58.33333%}.w3-col.s8{width:66.66666%}
 .w3-col.s9{width:74.99999%}.w3-col.s10{width:83.33333%}.w3-col.s11{width:91.66666%}.w3-col.s12{width:99.99999%}
-@media (min-width:601px){.w3-col.m1{width:8.33333%}.w3-col.m2{width:16.66666%}.w3-col.m3,.w3-quarter{width:24.99999%}.w3-col.m4,.w3-third{width:33.33333%}
-.w3-col.m5{width:41.66666%}.w3-col.m6,.w3-half{width:49.99999%}.w3-col.m7{width:58.33333%}.w3-col.m8,.w3-twothird{width:66.66666%}
+@media (min-width:601px){.w3-col.m1{width:8.33333%}.w3-col.m2{width:16.66666%}.w3-col.m3,.w3-quarter{display:table;width:24.99999%}.w3-col.m4,.w3-third{display:table;width:33.33333%}
+.w3-col.m5{width:41.66666%}.w3-col.m6,.w3-half{display:table;width:49.99999%}.w3-col.m7{width:58.33333%}.w3-col.m8,.w3-twothird{width:66.66666%}
 .w3-col.m9,.w3-threequarter{width:74.99999%}.w3-col.m10{width:83.33333%}.w3-col.m11{width:91.66666%}.w3-col.m12{width:99.99999%}}
-@media (min-width:1025px){.w3-col.ml1{width:8.33333%}.w3-col.ml2{width:16.66666%}.w3-col.ml3{width:24.99999%}.w3-col.ml4{width:33.33333%}
+@media (min-width:1025px){.w3-col.ml1{width:8.33333%}.w3-col.ml2{display:table;width:16.66666%}.w3-col.ml3{display:table;width:24.99999%}.w3-col.ml4{display:table;width:33.33333%}
 .w3-col.ml5{width:41.66666%}.w3-col.ml6{width:49.99999%}.w3-col.ml7{width:58.33333%}.w3-col.ml8{width:66.66666%}
 .w3-col.ml9{width:74.99999%}.w3-col.ml10{width:83.33333%}.w3-col.ml11{width:91.66666%}.w3-col.ml12{width:99.99999%}}
-@media (min-width:1223px){.w3-col.l1{width:8.33333%}.w3-col.l2{width:16.66666%}.w3-col.l3{width:24.99999%}.w3-col.l4{width:33.33333%}
-.w3-col.l5{width:41.66666%}.w3-col.l6{width:49.99999%}.w3-col.l7{width:58.33333%}.w3-col.l8{width:66.66666%}
+@media (min-width:1223px){.w3-col.l1{width:8.33333%}.w3-col.l2{width:16.66666%}.w3-col.l3{display:table;width:24.99999%}.w3-col.l4{display:table;width:33.33333%}
+.w3-col.l5{width:41.66666%}.w3-col.l6{display:table;width:49.99999%}.w3-col.l7{width:58.33333%}.w3-col.l8{width:66.66666%}
 .w3-col.l9{width:74.99999%}.w3-col.l10{width:83.33333%}.w3-col.l11{width:91.66666%}.w3-col.l12{width:99.99999%}}
 .w3-rest{overflow:hidden}.w3-stretch{margin-left:-16px;margin-right:-16px}
 .w3-content,.w3-auto{margin-left:auto;margin-right:auto}.w3-content{max-width:980px}.w3-auto{max-width:1140px}
@@ -288,6 +288,11 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-border-pale-red,.w3-hover-border-pale-red:hover{border-color:#ffe7e7!important}.w3-border-pale-green,.w3-hover-border-pale-green:hover{border-color:#e7ffe7!important}
 .w3-border-pale-yellow,.w3-hover-border-pale-yellow:hover{border-color:#ffffcc!important}.w3-border-pale-blue,.w3-hover-border-pale-blue:hover{border-color:#e7ffff!important}
 
+.w3-button-centered{
+  margin: 0;
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, -0%);
+}
 
 @media screen and (prefers-color-scheme: dark) {
 	body {
@@ -297,7 +302,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 }
 
 /* Add media queries for responsiveness */
-@media screen and (max-width: 400px) {
+@media (max-width:400px) {
   .w3-jumbo {
     font-size:48px!important;
   }
@@ -419,13 +424,13 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
   position: fixed; /* Fixed/sticky position */
   bottom: 20px; /* Place the button at the bottom of the page */
   right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
+  z-index: 2; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 15px; /* Some padding */
   border-radius: 15px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
+  font-size: 16px; /* Increase font size */
 }
 
 .w3-floating-button:hover {
@@ -462,4 +467,8 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 
 .btn.activeYear {
   background-color: var(--collapsable-select-color);
+}
+
+.wrapper {
+  text-align: center;
 }

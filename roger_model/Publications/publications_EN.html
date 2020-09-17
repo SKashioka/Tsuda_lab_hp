@@ -132,10 +132,14 @@ p.thick {
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <!-- Back floating button -->
-<a href="../homepage_EN.html#publications" onclick="w3_close()" class="w3-button w3-tsudalabblue-button w3-floating-button" id="myBtn" title="Go back to main page"><i class="fa fa-arrow-left"></i> Back to main page</a> 
+<a href="../homepage_EN.html#publications" onclick="w3_close()" class="w3-button w3-tsudalabblue-button w3-floating-button w3-hide-medium w3-hide-large" id="myBtnSmall" title="Go back to main page" style="margin-left: -75px;"><i class="fa fa-arrow-left"></i></a> 
+<a href="../homepage_EN.html#publications" onclick="w3_close()" class="w3-button w3-tsudalabblue-button w3-floating-button w3-hide-small" id="myBtnBig" title="Go back to main page" style="margin-left: -75px;"><i class="fa fa-arrow-left"></i> Back to main page</a> 
+
 
 <!-- Scroll up floating button -->
-<button onclick="topFunction()" class="w3-button w3-tsudalabblue-button w3-floating-button" id="myBtnTop" style="display:none; left:50%" title="Go to top"><i class="fa fa-arrow-up"></i> Go to top</button> 
+<button onclick="topFunction()" class="w3-button w3-tsudalabblue-button w3-floating-button w3-button-centered w3-hide-small" id="myBtnTopBig" style="display:none; left:50%" title="Go to top"><i class="fa fa-arrow-up"></i> Go to top</button> 
+<button onclick="topFunction()" class="w3-button w3-tsudalabblue-button w3-floating-button w3-button-centered w3-hide-medium w3-hide-large" id="myBtnTopSmall" style="display:none; left:50%" title="Go to top"><i class="fa fa-arrow-up"></i></button> 
+
 
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:340px;margin-right:40px">
@@ -1403,16 +1407,19 @@ if (currentTheme) {
 
 // Back and scroll button
 //Get the button:
-mybutton = document.getElementById("myBtnTop");
+mybuttonsmall = document.getElementById("myBtnTopSmall");
+mybuttonbig = document.getElementById("myBtnTopBig");
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
+    mybuttonsmall.style.display = "block";
+    mybuttonbig.style.display = "block";
   } else {
-    mybutton.style.display = "none";
+    mybuttonsmall.style.display = "none";
+    mybuttonbig.style.display = "none";
   }
 }
 
