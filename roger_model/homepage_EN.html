@@ -100,15 +100,7 @@ p.thick {
     <a href="#introduction" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Introduction</a> 
     <a href="#research" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Research</a> 
     <a href="#members" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Members</a> 
-    <div class="w3-dropdown-hover w3-mobile" href="#publications">
-      <button href="#publications" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Publications <i class="fas fa-caret-down"></i></button>
-       <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
-               <a href="#journalArticles" onclick="w3_close()" class="w3-bar-item w3-button w3-mobile w3-hover-white">Journal Articles </a>
-               <a href="#conferenceProceedingsIntl" onclick="w3_close()" class="w3-bar-item w3-button w3-mobile w3-hover-white">Conference Proceedings (International)</a>
-               <a href="#conferenceProceedingsJapan" onclick="w3_close()" class="w3-bar-item w3-button w3-mobile w3-hover-white">Conference Proceedings (Japan) </a>
-               <a href="#invitedTalks" onclick="w3_close()" class="w3-bar-item w3-button w3-mobile w3-hover-white">Invited Talks / Keynote Lectures</a>
-             </div>
-     </div>
+    <a href="#publications" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Publications</a> 
     <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact Us</a> 
     <a href="#access" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Access</a> 
     <a href="#links" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Links</a> 
@@ -122,7 +114,7 @@ p.thick {
     <!-- Rounded switch -->
     <a class="w3-bar-item">Dark mode   
       <label class="switch">
-      <input type="checkbox" onclick="darkMode()">
+      <input type="checkbox">
       <span class="slider round"></span>
     </label></a>
 
@@ -181,7 +173,10 @@ p.thick {
     </div>
   </div>
 
-  <div class="w3-container" style="margin-top:80px" ">
+  <!-- Research -->
+  <div class="w3-container" id="research" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-tsudalabblue"><b>Research.</b></h1>
+    <hr style="width:50px;border:5px solid var(--main-color)" class="w3-round">
     <p>The research topics are always aimed at the connection between actual engineering applications and
       theoretical approaches to the problems. Some of these research projects carried out together with the
       laboratory students are:
@@ -202,26 +197,57 @@ p.thick {
       ISAS projects and the creation and design of future missions of the agency. This experience is unique to
       students in ISAS, and not easy to come by at other University laboratories.
     </p>
-   
-  </div>
+    <div class="w3-row-padding_mod">
+      <div class="w3-col ml3 w3-margin-bottom ">
+        <div class="w3-light-grey">
+          <img src="Images/hayabusa2.jpg" style="width:100%" alt="Astrodynamics" class="image">
+          <div class="w3-container w3-center">
+            <p><span style="font-size:30px;">Astrodynamics</span></p>
 
-  <!-- Research -->
-  <div class="w3-container" id="research" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-tsudalabblue"><b>Research.</b></h1>
-    <hr style="width:50px;border:5px solid var(--main-color)" class="w3-round">
-    <p>We research space.</p>
-    <p>We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-    incididunt ut labore et quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    </p>
-    <div class="container">
-      <a target="_blank" rel="noopener noreferrer"  href="Research/research_EN.html">
-      <img src="Images/hayabusa2.jpg" alt="Astrodynamics" class="image">
-      <div class="overlay">
-        <div class="text">Astrodynamics</div>
+            <a target="" rel="noopener"  href="Research/en/research_Astro_EN.html">
+            <p><button class="w3-button w3-tsudalabblue-button" style="padding: 15px; border-radius: 15px">See More</button></p>
+          </a>
+          </div>
+        </div>
       </div>
-    </a>
+      <div class="w3-col ml3 w3-margin-bottom ">
+        <div class="w3-light-grey">
+          <img src="Images/ryugu_surface.jpg" style="width:100%" alt="Visual Navigation" class="image">
+          <div class="w3-container w3-center">
+            <p><span style="font-size:30px;">Visual Navigation</span></p>
+
+            <a target="" rel="noopener noreferrer"  href="Research/en/research_Visual_EN.html">
+            <p><button class="w3-button w3-tsudalabblue-button" style="padding: 15px; border-radius: 15px">See More</button></p>
+          </a>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col ml3 w3-margin-bottom ">
+        <div class="w3-light-grey">
+          <img src="Images/haya2_lidar.jpg" style="width:100%" alt="Solar Sails" class="image">
+          <div class="w3-container w3-center">
+            <p><span style="font-size:30px;">Solar Sails</span></p>
+
+            <a target="" rel="noopener noreferrer"  href="Research/en/research_Sails_EN.html">
+            <p><button class="w3-button w3-tsudalabblue-button" style="padding: 15px; border-radius: 15px">See More</button></p>
+          </a>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col ml3 w3-margin-bottom ">
+        <div class="w3-light-grey">
+          <img src="Images/touchdown.jpg" style="width:100%" alt="Proximity Thrusting" class="image">
+          <div class="w3-container w3-center">
+            <p><span style="font-size:30px;">Proximity Thrusting</span></p>
+
+            <a target="" rel="noopener noreferrer"  href="Research/en/research_Thrust_EN.html">
+            <p><button class="w3-button w3-tsudalabblue-button" style="padding: 15px; border-radius: 15px">See More</button></p>
+          </a>
+          </div>
+        </div>
+      </div>
     </div>
+   
   </div>
 
    <!-- Members -->
@@ -233,14 +259,14 @@ p.thick {
     dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
     incididunt ut labore et quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     </p>
-    <h1 class="w3-xlarge w3-text-tsudalabblue"><b>Current Members.</b></h1>
+    <h1 class="w3-xxlarge w3-text-tsudalabblue"><b>Current Members.</b></h1>
   </div>
 
   <!-- The Team -->
   <div class="w3-row-padding_mod">
     <div class="w3-col m4 w3-margin-bottom">
       <div class="w3-light-grey">
-        <img src="Member/Pics/TsudaYuichi_web.jpg" alt="Yuichi Tsuda" style="width:100%">
+        <img src="Members/Pics/TsudaYuichi_web.jpg" alt="Yuichi Tsuda" style="width:100%">
         <div class="w3-container">
           <h3>Prof. Yuichi Tsuda</h3>
           <p class="w3-opacity">Professor & Hayabusa 2 Project Manager</p>
@@ -250,7 +276,7 @@ p.thick {
     </div>
     <div class="w3-col m4 w3-margin-bottom">
       <div class="w3-light-grey">
-        <img src="Member/Pics/Takao_2020_v1.jpg" alt="Yuki Takao" style="width:100%">
+        <img src="Members/Pics/Takao_2020_v1.jpg" alt="Yuki Takao" style="width:100%">
         <div class="w3-container">
           <h3>Yuki Takao</h3>
           <p class="w3-opacity">JSPS Postdoc</p>
@@ -260,7 +286,7 @@ p.thick {
     </div>
     <div class="w3-col m4 w3-margin-bottom">
       <div class="w3-light-grey">
-        <img src="Member/Pics/NoImages_web.jpg" alt="Miwa Fukazawa" style="width:100%">
+        <img src="Members/Pics/NoImages_web.jpg" alt="Miwa Fukazawa" style="width:100%">
         <div class="w3-container">
           <h3>Miwa Fukazawa</h3>
           <p class="w3-opacity">Secretary</p>
@@ -273,7 +299,7 @@ p.thick {
   <div class="w3-row-padding_mod">
     <div class="w3-col ml3 m4 w3-margin-bottom">
       <div class="w3-light-grey">
-        <img src="Member/Pics/KashiokaShuya_43.jpg" alt="Shuya Kashioka" style="width:100%">
+        <img src="Members/Pics/KashiokaShuya_43.jpg" alt="Shuya Kashioka" style="width:100%">
         <div class="w3-container">
           <h3>Shuya Kashioka</h3>
           <p class="w3-opacity">D3 / The Graduate University for Advanced Studies, SOKENDAI</p>
@@ -283,7 +309,7 @@ p.thick {
     </div>
     <div class="w3-col ml3 m4 w3-margin-bottom">
       <div class="w3-light-grey">
-        <img src="Member/Pics/RogerGRamon_2020_v1.jpg" alt="Roger Gutierrez Ramon" style="width:100%">
+        <img src="Members/Pics/RogerGRamon_2020_v1.jpg" alt="Roger Gutierrez Ramon" style="width:100%">
         <div class="w3-container">
           <h3>Roger Gutierrez Ramon</h3>
           <p class="w3-opacity">D1 / The Graduate University for Advanced Studies, SOKENDAI</p>
@@ -293,7 +319,7 @@ p.thick {
     </div>    
     <div class="w3-col ml3  m4 w3-margin-bottom">
       <div class="w3-light-grey">
-        <img src="Member/Pics/OhiraGenki_M2_ver3.jpg" alt="Genki Ohira" style="width:100%">
+        <img src="Members/Pics/OhiraGenki_M2_ver3.jpg" alt="Genki Ohira" style="width:100%">
         <div class="w3-container">
           <h3>Genki Ohira</h3>
           <p class="w3-opacity">D1 / The Graduate University for Advanced Studies, SOKENDAI</p>
@@ -303,7 +329,7 @@ p.thick {
     </div>
     <div class="w3-col ml3 m4 w3-margin-bottom">
       <div class="w3-light-grey">
-        <img src="Member/Pics/YamakawaMaiko.jpg" alt="Maiko Yamakawa" style="width:100%">
+        <img src="Members/Pics/YamakawaMaiko.jpg" alt="Maiko Yamakawa" style="width:100%">
         <div class="w3-container">
           <h3>Maiko Yamakawa</h3>
           <p class="w3-opacity">M2 / The Graduate University for Advanced Studies, SOKENDAI</p>
@@ -313,7 +339,7 @@ p.thick {
     </div>
     <div class="w3-col ml3 m4 w3-margin-bottom">
       <div class="w3-light-grey">
-        <img src="Member/Pics/NamikiKaoru_2020_v1.jpg" alt="Kaoru Namiki" style="width:100%">
+        <img src="Members/Pics/NamikiKaoru_2020_v1.jpg" alt="Kaoru Namiki" style="width:100%">
         <div class="w3-container">
           <h3>Kaoru Namiki</h3>
           <p class="w3-opacity">M1 / The Graduate University for Advanced Studies, SOKENDAI</p>
@@ -325,13 +351,13 @@ p.thick {
 
    <!-- Past Team Members -->
   <div class="w3-container" style="margin-top:75px">
-    <h1 class="w3-xlarge w3-text-tsudalabblue"><b>Past Members.</b></h1>
+    <h1 class="w3-xxlarge w3-text-tsudalabblue"><b>Past Members.</b></h1>
   </div>
 
     <div class="w3-row-padding_mod">
       <div class="w3-col l2 m3 w3-margin-bottom">
       <div class="w3-light-grey">
-        <img src="Member/Pics/ManelCaballero.jpg" alt="Manel Caballero" style="width:100%">
+        <img src="Members/Pics/ManelCaballero.jpg" alt="Manel Caballero" style="width:100%">
         <div class="w3-container">
           <h3>Manel Caballero</h3>
           <p class="w3-opacity">Short-term International Student</p>
@@ -340,7 +366,7 @@ p.thick {
     </div>
       <div class="w3-col l2 m3 w3-margin-bottom">
       <div class="w3-light-grey">
-        <img src="Member/Pics/KadokuraMiyuki_web.jpg" alt="Miyuki Kadokura" style="width:100%">
+        <img src="Members/Pics/KadokuraMiyuki_web.jpg" alt="Miyuki Kadokura" style="width:100%">
         <div class="w3-container">
           <h3>Miyuki Kadokura</h3>
           <p class="w3-opacity">Special Joint Researcher</p>
@@ -349,7 +375,7 @@ p.thick {
     </div>  
     <div class="w3-col l2 m3 w3-margin-bottom">
       <div class="w3-light-grey">
-        <img src="Member/Pics/AlessandroLatino.jpg" alt="Alessandro Latino" style="width:100%">
+        <img src="Members/Pics/AlessandroLatino.jpg" alt="Alessandro Latino" style="width:100%">
         <div class="w3-container">
           <h3>Alessandro Latino</h3>
           <p class="w3-opacity">Short-term International Student</p>
@@ -358,7 +384,7 @@ p.thick {
     </div>
     <div class="w3-col l2 m3 w3-margin-bottom">
       <div class="w3-light-grey">
-        <img src="Member/Pics/DanielVillegasPinto_43.jpg" alt="Daniel Villegas Pinto" style="width:100%">
+        <img src="Members/Pics/DanielVillegasPinto_43.jpg" alt="Daniel Villegas Pinto" style="width:100%">
         <div class="w3-container">
           <h3>Daniel Villegas Pinto</h3>
           <p class="w3-opacity">Short-term International Student</p>
@@ -367,7 +393,7 @@ p.thick {
     </div>
     <div class="w3-col l2 m3 w3-margin-bottom">
       <div class="w3-light-grey">
-        <img src="Member/Pics/GiacomoAcciarini_43.jpg" alt="Giacomo Acciarini" style="width:100%">
+        <img src="Members/Pics/GiacomoAcciarini_43.jpg" alt="Giacomo Acciarini" style="width:100%">
         <div class="w3-container">
           <h3>Giacomo Acciarini</h3>
           <p class="w3-opacity">Short-term International Student</p>
@@ -376,7 +402,7 @@ p.thick {
     </div>
     <div class="w3-col l2 m3 w3-margin-bottom">
       <div class="w3-light-grey">
-        <img src="Member/Pics/TommasoPino_web.jpg" alt="Tommaso Pino" style="width:100%">
+        <img src="Members/Pics/TommasoPino_web.jpg" alt="Tommaso Pino" style="width:100%">
         <div class="w3-container">
           <h3>Tommaso Pino</h3>
           <p class="w3-opacity">Short-term International Student</p>
@@ -385,7 +411,7 @@ p.thick {
     </div>
     <div class="w3-col l2 m3 w3-margin-bottom">
       <div class="w3-light-grey">
-        <img src="Member/Pics/StefaniaSoldini_web.jpg" alt="Stefania Soldini" style="width:100%">
+        <img src="Members/Pics/StefaniaSoldini_web.jpg" alt="Stefania Soldini" style="width:100%">
         <div class="w3-container">
           <h3>Stefania Soldini</h3>
           <p class="w3-opacity">JSPS Postdoc</p>
@@ -394,7 +420,7 @@ p.thick {
     </div>
     <div class="w3-col l2 m3 w3-margin-bottom">
       <div class="w3-light-grey">
-        <img src="Member/Pics/NoImages.jpg" alt="Coleen Madlinger" style="width:100%">
+        <img src="Members/Pics/NoImages.jpg" alt="Coleen Madlinger" style="width:100%">
         <div class="w3-container">
           <h3>Coleen Madlinger</h3>
           <p class="w3-opacity">MIT-JAPAN Short-term Training Program</p>
@@ -407,544 +433,52 @@ p.thick {
   <div class="w3-container" id="publications" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-tsudalabblue"><b>Publications.</b></h1>
     <hr style="width:50px;border:5px solid var(--main-color)" class="w3-round">
-      <button type="button" class="w3-xlarge w3-text-tsudalabblue collapsible" id="journalArticles"><b>Journal Articles.</b></button>
-      <div class="content">
-      <button type="button" class="w3-large w3-text-tsudalabblue collapsible">2016</button>
-      <div class="content">
-        <ul>
-        <li>Tsuda, Y., Nakazawa, S., Kushiki, K., Yoshikawa, M., Kuninaka, H., Watanabe, S., Flight Status of Robotic
+    <p>Here you can find some selected publications from our lab members. If you want to see the full list, please click on the button below. </p>
+
+    <h1 class="w3-xlarge w3-text-tsudalabblue" id="journalArticles"><b>Journal Articles.</b></h1>
+    <p>Tsuda, Y., Nakazawa, S., Kushiki, K., Yoshikawa, M., Kuninaka, H., Watanabe, S., Flight Status of Robotic
         Asteroid Sample Return Mission Hayabusa2, ActaAstronautica, Vol.127, pp.702-709,
-        doi:10.1016/j.actaastro.2016.01.027, Accepted on Jan 15, 2016.</li>
-      <li>
-        水野貴秀，加瀬貞二，野田寛大，國森裕生，千秋博紀，尾川順子，竹内央，山口智宏，佐伯孝尚，並木則行，津田雄一，はやぶさ２LIDARの開発と光リンク機能を使った初期動作チェック，信学技法，電子情報通信学会，SANE2016-02,
-        pp.7-12, 2016</li>
-      <li>Ono, G., Tsuda, Y., Akatsuka, K., Saiki, T., Mimasu, Y., Ogawa, N., Terui, F., Generalized Attitude Model
-        for Momentum-Biased Solar Sail Spacecraft, Journal of Guidance, Control and Dynamics, Vol. 39, No. 7, pp.
-        1491-1500, doi: 10.2514/1.G001750, 2016, accepted on Jan.1, 2016.</li>
-      <li>津田雄一，小惑星探査機「はやぶさ２」ミッションの概要と現況，特集「JAXAにおける宇宙開発と宇宙材料，日本材料科学会誌，Vol.53, No.6, December, 2016.</li>
-    </ul>
-  </div>
-    <button type="button" class="w3-large w3-text-tsudalabblue collapsible">2015</button>
-    <div class="content">
-      <ul>
-      <li>Naoya Takeishi, Akira Tanimoto, Takehisa Yairi, Yuichi Tsuda, Fuyuto Terui, Naoko Ogawa and Yuya Mimasu,
-        Evaluation of Interest-region Detectors and Descriptors for Automatic Landmark Tracking on Asteroids,
-        Transactions of the Japan Society for Aeronautical and Space Sciences, Vol.58, No.1, 2015.</li>
-      <li>Jozef van der Ha, Yuya Mimasu, Yuichi Tsuda, Osamu Mori, Solar and Thermal Radiation Models and Flight
-        Evaluation for IKAROS Solar Sail，AIAA Journal of Spacecraft and Rocket, Vol.50, No.3, 2015, accepted on
-        2015/2/19. DOI: 10.2514/1.A33158</li>
-      <li>Chujo, T., Tsuda, Y., Shimizu, Y., Yoshikawa2, M., Yano, H., Mars impact probability analysis for the
-        Hayabusa-2 NEO sample return mission, Advances in Space Research, Vol.57, pp.1991-2002, 2016, accepted on
-        2015/7/30. doi:10.1016/j.asr.2015.07.042</li>
-      <li>大島武，津田雄一，小惑星探査機「はやぶさ２」―深宇宙のための自律化技術―（小特集 宇宙開発への情報技術の貢献），情報処理（情報処理学会），Vol.56, No.7, 2015年7月.</li>
-    </ul>
-  </div>
-      <button type="button" class="w3-large w3-text-tsudalabblue collapsible">2014</button>
-      <div class="content">
-        <ul>
-        <li>Chujo, T., Tsuda, Y., and Kawaguchi, J.: Analysis of Sail Deformation Based on Attitude Motion of Spinning
-        Solar Sail, The 29 ISTS Special Issue of Transaction of JSASS, pp.Pd_53 - Pd_59 , 2014, Accepted on January
-        24th, 2014.</li>
-      <li>Kuroda, D., Ishiguro, M., Takato, N., Hasegawa, S., Abe, M., Tsuda, Y., Sugita, S.,Usui, F., Hattori, T.,
-        Iwata, I., Imanishi, M., Terada, H., Choi, Y., Watanabe, S., and Yoshikawa, M., Visible wavelength
-        spectroscopy of sub-km-sized Near-Earth Asteroids with low delta-v, accepted, Publications of the
-        Astronomical Society of Japan(PASJ), Vol.66, issue 3, 2014, accepted on Feb.14, 2014.</li>
-      <li>照井冬人，津田雄一，尾川順子，三桝裕也，小惑星探査機「はやぶさ2」の航法誘導制御における自動・自律機能 （特集 宇宙に挑む人工知能技術），人工知能，Vol.29, No.4, 2014, pp.327-334.
-      </li>
-      <li>Giancotti, M., Campagnola, S., Tsuda, Y., Kawaguchi, J. , Families of periodic orbits in Hill’s problem
-        with solar radiation pressure: application to Hayabusa 2, Celestial Mechanics and Dynamical Astronomy ,
-        Vol.120, Issue 3, pp.269-286, 2014, doi: 10.1007/s10569-014-9564-5.</li>
-      </ul>
-    </div>
-        <button type="button" class="w3-large w3-text-tsudalabblue collapsible">2013</button>
-      <div class="content">
-        <ul>
-        <li>津田雄一，白澤洋次，佐伯孝尚，三桝裕也，船瀬龍，河内宏道，卯尾匡史，谷口正，石橋史朗，IKAROSの姿勢系システム (<特集>小型ソーラー電力セイル実証機「IKAROS(イカロス)」
-          第6回)，日本航空宇宙学会，Vol.61, No.4., 2013, pp.136-142.</li>
-      <li>Tsuda, Y., Saiki, T., Funase, R., Mimasu, Y., Generalized Attitude Model for Spinning Solar Sail
+        doi:10.1016/j.actaastro.2016.01.027, Accepted on Jan 15, 2016.</p>
+        <p>   Tsuda, Y., Saiki, T., Funase, R., Mimasu, Y., Generalized Attitude Model for Spinning Solar Sail
         Spacecraft, AIAA Journal of Guidance, Control and Dynamics, , Vol. 36, No. 4, 2013, pp. 967-974. doi:
-        10.2514/1.59516.</li>
-      <li>Yamaguchi, T., Mimasu, Y., Tsuda, Y., and Yoshikawa, M., Hybrid Estimation of the Solar Radiation Pressure
-        for a Spinning Solar Sail Spacecraft, Engineering note, Journal of Spacecraft and Rockets, doi:
-        10.2514/1.A32387, 2013, Accepted on April 2013.</li>
-      <li>Tsuda, Y., Yoshikawa, M., Abe, M., Minamino, H., Nakazawa, S., System Design of The Hayabusa 2 – Asteroid
-        Sample Return Mission To 1999 JU3，Acta Astronautica, Vol.90, pp.356-362, 10.1016/j.actaastro.2013.06.028,
-        2013.</li>
-      <li>Tsuda, Y., Terui, F., Saiki, T., Ground-Based Guidance and Navigation for Kinetic Impact to Asteroid 1999
-        JU3, Transactions of JSASS, Aerospace Technology Japan, Accepted on Oct. 30, 2013.</li>
-      </ul>
-    </div>
-        <button type="button" class="w3-large w3-text-tsudalabblue collapsible">2012</button>
-        <div class="content">
-          <ul>     
-          <li>Tsuda, Y., Mori, O., Funase, R., Sawada, H., Yamamoto, T., Saiki T., Endo, T., Yonekura, K., Hoshino, H.,
-        Kawaguchi, J., Achievement of IKAROS –Japanese Deep Space Solar Sail Demonstration Mission, Acta
-        Astronautica，Volume 82, Issue 2, February 2013, pp.183–188. doi:10.1016/j.actaastro.2012.03.032.</li>
-      <li>Tsuda, Y., Saiki, T., Mimasu, Y., Yamaguchi, T., Ikeda, H., Nakamiya, M., Takeuchi, H. and IKAROS
-        Demonstration Team, Modeling of Solar Radiation Pressure Effect for Trajectory Guidance of Spinner Solar
-        Sailer IKAROS, Transaction of JSASS, Aerospace Technology Japan, Vol. 10, No. ists28, pp. Po_4_7-Po_4_12,
-        2012.</li>
-      <li>Soma, E., Endo, T., , Tanaka, K., Miyauchi, M., Yokota, R., Tsuda, Y., Mori, O. and IKAROS Demonstration
-        Team，Flexible Solar Array of Small Solar Power Sail Demonstrator “IKAROS”，Trans. JSASS Aerospace Tech. Japan
-        Vol. 10, No. ists28, pp. Po_4_27-Po_4_31, 2012.</li>
-      <li>Mori, O, Tsuda, Y., Sawada, H., Funase, R., Saiki, T., Yamamoto, T., Yonekura, K., Hoshino, H., Minamino,
-        H., Endo, T., Kawaguchi, J. and IKAROS Demonstration Team，IKAROS and Extended Solar Power Sail Missions for
-        Outer Planetary Exploration, Trans. JSASS Aerospace Tech. Japan, Vol. 10, No. ists28, pp. Po_4_13-Po_4_20,
-        2012.</li>
-      <li>Mori, O, Shirasawa, Y., Sawada, H., Tsuda, Y., Funase, R., Saiki, T., Yamamoto, T., Motooka, N., Jifuku,
-        R., Attitude Dynamics of Spinning Solar Sail "IKAROS" Considering Thruster Plume, Transactions of JSASS,
-        Aerospace Technology Japan, Vol.10, pp.27-32, 2012.</li>
-      <li>森治，津田雄一，ソーラー電力セイル実証機IKAROS，日本物理学会誌, Vol.67, No.6, 2012, pp378-384.</li>
-      <li>津田雄一，森治，白澤洋次，三桝裕也，澤田弘崇，船瀬龍，遠藤達也，山本高行，田中孝冶，横田力男，川口淳一郎，JAXAにおけるソーラーセイル展開展張技術の開発経緯（特集
-        小型ソーラー電力セイル実証機「IKAROS（イカロス）」第2回），日本航空宇宙学会，Vol.60, No.10, 2012, pp.357-363.</li>
-      <li>Tanaka, K., Tsuda, Y., Saiki, T., Shirasawa, Y., Jifuku, R., The Development of Spherical Gas Bearings for
-        the 3DRW Operated by a Small Air Supplier, Transactions of JSASS, Aerospace Technology Japan, Vol. 10 (2012)
-        No. ists28.</li>
-      </ul>
-    </div>
-        <button type="button" class="w3-large w3-text-tsudalabblue collapsible">2011</button>
-        <div class="content">
-          <ul>
-          <li>森治，津田雄一，澤田弘崇，佐伯孝尚，船瀬龍，イカロスの技術（ソーラーセイル），人工知能学会誌，Vol.26, No.2, pp.164-175, 2011, (招待論文，特集「宇宙探索と人工知能」)</li>
-      <li>Tsuda, Y., Mori, O., Funase, R., Sawada, H., Yamamoto, T., Saiki, T., Endo, T., Kawaguchi, J., Flight
-        Status of IKAROS Deep Space Solar Sail Demonstrator, Acta Astronautica Vol.69, 2011, pp.833-840. </li>
-      <li>Funase, R., Shirasawa, Y., Mimasu, Y., Mori, O., Tsuda, Y., Saiki, T., Kawaguchi, J., On-orbit
-        Verification of Fuel-free Attitude Control System for Spinning Solar Sail Utilizing Solar Radiation
-        Pressure, Advances in Space Research, Volume 48, Issue 11, 1 December 2011, Pages 1740-1746.</li>
-      </ul>
-    </div>
-        <button type="button" class="w3-large w3-text-tsudalabblue collapsible">2010</button>
-        <div class="content">
-          <ul>
-          <li>津田雄一，大面積柔軟膜面を有する軸対称スピン物体の姿勢安定条件，日本航空宇宙学会誌, Vol.58, No.678, pp187-194, 2010.</li>
-      <li>Mimasu, Y., Kitajima A., Yamaguchi, T., Funase, R., Morimoto, M. Y., Sawada, H., Takeuchi, H., Mori, O.,
-        Tsuda, Y. and Kawaguchi, J., Photon Acceleration Model of Flexible Spinning Solar Sail, Transactions of
-        JSASS, Aerospace Technology Japan, Vol. 8 (2010) No. ists27 pp.Pk_1-Pk_6.</li>
-      <li>Ogawa, N., Morimoto, M. Y., Tsuda, Y., Yamada, T., Fujita, K., Yamaguchi, T., Kawakatsu, Y., Kubota, T.
-        and Kawaguchi, J., Preliminary Mission Analysis and Orbit Design for Next Mars Exploration, Transactions of
-        JSASS Aerospace Technology Japan, Vol. 8 (2010) No. ists27 pp.Tk_7-Tk_12.</li>
-      <li>Yanaguchi, T., Mimasu, Y., Tsuda, Y., Funase, R., Sawada, H., Mori, O., Morimoto, M. Y., Takeuchi H. and
-        Yoshikawa, M., Trajectory Analysis of Small Solar Sail Demonstration Spacecraft IKAROS Considering the
-        Uncertainty of Solar Radiation Pressure, Transactions of JSASS, Aerospace Technology Japan, Vol. 8 (2010)
-        No. ists27 pp.Pd_37-Pd_43.</li>
-      <li>Mori, O., Sawada, H., Funase, R., Morimoto, M. Y., Endo T., Yamamoto T., Tsuda, Y., Kawakatsu Y.,
-        Kawaguchi J., Miyazaki Y., Shirasawa, Y., IKAROS Demonstration Team and Solar Sail Working Group, First
-        Solar Power Sail Demonstration by IKAROS, Transactions of JSASS, Aerospace Technology Japan, Vol. 8 (2010)
-        No. ists27 pp.To_4_25-To_4_31.</li>
-      <li>Sasaki, S., Fujimoto, M., Takashima T., Yano, H., Kasaba, Y., Takahashi Y., Kimura, J., Okada, T.,
-        Kawakatsu, Y., Tsuda, Y., Kawaguchi, J., Funase, R., Mori, O., Morimoto M., Ikoma, M., Naganuma T, Yamaji,
-        A., Hussmann, H., Kurita, K. and Jupiter Working Group, Exploration of the Jovian System by EJSM (Europa
-        Jupiter System Mission): Origin of Jupiter and Evolution of Satellites, Transactions of JSASS, Aerospace
-        Technology Japan, Vol. 8 (2010) No. ists27 pp.Tk_35-Tk_38.</li>
-      <li>Tsuda, Y., Scheeres, D.J., Numerical Method of Symplectic State Transition Matrix and Application to Fully
-        Perturbed Earth Orbit, Transactions of the Japan Society for Aeronautical and Space Sciences, Vol.53,
-        No.180, pp.105-113, Aug., 2010.</li>
-      <li>Tsuda, Y., State Transition Matrix Approximation with Geometry Preservation for General Perturbed Orbits,
-        Acta Astronautica, 2010.09., SSN 0094-5765, DOI: 10.1016/j.actaastro.2010.09.016.</li>
-      <li>Tsuda, Y., Scheeres, D.J.,, Series Expansion Form of an Approximate State Transition Matrix for Fully
-        Perturbed Orbits, Transaction of JSASS, Aerospace Technology Japan, Vol. 8, 2010, pp.Pd_53-Pd_60.</li>
-      </ul>
-    </div>
-        <button type="button" class="w3-large w3-text-tsudalabblue collapsible">2009</button>
-        <div class="content">
-       <ul>    
-         <li>Shirasawa, Y., and Tsuda, Y., System Performance Analysis of Three Dimensional Reaction Wheel for the
-        Attitude Control of Microsatellites, Trans. JSASS Space Tech. Japan, Vol. 7 (2009), pp.Pd_105-Pd_110.</li>
-      <li>Toda, T., Saito, Y., and Tsuda, Y., Design and Experimental Validation of Inter-Satellite Link System for
-        Formation Flight SCOPE Mission, Trans. JSASS Space Tech. Japan, Vol. 7 (2009), No. ists26, pp.Pj_1-Pj_6.
-      </li>
-      <li>[査読15] Tsuda, Y., Scheeres, D. J., Computation and Applications of an Orbital Dynamics Symplectic State
-        Transition Matrix, Journal of Guidance, Control, and Dynamics, Vol. 32, No. 4, pp.1111-1123, 2009.</li>
-      <li>Saiki, T., Nakaya, K., Yamamoto, T., Tsuda, Y., Mori, O., Kawaguchi, J., Development of a Small-spin-axis
-        Controller and Its Application to a Solar Sail Subpayload Satellite, Transaction of the Japan Society for
-        Aeronautical and Spae Sciences, Space Technology Japan, Vol. 7, pp.25-32, 2009.</li>
-      <li>Funase, R., Hanaoka, F., Mori, O., Tsuda, Y. and Kawaguchi, J., Development of Oscillation-Free Attitude
-        Maneuvering System for Spinning Solar Sail, Transactions of JSASS, Space Technology Japan, Vol. 7 (2009) No.
-        ists26 pp.Pd_49-Pd_55.</li>
-      <li>Tsuda, Y., Scheeres, D.J., State Transition Matrix Approximation Using a Generalized Averaging Method,
-        Journal of Guidance, Control, and Dynamics, Vol. 32, No. 6, pp.1781-1794, 2009, doi: 10.2514/1.44142. </li>
-      </ul>
-    </div>
-        <button type="button" class="w3-large w3-text-tsudalabblue collapsible">2008</button>
-        <div class="content">
-          <ul>
-          <li>齋藤宏文, 水野貴秀, 川原康介, 佐伯孝尚, 津田雄一, 福島洋介, 浜田裕介, 佐々木博幸, 勝本幸子, 黒木聖司, 梶川泰広, 車載用技術を利用した超小型宇宙用GPS受信機の開発と軌道上実証,
-        日本航空宇宙学会論文集，Vol. 56, No. 650, 2008.</li>
-      </ul>
-     </div>
-        <button type="button" class="w3-large w3-text-tsudalabblue collapsible">2007</button>
-        <div class="content">
-          <ul>
-          <li>Funase, R., Nakasuka, S., Sako, N., Fujiwara T., Tsuda, Y., Ukawa, S., Kimura, S., Hashimoto, H.,
-        Yoshihara, K. and Yamamoto, T., On-Orbit Experiment of Vision-Based Motion Estimation and Tracking of
-        Tumbling Object in Space, Transactions of the Japan Society for Aeronautical and Space Sciences, Vol.50,
-        No.168, pp.97-104,2007.</li>
-      </ul>
-      </div>
-        <button type="button" class="w3-large w3-text-tsudalabblue collapsible">2006</button>
-      <div class="content">
-        <ul>
-        <li>津田雄一, 中須賀真一, 制御量制約を考慮した高速タンブリング物体の実時間姿勢制御法 第三報 —保存性状態量を利用したフィードバック制御則—, 日本航空宇宙学会誌, Vol. 54, No. 627,
-        pp.151-159, 2006.</li>
-      <li>Tsuda, Y., Mori, O., Takeuchi, S., Kawaguchi, J., Flight Result and Analysis of Solar Sail Deployment
-        Experiment Using S-310 Sounding Rocket, Space Technology, Vol.26, No.1-2, pp.33-39, 2006. </li>
-      </ul>
-      </div>
-        <button type="button" class="w3-large w3-text-tsudalabblue collapsible">2005</button>
-        <div class="content">
-          <ul>
-          <li>津田雄一, 中須賀真一, 続報:制御量制約を考慮した高速タンブリング物体の実時間姿勢制御法 —保存性状態量による剛体ダイナミクスの定式化—, 日本航空宇宙学会誌, Vol.53, No.616,
-        pp200-208, 2005.</li>
-      <li>中須賀真一, 酒匂信匡, 津田雄一, 永島隆, 船瀬龍, 中村友哉, 永井将貴，CubeSat-XIの軌道上実証成果と超小型衛星による低コスト化・短期開発化の試み, 電子情報通信学会論文誌　VOL.J88-B,
-        No.1, 2005.</li>
-      </ul>
-      </div>
-        <button type="button" class="w3-large w3-text-tsudalabblue collapsible">2004</button>
-      <div class="content">
-        <ul>
-        <li>河原吉伸, 津田雄一, 中須賀真一, 多数機フォーメーションフライトの為の連続推力推進による燃料最小誘導則, 日本航空宇宙学会誌, Vol.52, No.601, pp72-79, 2004.</li>
-      </ul>
-      </div>
-      <button type="button" class="w3-large w3-text-tsudalabblue collapsible">2003</button>
-      <div class="content">
-        <ul>
-        <li>Tsuda, Y., Nakasuka, S., New Attitude Motion Following Control Algorithm for Capturing Tumbling Object in
-        Space, Acta Astronautica Vol. 53, No.11, pp.847-861, 2003.</li>
-      </ul>
-      </div>
-        <button type="button" class="w3-large w3-text-tsudalabblue collapsible">2002</button>
-        <div class="content">
-          <ul>
-          <li>津田雄一, 中須賀真一, `制御量制約を考慮した高速タンブリング物体の実時間姿勢制御法, 日本航空宇宙学会誌, Vol.50, No.584, pp1-8, 2002.</li>
-        </ul>
-        </div>
-      <button type="button" class="w3-large w3-text-tsudalabblue collapsible">2001</button>
-      <div class="content">
-        <ul>
-        <li>Nakasuka, S., Aoki, T., Ikeda, I., Tsuda, Y. and Kawakatsu, Y., “Furoshiki Satellite" -A Large Membrane
-        Structure as a Novel Space System, Acta Astronautica, Vol.48, No.5-12, pp.461-468, 2001.</li>
-      <li>Sako, N., Ota, S., Tsuda, Y., Yamamoto, T., Ikeda, I., Ii, H., Yamamoto, H., Tanaka, H., Eishima, T.,
-        Tanaka, A., Nakasuka, S., “CanSat” Suborbital Launch Experiment –University Educational Space Program Using
-        Can Sized Pico-Satellite, Acta Astronautica, Vol. 48, No.5-12, pp.767-776, 2001.</li>
-      </ul>
-      </div>
-        <button type="button" class="w3-large w3-text-tsudalabblue collapsible">1999</button>
-      <div class="content">
-        <ul>
-        <li>藤原健, 中村大賀, 津田雄一, 中須賀真一, 軌道上の浮遊物体に対する運動状態の認識とその捕獲(第1報) --全体像と運動推定問題--, 日本航空宇宙学会誌, Vol.47, No.547, pp1-7,
-        1999.</li>
-      </ul>
-      </div>
-    </div>
-    <button type="button" class="w3-xlarge w3-text-tsudalabblue collapsible" id="conferenceProceedingsIntl"><b>Conference Proceedings (International).</b></button>
-    <div class="content">
-    <ul>
-      <h1 class="w3-large w3-text-tsudalabblue"><b>2017</b></h1>
-      <li>Tsuda, Y., Ono, G., Generalized Attitude Dynamics Model for Angular Momentum Stabilized Sail, 4th
-        International Solar Sail Symposium, No.17078, Kyoto, 2017.1.29.</li>
-        <h1 class="w3-large w3-text-tsudalabblue"><b>2016</b></h1>
-      <li>Tsuda, Y., Yoshikawa, M., Flight Status of Hayabusa2: Asteroid Sample Return Mission to C-type Asteroid
-        Ryugu, 14th SBAG(Small Body Assessment Group) meeting, 2016.1.28.</li>
-      <li>Tsuda, Y., Ono, G., Saiki, T., Mimasu, Y., Ogawa, N., Terui, F., SRP-Assisted Fuel-Free Sun Tracking and
-        Its Application to Hayabusa2, AIAA/AAS, Astrodynamics Specialist Conference, AIAA-2016-5379, 2016.</li>
-      <li>Tsuda, Y., Yoshikawa, M., Flight Status of Hayabusa2: Asteroid Sample Return Mission to C-type Asteroid
-        Ryugu, 15th SBAG(Small Body Assessment Group) meeting, 2016.6.28.</li>
-      <li>Tsuda, Y., Watanabe, S., Saiki, T., Yoshikawa, M., Nakazawa, S., Cruise Status of Hayabusa2 : Round Trip
-        Mission to Asteroid 162173 Ryugu, 67th International Astronautical Congress, IAC-16.A3.4.5, Guadalajara,
-        Mexico, 2016.</li>
-        <h1 class="w3-large w3-text-tsudalabblue"><b>2015</b></h1>
-      <li>Tsuda, Y., Nakazawa, S., Kushiki, K.,, Yoshikawa, M., Watanabe, S., Kuninaka, H., Flight Status of
-        Robotics Asteroid Sample Return Mission Hayabusa 2, 9th IAA Symposium on the Future of Space Exploration:
-        Towards New Global Programmes, IAA-FSE-15-11-01, Torino, Italy, 2015.7.9.</li>
-      <li>Tsuda, Y., Electric-Delta V Earth Gravity Assist Phase Operation of Hayabusa2, 2015 ISAS Workshop on
-        Astrodynamics and Flight Mechanics, B-17, Sagamihara, 2015.7.28.</li>
-      <li>Tsuda. Y., Ono, G., Akatsuka, K., Saiki, T., Mimasu, Y., Ogawa, N., Terui, F., Generalized Attitude Model
+        10.2514/1.59516.</p>
+        <p>Tsuda, Y., Mori, O., Funase, R., Sawada, H., Yamamoto, T., Saiki T., Endo, T., Yonekura, K., Hoshino, H.,
+          Kawaguchi, J., Achievement of IKAROS –Japanese Deep Space Solar Sail Demonstration Mission, Acta
+          Astronautica，Volume 82, Issue 2, February 2013, pp.183–188. doi:10.1016/j.actaastro.2012.03.032.</p>
+
+    <h1 class="w3-xlarge w3-text-tsudalabblue" id="conferenceProceedingsIntl"><b>Conference Proceedings (International).</b></h1>
+    <p>Tsuda, Y., Ono, G., Generalized Attitude Dynamics Model for Angular Momentum Stabilized Sail, 4th
+      International Solar Sail Symposium, No.17078, Kyoto, 2017.1.29.</p>
+      <p> Tsuda, Y., Ono, G., Saiki, T., Mimasu, Y., Ogawa, N., Terui, F., SRP-Assisted Fuel-Free Sun Tracking and
+        Its Application to Hayabusa2, AIAA/AAS, Astrodynamics Specialist Conference, AIAA-2016-5379, 2016.</p>
+      <p>Tsuda. Y., Ono, G., Akatsuka, K., Saiki, T., Mimasu, Y., Ogawa, N., Terui, F., Generalized Attitude Model
         for Momentum-Biased Solar Sail Spacecraft, AAS Astrodynamics Specialist Conference, AAS15-656, Vail, CO,
-        2015.8.12.</li>
-      <li>Tsuda, Y, Kato, T., Shiraishi, M., Matsuoka, M., Trajectory Guidance and Navigation Operation Toward Earth
-        Swing-by of Asteroid Sample Return Mission “Hayabusa2” , 25th International Symposium on Space Flight
-        Dynamics, Munich, Germany, 2015.10.19.</li>
-        <h1 class="w3-large w3-text-tsudalabblue"><b>2014</b></h1>
-      <li>Van Der Ha, J.C., Mimasu, Y., Tsuda, Y., Mori, O., Solar and Thermal Radiation Pressure Models and Flight
-        Evaluation for IKAROS Solar Sail, AAS Space Flight Mechanics Meeting, AAS14-244, Santa Fe, NM, 2014.1.26-30.
-      </li>
-      <li>Tsuda, Y., Systematic Interpretation of Spacecraft Dynamics Under the Effect of Solar Radiation Pressure,
-        24th Workshop on Astrodynamics and Flight Mechanics, C-13, Sagamihara, 2014.7.28.</li>
-      <li>Tsuda, Y., Chujo, T., Shimizu, Y., Yano, Y., Mars Impact Probability Analysis For The Hayabusa-2 NEO
-        Sample Return Mission, PPP.2-3-14, 40th COSPAR Scientific Assembly, Moscow, 2014.8.2-10.</li>
-        <h1 class="w3-large w3-text-tsudalabblue"><b>2013</b></h1>
-      <li>Tsuda, Y., Terui, F., Saiki, T., Ground-Based Guidance and Navigation for Kinetic Impact to Asteroid 1999
-        JU3, 29th International Symposium on Space Technology and Science, Nagoya, 2013.</li>
-      <li>Van Der Ha, J.C., Mimasu, Y., Tsuda, Y., Mori, O., Solar and Thermal Radiation Pressure Models and
-        In-Flight Evaluation for IKAROS Solar Sail, 29th International Symposium on Space Technology and Science,
-        Nagoya, 2013.</li>
-      <li>Brémond, L., Tsuda, Y., Funase, R., Kawaguchi, J., A Trajectory Optimization for a Multiple Rendezvous
-        Mission with Trojan Asteroids, AAS Space Flight Mechanics Meeting, AAS 13-497, Kauai, 2013.2.</li>
-      <li>Ikeda, H., Tsuda, Y., Mimasu, Y., Yoshikawa, M., A Simulation Study of Gravity and Ephemeris Estimation of
-        Asteroid 1999JU3 Using Spacecraft Radiometric Tracking, Optical and Altimeter Measurements, AAS Space Flight
-        Mechanics Meeting, AAS13-417, Kauai, 2013.2.</li>
-      <li>Mimasu, Y., Taniguchi, S., Takeuchi, H., Shirasawa, Y., Yonekura, K., Mori, O., Funase, R., Saiki, T.,
-        Tsuda, Y., Long-Term Attitude and Orbit Prediction of Solar Sailing IKAROS While Being Lost in Space, AAS
-        Space Flight Mechanics Meeting, AAS13-406, Kauai, 2013.2.</li>
-      <li>Tsuda, Y. and IKAROS Demonstration Team, How IKAROS Shape is Designed -Attitude Stability of Spinning
-        Solar Sail, The 3rd International Symposium on Solar Sailing, Glasgow, UK, June 11-13, 2013</li>
-      <li>Tsuda, Y., Saiki, T. and Mimasu, Y., Realization of Minimal Attitude Determination System for Small
-        Spinner Spacecraft IKAROS, Small Satellite Conference, SSC13-IV-4, Logan, Utah, 2013.8.13.</li>
-        <h1 class="w3-large w3-text-tsudalabblue"><b>2012</b></h1>
-      <li>Tsuda, Y., Okano, Y., Mimasu Y., Funase, R., On-Orbit Sail Quality Evaluation Utilizing Attitude Dynamics
-        of Spinner Solar Sailer IKAROS, AAS/AIAA Space Flight Mechanics Meeting, AAS12-211, 2012.2.1, Charleston;
-        Also Advances in the Astronautical Sciences, Vol.143, pp.1609-1626, 2012.</li>
-      <li>Tsuda, Y., Mimasu, Y., Funase, R., Okano, Y., Design Criteria of Spinning Solar Sail Surface Based on
-        Attitude Dynamics, AIAA/AAS Astrodynamics Specialist Conference, AIAA2012-4662, Minneapolis, 2012.8.14.</li>
-      <li>Tsuda, Y., Yoshikawa, M., Minamino, N., Nakazawa, S., System Design of Hayabusa2 –Asteroid Sample Return
-        Mission to 1999JU3, 63rd International Astronautical Congress, IAC-12-A.3.4.5, Naples, 2012.10.4.</li>
-      <li>Tsuda, Y., Saiki, T., Ogawa, N., Morimoto, M., Trajectory Design for Japanese New Asteroid Sample Return
-        Mission Hayabusa-2, 23rd International Symposium on Space Flight Dynamics, IMD-1-1, Pasadena, 2012.10.29.
-      </li>
-      <h1 class="w3-large w3-text-tsudalabblue"><b>2011</b></h1>
-      <li>Tsuda, Y., Saiki, T., Mimasu, Y. and Funase, R., Modeling of Attitude Dynamics for IKAROS Solar Sail
-        Demonstrator, AAS/AIAA Space Flight Mechanics Meeting, AAS11-112, 2011.2.14, New Orleans.</li>
-      <li>Tsuda, Y., Saiki, T., Funase, R., Shirasawa, Y., Mimasu, Y., Shape Parameters Estimation of IKAROS Solar
-        Sail Using In-Flight Attitude Determination Data, 12th AIAA Gossamer Systems Forum, 53-GSF-5-2, Apr.11,2011,
-        Denver.</li>
-      <li>Tsuda, Y., Saiki, T., Mimasu, Y., Yamaguchi, T., Ikeda, H., Nakamiya, M., Takeuchi, H. and IKAROS
-        Demonstration Team, Modeling of Solar Radiation Pressure Effect for Trajectory Guidance of Spinner Solar
-        Sailer IKAROS, 28th International Symposium on Space Technology and Science, ISTS ISTS-o-4-10v, Okinawa,
-        Japan, 2011.6.11.</li>
-      <li>Tsuda, Y., Saiki, T., Mimasu, Y. and Funase, R., Sun-Earth Based Spin Axis Determination for
-        Interplanetary Missions and Its Application to IKAROS, 2011 AIAA/AAS Astrodynamics Specialist Conference,
-        AAS11-448, Girdwood, Alaska, 2011.8.2.</li>
-        <h1 class="w3-large w3-text-tsudalabblue"><b>2010</b></h1>
-      <li>Tsuda, Y., Reduction of Truncation Error in Computing Symplectic State Transition Matrix, 2010 AIAA/AAS
-        Astrodynamics Specialist Conference, AIAA-2010-7660, Aug.2, 2010, Toronto.</li>
-      <li>Tsuda, Y., Unscented Batch Sequential Filter and Its Application to Relative Orbit Determination for
-        Formation Flight, 8th IFAC Symposium on Automatic Control in Aerospace, Sep. 6.2010, Nara.</li>
-      <li>Tsuda, Y., Mori, O., Funase, R., Sawada, H., Yamamoto, T., Saiki, T., Endo, T. and Kawaguchi, J., Flight
-        Status of IKAROS Deep Space Solar Sail Demonstrator, 61th International Astronautical Congress,
-        IAC-10-A3.6.8, 2010.10.1, Prague.</li>
-        <h1 class="w3-large w3-text-tsudalabblue"><b>2009</b></h1>
-      <li>Tsuda, Y., Scheeres, D. J., Computation and Applications of an Orbital Dynamics Symplectic State
-        Transition Matrix, 19th AAS/AIAA Space Flight Mechanics Meeting, AAS-09-158, Feb 8-12, 2009, Savannah,
-        Georgia.</li>
-      <li>Shirasawa, Y., Tsuda, Y., Development of Control and Measurement System for the Three-Dimensional Reaction
-        Wheel, 19th AAS/AIAA Space Flight Mechanics Meeting,AAS-09-170, Feb 8-12, 2009, Savannah, Georgia.</li>
-      <li>Fujimoto, M., Tsuda, Y., Saito, Y., Shinohara, I., Takashima, T., Matsuoka, A., Kojima, H., and Kasaba,
-        Y., The SCOPE Mission, American Institute of Physics, Conf. Proc. Volume 1144, pp. 29-35 (s2009).</li>
-      <li>Tsuda, Y., Series Expansion Form of an Approximate State Transition Matrix for Fully Perturbed Orbits,
-        27th International Symposium on Space Technology and Science, ISTS 2009-d-27, Tsukuba, Japan, 2009.7.8.</li>
-      <li>Tsuda, Y., Scheeres, D. J., State Transition Matrix Approximation Using a Generalized Averaging Method,
-        AAS/AIAA Astrodynamics Specialist Conference, AAS-09-444, Pittsburgh, 2009.8.13.</li>
-      <li>Tsuda, Y. and Saito, Y., Formation Keeping and Changing Strategy for SCOPE Formation Flight Mission, 21th
-        International Symposium on Space Flight Dynamics, Toulouse, 2009.9.29.</li>
-      <li>Tsuda, Y., State Transition Matrix Approximation with Geometry Preservation for General Perturbed Orbits,
-        60th International Aeronautical Congress, IAC-09.C1.2.3, Daejeon, Korea, 2009.10.13.</li>
-        <h1 class="w3-large w3-text-tsudalabblue"><b>2008</b></h1>
-      <li>Shirasawa, Y., Tsuda, Y., Experimental Study and Analysis on Three Dimensional Reaction Wheel for
-        Microsatellites, 18th AAS/AIAA Space Flight Mechanics Meeting, AAS 08-132, Jan 28, 2008.</li>
-      <li>Hanaoka, F., Mori, O., Tsuda, Y. and Kawaguchi, J., Attitude Control of Spinning Solar Sail with Huge
-        Membrane, 18th AAS/AIAA Space Flight Mechanics Meeting, AAS 08-221, Jan 28, 2008.</li>
-      <li>Tsuda, Y., Stability Criteria for the Spinning Spacecraft with Large Flexible Membrane, AIAA Guidance,
-        Navigation and Control Conference, AIAA-2008-6456, 2008.8.18-21, Honolulu.</li>
-      <li>Funase, R., Tsuda, Y., Mori, O, Hanaoka, F. and Kawaguchi, J., Attitude Control of Spinning Solar Sail
-        Considering the Deformation by Solar Radiation Pressure, 59th International Astronautical Congress,
-        IAC-08.C1.7.8, Sep 29-Oct 3, 2008, Glasgow, Scotland.</li>
-      <li>Kawaguchi, J., Tsuda, Y., Mori, O., Yamamoto, T., Funase, R., Sawada, H., Kawakatsu, Y. and Morimoto, M.,
-        World’s First Solar Power Sail Demonstration Flight in Interplanetary Cruise in 2010, 59th International
-        Astronautical Congress, IAC-08.A3.6.15, Sep 29-Oct 3, 2008, Glasgow, Scotland.</li>
-        <h1 class="w3-large w3-text-tsudalabblue"><b>2007</b></h1>
-      <li>Tsuda, Y., An Attitude Control Strategy for Spinning Solar Sail, 17th IFAC Symposium on Automatic Control
-        in Aerospace, WE-P02, 2007.6.25-29 Toulouse.</li>
-      <li>Tsuda, Y., Optimal Formation Design Strategy for Formation-Flying Mission in High-Elliptic Orbit，11th
-        International Space Conference of Pacific-basin Societies，2007.5.16-18, Beijin.</li>
-      <li>Tsuda, Y., Formation Design Strategy For Scope High Elliptic Formation Flying Mission, 20th International
-        Symposium on Space Flight Dynamics, 3-13, September 23-28, 2007, Annapolis.</li>
-      <li>Shibasaki, Y., Tsuda, Y. and Kawaguchi, J., Optimization of Return Trajectories for Orbital Transfer
-        Vehicle Between Earth and Moon, 20th International Symposium on Space Flight Dynamics, 19-2, September
-        23-28, 2007, Annapolis.</li>
-        <h1 class="w3-large w3-text-tsudalabblue"><b>2006</b></h1>
-      <li>Tsuda, Y., Saito, Y. and Toda, T., Online Relative Range Determination and Clock Synchronization Algorithm
-        for Formation Flying Spacecrafts, AAS/AIAA Space Flight Mechanics Conference, AAS06-205, Tampa,USA, 2006.1.
-      </li>
-      <li>Tsuda, Y., Nakaya, K. and Yamamoto, T., Microsatellite-Class Solarsail Demonstrator –Mission Design and
-        Development Status–, 25th International Symposium on Space Technology and Science, ISTS 2006-k-37, Kanazawa,
-        Japan, 2006.6.</li>
-        <h1 class="w3-large w3-text-tsudalabblue"><b>2005</b></h1>
-      <li>Tsuda, Y., Mori, O., Takeuchi, S. and Kawaguchi, J., Flight Result and Analysis of Solar Sail Deployment
-        Experiment Using S-310 Sounding Rocket, 56th International Astronautical Congress, IAC-05-C1.4.05, Fukuoka,
-        Japan, 2005.10.</li>
-      <li>Tsuda, Y., Maezawa, K., Shinohara, I., Saito, Y., Higuchi, L, Toda, T., Takashima, T., Kojima, H. and
-        Fujimoto, M., Mission Design of SCOPE –Small Satellites Formation Flying Mission for Magnetospheric Tail
-        Observation–, 6th AIAA International Conference on Low Cost Planetary Missions, Kyoto, Japan, 2005.10.</li>
-        <h1 class="w3-large w3-text-tsudalabblue"><b>2004</b></h1>
-      <li>Tsuda, Y., Mori, M., Nishimura, Y., Kawaguchi, J., Deployment Experiment of Thin Flexible Membrane Using
-        Sounding Rocket for Future Solar Sail Mission, 24th International Symposium on Space Technology and Science,
-        ISTS2004-c-11, Miyazaki, Japan ,2004.5.</li>
-      <li>Tsuda, Y., Global Optimization of Maneuver Schedule for Multiple Spacecrafts Flying in Formaon, 55th
-        International Astronautical Congress, IAC-04-A.2.01, Vancouver, 2004.10.</li>
-        <h1 class="w3-large w3-text-tsudalabblue"><b>2002</b></h1>
-      <li>Tsuda, Y., Sako, N., Eishima, T., Ito, T., Arikawa, Y., Miyamura, N., Kanairo, K., Ukawa, S., Ogasawara,
-        S., Ishikawa, S. and Nakasuka, S., University of Tokyo's CubeSat "XI" as a Student-Built Educational
-        Pico-Satellite -Final Design and Operation Plan-, The 23rd International Symposium of Space Technology and
-        Science, 2002-f-13, Matsue, Japan, 2002.5.30.</li>
-      <li>Tsuda, Y. and Nakasuka, S., Impulsive Optimal Guidance Algorithm for Formation Flying Spacecraft, The 23rd
-        International Symposium of Space Technology and Science, 2002-d-51, 松江, 2002.5.31.</li>
-      <li>Tsuda, Y. and Nakasuka, S., Optimum Guidance Law and Information Management for a Large Number of
-        Formation Flying Spacecrafts, 53rd International Astronautical Congress, IAC-02-A.P.09, Houston, 2002.10.15.
-      </li>
-      <li>Tsuda, Y., Sako, S., Eishima, T., Ito, T., Arikawa, Y., Miyamura, N., Kanairo, K., Ukawa, S., Ogasawara,
-        S., Ishikawa, S. and Nakasuka, S., Educational Pico-Satellite Project CubeSat –University of Tokyo’s CubeSat
-        ‘’XI’’ and its operation Plan, 53rd International Astronautical Congress, IAC-02-P.1.02, Houston,
-        2002.10.14.</li>
-        <h1 class="w3-large w3-text-tsudalabblue"><b>2001</b></h1>
-      <li>Tsuda, Y. and Nakasuka, S., New Attitude Motion Following Control Algorithm for Capturing Tumbling Object
-        in Space, The 51st International Astronautical Congress, IAF-00-A.2.05, Rio de Janeiro, 2000.10.</li>
-      <li>Tsuda, Y., Sako, N., Eishima, T., Ito, T., Arikawa, Y., Miyamura, N., Tanaka, A. and Nakasuka S.,
-        University of Tokyo’s CubeSat Project – Its Educational and Technological Significance –, The 15th Annual
-        AIAA/USU Conference on Small Satellites, SSC01-VIIIb-7, Logan, Utah, 2001.8.</li>
-        <h1 class="w3-large w3-text-tsudalabblue"><b>2000</b></h1>
-      <li>Tsuda, Y. and Nakasuka, S., Real-Time Attitude Motion Synchronization Control with Torque Constraint for
-        Capturing Tumbling Objects in Space, The 22nd International Symposium on Space Technology and Science,
-        2000-s-14, Morioka, Japan, 2000.5.</li>
-    </ul>
-  </div>
-   <h1 class="w3-xlarge w3-text-tsudalabblue" id="conferenceProceedingsJapan"><b>Conference Proceedings (Japan).</b></h1>
-   <ul>
-    <h1 class="w3-large w3-text-tsudalabblue"><b>2017</b></h1>
-    <li>津田雄一，渡邊誠一郎，はやぶさ２プロジェクトチーム，小惑星探査機はやぶさ２: 運用状況及び小惑星近傍フェーズに向けた準備状況，第17回宇宙科学シンポジウム，S4-001，2017.1.6.</li>
-    <h1 class="w3-large w3-text-tsudalabblue"><b>2016</b></h1>
-    <li>津田雄一，渡邊誠一郎，はやぶさ２プロジェクトチーム，小惑星探査機「はやぶさ２」の運用状況：巡航開始から地球スイングバイまで，第16回宇宙科学シンポジウム，S4-002，2016.1.6.</li>
-    <li>Tsuda, Y., Robust Trajectory Design for Mars System Sample Return
-      Mission（ロバスト性を考慮した火星圏サンプルリターンのための軌道設計），2016 ISAS Workshop on Astrodynamics and Flight Mechanics, B-2,
-      Sagamihara, 2016.7.25.</li>
-    <li>津田雄一，中澤暁，佐伯孝尚，渡邊誠一郎，小惑星探査機はやぶさ２のミッションと巡航運用状況, 第60回宇宙科学技術連合講演会, 1G06, 函館，2016.9.6.</li>
-    <li>津田雄一，はやぶさからはやぶさ２へ：太陽系探査技術の進化，石油学会装置研究討論会，2016.12.8.</li>
-    <h1 class="w3-large w3-text-tsudalabblue"><b>2015</b></h1>
-    <li>津田雄一，重力天体探査の技術展望，第15回宇宙科学シンポジウム, S2-009，相模原，2015.1.6.</li>
-    <h1 class="w3-large w3-text-tsudalabblue"><b>2013</b></h1>
-    <li>谷本啓，武石直也，矢入健久，津田雄一，照井冬人，尾川順子，三桝裕也，観測画像列からの小惑星形状と相対運動の同時推定（英題：Simultaneous Estimation of Asteroid Shape and
-      Motion），The 27th Annual Conference of Japanese Society for Artificial Intelligence, 1G4-2, 2013.</li>
-    <li>Tsuda, Y., Kikuchi, S., Marco, G., A Study on Quasi-Periodic Orbits around Small Body for Hayabusa-2
-      Mission, 23rd Workshop on Astrodynamics and Flight Mechanics, B-16, Sagamihara, 2013.7.30.</li>
-    <li>津田雄一，國中均，稲場典康，吉川真，倉岡今朝年，南野浩之，中澤暁，櫛木賢一，今村裕志，安部正真，渡邊誠一郎, 小惑星探査機はやぶさ２の開発状況, 第57回宇宙科学技術連合講演会, 1C03, 米子,
-      2013.10.9.</li>
-      <h1 class="w3-large w3-text-tsudalabblue"><b>2012</b></h1>
-    <li>津田雄一，佐伯孝尚，尾川順子，森本睦子，はやぶさ２の軌道設計，第55回宇宙科学技術連合講演会，1D03，2011.11.30，松山.</li>
-    <li>津田雄一，「はやぶさ２」のシステム, 第12回宇宙科学シンポジウム，S1-06，2012.1.5，相模原.</li>
-    <li>Tsuda, Y., Sail Surface Design of Spinning Solar Sail Based on Attitude Dynamics, 22nd JAXA Workshop on
-      Astrodynamics and Flight Mechanics, B-9, 2012.7.30, Sagamihara.</li>
-    <li>津田雄一，はやぶさ２プロジェクトチーム，はやぶさ２のミッション解析とシステム設計，第56回宇宙科学技術連合講演会，3A02，2012.11.22，別府．</li>
-    <h1 class="w3-large w3-text-tsudalabblue"><b>2011</b></h1>
-    <li>津田雄一，太陽系探査の将来，第11回宇宙科学シンポジウム，S5-06，2011.1.5，相模原.</li>
-    <li>Tsuda, Y., Ogawa, N., Morimoto, M., Kawaguchi, J., Trajectory Design of Hayabusa-2, JAXA Workshop on
-      Astrodynamics and Flight Mechanics, A-5, 2011.7.26, Sagamihara.</li>
-      <h1 class="w3-large w3-text-tsudalabblue"><b>2010</b></h1>
-    <li>Tsuda, Y., Saiki, T., Funase, R., Mimasu, Y., Shirasawa, Y., Uo, T., Kawauchi, H., Ishibashi, S.,
-      Taniguchi, S., Attitude Determination and Control Operation of IKAROS in Initial On-Orbit Phase, JAXA
-      Workshop on Astrodynamics and Flight Mechanics, A-5, 2010.7.26, Sagamihara.</li>
-    <li>津田雄一，佐伯孝尚，船瀬龍，池田人，三桝裕也，白澤洋次，山口智宏，中宮賢樹，IKAROSにおける姿勢軌道ダイナミクス同定，第54回宇宙科学技術連合講演会，2S16，2010.11.18，静岡.</li>
-    <h1 class="w3-large w3-text-tsudalabblue"><b>2009</b></h1>
-    <li>津田雄一, 特殊環境下の誘導航法, ALL-JAXAシンポジウム, 筑波, 2009.6.24.</li>
-    <li>Tsuda, Y., Relative Orbit Determination for Formation Flight Based on Unscented Transformation, JAXA
-      Workshop on Astrodynamics and Flight Mechanics, A-12, 2009.</li>
-    <li>Terui, F., Tsuda, Y., Ogawa, N., Mori, O, Funase, R., Ikeda, S., Guidance and Control of the Spacecraft to
-      Collide with the Asteroid 1999JU3, JAXA Workshop on Astrodynamics and Flight Mechanics, C-15, 2009.</li>
-    <li>津田雄一, ハミルトン系の構造を厳密に保存する軌道の状態遷移行列の計算法, 第53回宇宙科学技術連合講演会, 1I16, 2009.9.9, 京都.</li>
-    <h1 class="w3-large w3-text-tsudalabblue"><b>2008</b></h1>
-    <li>津田雄一, 山本高行, 有人月輸送システムの軌道計画, 宇宙輸送シンポジウム, Sagamihara, 2008.1.28-29.</li>
-    <li>津田雄一, スピン型ソーラーセイルの姿勢安定性解析, ALL-JAXAシンポジウム, 2008.6.24-25, 相模原</li>
-    <h1 class="w3-large w3-text-tsudalabblue"><b>2007</b></h1>
-    <li>Tsuda, Y. and Matsumoto, M., Globally Optimum Formation Design Strategy for High-Elliptic Formation
-      Flying, The 17th JAXA Workshop on Astrodynamics and Flight Mechanics, B-17, July 23-24, 2007, Sagamihara.
-    </li>
-    <li>Tsuda, Y., Preliminary Orbit Design of Jupiter System Tour for Jovian Magnetospheric Science Mission, The
-      17th JAXA Workshop on Astrodynamics and Flight Mechanics, C-8, Sagamihara, July 23-24, 2007, Sagamihara.
-    </li>
-    <li>Shirasawa, Y., Iwakura, A. and Tsuda, Y., Evaluation of the Attitude Control System Using Three
-      Dimensional Reaction Wheel for Micro Satellites, The 17th Workshop on Astrodynamics snd Flight Mechanics,
-      A-19, Ssagamihara, Jul 24, 2007.</li>
-    <li>Okada, S., Shirasawa, Y., Miwa, Y., Mori, O., Kawakatsu, Y., Tsuda, Y., Yamamoto, T., Funase, R. and
-      Kawaguchi, J., Design of Attitude Control System for H2A piggyback Solar Sail Spacecraft, The 17th Workshop
-      on Astrodynamics snd Flight Mechanics, A-8, Sagamihara, July 23, 2007.</li>
-    <li>津田雄一, 大型柔軟薄膜を有するスピン型宇宙機の姿勢安定解析, 宇宙構造・材料シンポジウム, 26, 相模原, 2007.11.22.</li>
-    <h1 class="w3-large w3-text-tsudalabblue"><b>2006</b></h1>
-    <li>津田雄一, 中谷幸司, 森治, 佐伯孝尚, 山本高行, 川口淳一郎, 矢野創, 田中真, M-Vサブペイロードを利用したソーラー電力セイル実験小型衛星の開発, 第6回宇宙科学シンポジウム, 相模原,
-      2006.1.</li>
-    <li>津田雄一，スピン型ソーラーセイルのダイナミクス解析 ，The 16th Workshop on Astrodynamics and Flight Mechanics, C-18, 相模原, 2006.8.2.
-    </li>
-    <li>中谷幸司，津田雄一，森治，山本高行，佐伯孝尚，川口 淳一郎，サブペイロード領域を利用したソーラー電力セイル実験とその解析， 第22回宇宙構造材料シンポジウム，Sesson3-9，相模原, 2006.12.1.
-    </li>
-    <h1 class="w3-large w3-text-tsudalabblue"><b>2005</b></h1>
-    <li>津田雄一, 戸田智朗, 市川勉, 斎藤義文, SCOPEにおける編隊飛行のための測距システムと軌道設計, 15th ISAS Workshop on Astrodynamics and Flight
-      Mechanics, C-22, 2005.7.</li>
-    <li>津田雄一, 森治, 改良多粒子系モデルによるソーラーセイル膜の挙動解析, 15th ISAS Workshop on Astrodynamics and Flight Mechanics, B-3,
-      2005.7.</li>
-      <h1 class="w3-large w3-text-tsudalabblue"><b>2004</b></h1>
-    <li>西山和孝, 津田雄一, 森治，はやぶさの巡航時運用， 14th ISAS Workshop on Astrodynamics and Flight Mechanics, pp.381-386, 2004.7.
-    </li>
-    <li>津田雄一, 任意形状に対応した多粒子系モデルによる薄膜挙動解析手法について, The 14th Workshop on Astrodynamics and Flight Mechanics, A-2, 相模原,
-      2004.7.26.</li>
-    <li>津田雄一，竹内伸介，森治，川口淳一郎，峯杉賢治，西村祐介，南川幸毅, 観測ロケットを用いたソーラーセール膜展開実験の飛翔結果について, 第48回宇宙科学技術連合講演会, 2C17, 2004.11.5, 福井.
-    </li>
-    <li>津田雄一, 市川勉, 戸田知朗, 前澤洌, 斎藤義文, SCOPEフォーメーションフライトミッションにおける相対軌道決定手法, 第5回計測自動制御学会システムインテグレーション部門講演会 (SI2004),
-      2004.12.18.</li>
-      <h1 class="w3-large w3-text-tsudalabblue"><b>2003</b></h1>
-    <li>津田雄一, 大規模フォーメーションフライトを実現する分散型情報アーキテクチャ, The 13th Workshop on Astrodynamics and Flight Mechanics, 相模原,
-      2003.7.24.</li>
-    <li>津田雄一, 川口淳一郎, 村上誠典, l310ロケットによるソーラーセール展開実験とその運動解析, The 13th Workshop on Astrodynamics and Flight Mechanics,
-      A-15, 相模原, 2003.7.24.</li>
-    <li>津田雄一, 澤井秀次郎, 中須賀真一, 寺薗淳也, 実ミッションと宇宙工学教育の効果的な関係について, 第47回宇宙科学技術連合講演会, 2B7, 2003.11.18.</li>
-    <li>津田雄一, 河原吉伸, 大規模フォーメーションフライトにおける誘導則の大域的最適化手法, 第47回宇宙科学技術連合講演会, 2H4, 2003.11.18.</li>
-    <h1 class="w3-large w3-text-tsudalabblue"><b>2002</b></h1>
-    <li>Tsuda, Y. and Nakasuka, S., Optimal Guidance Law for Stand-by Orbit Insertion for Formation Flying
-      Spacecraft, The 12th ISAS Workshop on Astrodynamics and Flight Mechanics, A-4, 相模原, 2002.7.29 .</li>
-    <li>津田雄一, 酒匂信匡, 永島隆, 金色一賢, 鵜川晋一, 中須賀真一, 東京大学CubeSat-Iの現状 –開発を終えて-, 2002年度日本機会学会年次大会, 3322, 東京, 2002.9.26.</li>
-    <h1 class="w3-large w3-text-tsudalabblue"><b>2001</b></h1>
-    <li>津田雄一, 酒匂信匡, 永島隆, 伊藤孝浩, 有川善久, 宮村典秀, 金色一賢, 桑田良昭, 鵜川晋一, 小笠原志朗, 村上誠典, 石川早苗, 中須賀真一, 東大CubeSatの意義と現状
-      ~地上試験と最終インテグレーション~, 第45回宇宙科学技術連合講演会, 01-3D6, 浜松, 2001.10.19.</li>
-      <h1 class="w3-large w3-text-tsudalabblue"><b>1999</b></h1>
-    <li>中須賀真一, 青木隆平, 津田雄一, 川勝康弘, 木下貴博, 長島隆一, 膜状太陽光発電システム(｢ふろしき｣)衛星を用いた宇宙機システムの概念検討, 平成10年度宇宙輸送シンポジウム, pp194-197,
-      相模原,1999.1.</li>
-    <li>中須賀真一, 青木隆平, 津田雄一, 長島 隆一, 川勝 康弘, 佐藤正雄, 桐谷浩太郎, 谷沢一雄, 大面積膜状太陽電池によるエネルギー獲得 ～ふろしき衛星の提案～, 第18回宇宙エネルギーシンポジウム,
-      相模原,1999.2.</li>
-      <h1 class="w3-large w3-text-tsudalabblue"><b>1998</b></h1>
-    <li>Tsuda, Y., Fujiwara, T., Nakamura, T.,and Nakasuka, S., The Attitude Control for Motion Synchronization to
-      Capture Free-Flying Object', Proceedings of the 8th ISAS Workshop on Astrodynamics and Flight Mechanics,
-      pp348-354, 相模原,1998.7.</li>
-  </ul>
+        2015.8.12.</p>
+
+
+    <h1 class="w3-xlarge w3-text-tsudalabblue" id="conferenceProceedingsJapan"><b>Conference Proceedings (Japan).</b></h1>
+    <p>津田雄一，渡邊誠一郎，はやぶさ２プロジェクトチーム，小惑星探査機はやぶさ２: 運用状況及び小惑星近傍フェーズに向けた準備状況，第17回宇宙科学シンポジウム，S4-001，2017.1.6.</p>
+      <p> 津田雄一，渡邊誠一郎，はやぶさ２プロジェクトチーム，小惑星探査機「はやぶさ２」の運用状況：巡航開始から地球スイングバイまで，第16回宇宙科学シンポジウム，S4-002，2016.1.6.</p>
+      <p>Tsuda, Y., Robust Trajectory Design for Mars System Sample Return Mission（ロバスト性を考慮した火星圏サンプルリターンのための軌道設計），2016 ISAS Workshop on Astrodynamics and Flight Mechanics, B-2,
+        Sagamihara, 2016.7.25.</p>
+
     <h1 class="w3-xlarge w3-text-tsudalabblue" id="invitedTalks"><b>Invited Talks / Keynote Lectures.</b></h1>
-        <ul>
-          <h1 class="w3-large w3-text-tsudalabblue"><b>2016</b></h1>
-          <li>津田雄一，はやぶさ２における宇宙工学の役割 6th UNISEC Takumi Conference, 2016.2.29. (Invited)</li>
-          <li>津田雄一，小惑星探査機はやぶさ２の航法誘導技術と地球スイングバイ運用，第3回制御部門マルチシンポジウム(MSCS2016)，名古屋・南山大学，2016.3.7．(Invited) </li>
-          <li>津田雄一, はやぶさ２の技術と運用状況，日本航空宇宙学会北部支部講演会，札幌・北海道大学，2016.3.9. (Invited)</li>
-          <li>Tsuda,. Y., Yoshikawa, M., Takanao, S., Watanabe, S., Hayabusa2 – Round Trip Exploration to Near-Earth
-            Asteroid ‘Ryugu’, Misasa International Symposium 2016 (Frontiers in Earth and Planetary Materials Research,
-            S4-01, Misasa, 2016.3.10. (Invited)</li>
-            <h1 class="w3-large w3-text-tsudalabblue"><b>2015</b></h1>
-          <li>津田雄一，小惑星探査機はやぶさ２のミッション・開発成果・初期運用状況，深宇宙探査学シンポジウム，柏，2015.3.10. （Invited）</li>
-          <li>津田雄一，はやぶさ２の深宇宙航行技術，第132回日本航海学会春季講演会， 横浜，2015.5.29，（Keynote）</li>
-          <h1 class="w3-large w3-text-tsudalabblue"><b>2013</b></h1>
-          <li>津田雄一，小天体探査の工学的側面：はやぶさ２と将来計画（英題：Engineering Aspect of Small Body Exploration -Hayabusa2 and
-            Future），日本地球惑星科学連合2013年大会（Japan Geoscience Union Meeting 2013）, U07-11，幕張，2013.5.19.（Invited）</li>
-            <h1 class="w3-large w3-text-tsudalabblue"><b>2011</b></h1>
-          <li>Tsuda, Y., Mori, O., Funase, R., Sawada, H., Yamamoto, T., Saiki, T., Endo, T. and Kawaguchi, J., Flight
-            Result of IKAROS Deep Space Solar Sail Demonstrator, 9th Low Cost Planetary Missions Conference, APL,
-            Laurel, MD, USA, 2011.6.21. (Invited)</li>
-          <li>Tsuda, Y., Mori, O., Funase, R., Sawada, H., Yamamoto, T., Saiki, T., Endo, T., Yonekura, K., Hoshino, H.
-            and Kawaguchi, J., Achievement of IKAROS – Japanese Interplanetary Deep Space Solar Sail Demonstration
-            Mission, 7th IAA Symposium on Realistic Near-Term Advanced Scientific Space Missions, Aosta, Italy,
-            2011.7.12. (Invited)</li>
-            <h1 class="w3-large w3-text-tsudalabblue"><b>2010</b></h1>
-          <li>Tsuda, Y., Mori, O., Funase, R., Saiki, T., Sawada, H., Yamamoto, T., Endo, T., Kawaguchi, J., Minamiono,
-            H., Yonekura, K. and Hoshino, H., Initial Flight Result of IKAROS and Perspective to Future Deep Space
-            Missions by Solar Power Sail Technology, European Planetary Science Conference, MT6, 2010.9.20, Rome.
-            (Invited)</li>
-            <h1 class="w3-large w3-text-tsudalabblue"><b>2009</b></h1>
-          <li>Tsuda, Y., Hayabusa-2 Mission Design and System Engineering, Invited Talk, International Workshop on Small
-            Body Exploration by Physical Interactions, 2009.10.20, Tokyo, Japan. (Invited)</li>
-            <h1 class="w3-large w3-text-tsudalabblue"><b>2006</b></h1>
-          <li>津田雄一, M-Vロケット・サブペイロードによる小型衛星打ち上げについて，日本機械学会2006年度年次大会，F07-3，熊本大学，2006.9.（Keynote）</li>
-        </ul>
+    <p>津田雄一，はやぶさ２における宇宙工学の役割 6th UNISEC Takumi Conference, 2016.2.29.</p>
+      <p> Tsuda,. Y., Yoshikawa, M., Takanao, S., Watanabe, S., Hayabusa2 – Round Trip Exploration to Near-Earth
+        Asteroid ‘Ryugu’, Misasa International Symposium 2016 (Frontiers in Earth and Planetary Materials Research,
+        S4-01, Misasa, 2016.3.10. </p>
+      <p>Tsuda, Y., Mori, O., Funase, R., Sawada, H., Yamamoto, T., Saiki, T., Endo, T., Yonekura, K., Hoshino, H.
+        and Kawaguchi, J., Achievement of IKAROS – Japanese Interplanetary Deep Space Solar Sail Demonstration
+        Mission, 7th IAA Symposium on Realistic Near-Term Advanced Scientific Space Missions, Aosta, Italy,
+        2011.7.12.</p>
+
+
+    <div class="w3-container w3-center">
+      <a target="" rel="noopener"  href="Publications/publications_EN.html">
+      <p><button class="w3-button w3-tsudalabblue-button" style="padding: 15px; border-radius: 15px"><span style="font-size:16px;">See full list of Publications</span></button></p>
+    </a>
+    </div>
+
   </div>
    
   <!-- Contact -->
@@ -1009,8 +543,8 @@ p.thick {
   <div class="w3-container" id="links" style="margin-top:75px">
     <h1 class="w3-xxxlarge  w3-text-tsudalabblue"><b>Links.</b></h1>
     <hr style="width:50px;border:5px solid var(--main-color)" class="w3-round">
-    <div class="w3-row-padding">
-    <div class="w3-col m3 w3-margin-bottom">
+    <div class="w3-row-padding_mod">
+    <div class="w3-col ml3 m4 w3-margin-bottom">
         <a target="_blank" rel="noopener noreferrer"  href="https://www.soken.ac.jp/en/">
         <div class="w3-card-2 w3-light-grey">
           <img src="Images/sokendai_logo_web.png" alt="SOKENDAI" style="width:100%">
@@ -1020,7 +554,7 @@ p.thick {
         </div>   
       </a> 
     </div>
-  <div class="w3-col m3 w3-margin-bottom">
+  <div class="w3-col ml3 m4 w3-margin-bottom">
       <a target="_blank" rel="noopener noreferrer"  href="http://www.isas.jaxa.jp/sokendai/">
       <div class="w3-card-2 w3-light-grey">
         <img src="Images/sokendai_logo_web.png" alt="SOKENDAI at ISAS" style="width:100%">
@@ -1030,7 +564,7 @@ p.thick {
       </div>   
     </a> 
   </div>
-  <div class="w3-col m3 w3-margin-bottom">
+  <div class="w3-col ml3 m4 w3-margin-bottom">
       <a target="_blank" rel="noopener noreferrer"  href="http://www.jaxa.jp/">
         <div class="w3-card-2 w3-light-grey">
         <img src="Images/Jaxa_logo_web.png" alt="JAXA" style="width:100%">
@@ -1040,28 +574,27 @@ p.thick {
       </div>   
     </a> 
 </div>
-<div class="w3-col m3 w3-margin-bottom">
+<div class="w3-col ml3 m4 w3-margin-bottom">
    <a target="_blank" rel="noopener noreferrer" href="http://www.isas.jaxa.jp/">
       <div class="w3-card-2 w3-light-grey">
-      <img src="Images/isas_logo.jpg" alt="ISAS" style="width:100%">
+      <img src="Images/isas_logo.png" alt="ISAS" style="width:100%">
       <div class="w3-container w3-center">
         <p>Institute of Space and Astronautical Science (ISAS)</p>
       </div>
     </div>   
   </a> 
 </div>
-<div class="w3-row-padding">
-<div class="w3-col m3 w3-margin-bottom">
+<div class="w3-col ml3 m4 w3-margin-bottom">
     <a target="_blank" rel="noopener noreferrer"  href="http://www.hayabusa2.jaxa.jp/">
       <div class="w3-card-2 w3-light-grey">
-      <img src="https://global.jaxa.jp/projects/hayabusa2/images/topics_20200522_hayabusa2.jpg" alt="Hayabusa 2" style="width:100%">
+      <img src="Images/haya2_web_logo.jpg" alt="Hayabusa 2" style="width:100%">
       <div class="w3-container w3-center">
         <p>Hayabusa 2 Mission</p>
       </div>
     </div>   
   </a> 
 </div>
-<div class="w3-col m3 w3-margin-bottom">
+<div class="w3-col ml3 m4 w3-margin-bottom">
     <a target="_blank" rel="noopener noreferrer"  href="http://www.hayabusa.isas.jaxa.jp/kawalab/?lang=en">
       <div class="w3-card-2 w3-light-grey">
       <img src="Images/kawalab_logo.png" alt="Kawaguchi Lab" style="width:100%">
@@ -1071,8 +604,7 @@ p.thick {
     </div>   
   </a> 
 </div>
-<div class="w3-col m3 w3-margin-bottom">
-  <div class="w3-row-padding">
+<div class="w3-col ml3 m4 w3-margin-bottom">
     <a target="_blank" rel="noopener noreferrer" href="http://kawakatsu.isas.jaxa.jp/">
       <div class="w3-card-2 w3-light-grey">
       <img src="Images/kawakatsu_logo.png" alt="Kawakatsu Lab" style="width:100%">
@@ -1093,8 +625,6 @@ p.thick {
 <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
 
 <script>
-
-var darkModeBool = false;
 
 // Script to open and close sidebar
 function w3_open() {
@@ -1171,8 +701,6 @@ for (i = 0; i < coll.length; i++) {
 
 </script>
 
-
-</script>
 
 
 

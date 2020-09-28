@@ -32,9 +32,9 @@ h1,h2,h3,h4,h5,h6{font-family:"Segoe UI",Arial,sans-serif;font-weight:400;margin
 hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-image{max-width:100%;height:auto}img{vertical-align:middle}a{color:inherit}
 .w3-image-menu{max-width:10%;height:auto;float:right;padding: 7px 0}img{vertical-align:middle}a{color:inherit}
-.w3-table,.w3-table-all{border-collapse:collapse;border-spacing:0;width:100%;display:table}.w3-table-all{border:1px solid #ccc}
-.w3-bordered tr,.w3-table-all tr{border-bottom:1px solid #ddd}.w3-striped tbody tr:nth-child(even){background-color:#f1f1f1}
-.w3-table-all tr:nth-child(odd){background-color:#fff}.w3-table-all tr:nth-child(even){background-color:#f1f1f1}
+.w3-table,.w3-table-all{border-collapse:collapse;border-spacing:0;width:100%;display:table}.w3-table-all{border:1px solid var(--table-border-darker)}
+.w3-bordered tr,.w3-table-all tr{border-bottom:1px solid var(--table-border-lighter)}.w3-striped tbody tr:nth-child(even){background-color:#f1f1f1}
+.w3-table-all tr:nth-child(odd){background-color:var(--table-background-odd)}.w3-table-all tr:nth-child(even){background-color:var(--table-background-even)}
 .w3-hoverable tbody tr:hover,.w3-ul.w3-hoverable li:hover{background-color:#ccc}.w3-centered tr th,.w3-centered tr td{text-align:center}
 .w3-table td,.w3-table th,.w3-table-all td,.w3-table-all th{padding:8px 8px;display:table-cell;text-align:left;vertical-align:top}
 .w3-table th:first-child,.w3-table td:first-child,.w3-table-all th:first-child,.w3-table-all td:first-child{padding-left:16px}
@@ -75,14 +75,14 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-col.s1{width:8.33333%}.w3-col.s2{width:16.66666%}.w3-col.s3{width:24.99999%}.w3-col.s4{width:33.33333%}
 .w3-col.s5{width:41.66666%}.w3-col.s6{width:49.99999%}.w3-col.s7{width:58.33333%}.w3-col.s8{width:66.66666%}
 .w3-col.s9{width:74.99999%}.w3-col.s10{width:83.33333%}.w3-col.s11{width:91.66666%}.w3-col.s12{width:99.99999%}
-@media (min-width:601px){.w3-col.m1{width:8.33333%}.w3-col.m2{width:16.66666%}.w3-col.m3,.w3-quarter{width:24.99999%}.w3-col.m4,.w3-third{width:33.33333%}
-.w3-col.m5{width:41.66666%}.w3-col.m6,.w3-half{width:49.99999%}.w3-col.m7{width:58.33333%}.w3-col.m8,.w3-twothird{width:66.66666%}
+@media (min-width:601px){.w3-col.m1{width:8.33333%}.w3-col.m2{width:16.66666%}.w3-col.m3,.w3-quarter{display:table;width:24.99999%}.w3-col.m4,.w3-third{display:table;width:33.33333%}
+.w3-col.m5{width:41.66666%}.w3-col.m6,.w3-half{display:table;width:49.99999%}.w3-col.m7{width:58.33333%}.w3-col.m8,.w3-twothird{width:66.66666%}
 .w3-col.m9,.w3-threequarter{width:74.99999%}.w3-col.m10{width:83.33333%}.w3-col.m11{width:91.66666%}.w3-col.m12{width:99.99999%}}
-@media (min-width:1025px){.w3-col.ml1{width:8.33333%}.w3-col.ml2{width:16.66666%}.w3-col.ml3{width:24.99999%}.w3-col.ml4{width:33.33333%}
+@media (min-width:1025px){.w3-col.ml1{width:8.33333%}.w3-col.ml2{display:table;width:16.66666%}.w3-col.ml3{display:table;width:24.99999%}.w3-col.ml4{display:table;width:33.33333%}
 .w3-col.ml5{width:41.66666%}.w3-col.ml6{width:49.99999%}.w3-col.ml7{width:58.33333%}.w3-col.ml8{width:66.66666%}
 .w3-col.ml9{width:74.99999%}.w3-col.ml10{width:83.33333%}.w3-col.ml11{width:91.66666%}.w3-col.ml12{width:99.99999%}}
-@media (min-width:1223px){.w3-col.l1{width:8.33333%}.w3-col.l2{width:16.66666%}.w3-col.l3{width:24.99999%}.w3-col.l4{width:33.33333%}
-.w3-col.l5{width:41.66666%}.w3-col.l6{width:49.99999%}.w3-col.l7{width:58.33333%}.w3-col.l8{width:66.66666%}
+@media (min-width:1223px){.w3-col.l1{width:8.33333%}.w3-col.l2{width:16.66666%}.w3-col.l3{display:table;width:24.99999%}.w3-col.l4{display:table;width:33.33333%}
+.w3-col.l5{width:41.66666%}.w3-col.l6{display:table;width:49.99999%}.w3-col.l7{width:58.33333%}.w3-col.l8{width:66.66666%}
 .w3-col.l9{width:74.99999%}.w3-col.l10{width:83.33333%}.w3-col.l11{width:91.66666%}.w3-col.l12{width:99.99999%}}
 .w3-rest{overflow:hidden}.w3-stretch{margin-left:-16px;margin-right:-16px}
 .w3-content,.w3-auto{margin-left:auto;margin-right:auto}.w3-content{max-width:980px}.w3-auto{max-width:1140px}
@@ -158,25 +158,47 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
   --theme-background-color:#fff;
   --theme-font-color: #000;
   --main-color:#333366;
+  --main-color-secondary:#ADADC1;
   --gray-color-background: #f1f1f1;
   --gray-color-text: #000;
   --button-color-text: #fff;
   --collapsable-select-color: #999;
+  --table-background-odd:#fff;
+  --table-background-even: #f1f1f1;
+  --table-background-subheader: #ADADC1;
+  --table-text-subheader: #333366;
+  --table-border-darker: #ccc;
+  --table-border-lighter: #ddd;
 }
 
 [data-theme="dark"] {
   --theme-background-color:#121212;
   --theme-font-color: #fff;
   --main-color:#ADADC1;
+  --main-color-secondary:#333366;
   --gray-color-background: #1E1E1E;
   --gray-color-text: #fff;
   --button-color-text: #000;
   --collapsable-select-color: #444;
+  --table-background-odd:#121212;
+  --table-background-even: #1E1E1E;
+  --table-background-subheader: #797987;
+  --table-text-subheader: #fff;
+  --table-border-darker: #222;
+  --table-border-lighter: #333;
 }
 
 /* Colors */
 .w3-tsudalabblue,.w3-hover-tsudalabblue:hover{color:#fff!important;background-color:#333366!important}
+/*.w3-tsudalabblue,.w3-hover-tsudalabblue:hover{color:var(--button-color-text)!important;background-color:var(--main-color)!important}*/
+
 .w3-tsudalabblue-button,.w3-hover-tsudalabblue-button:hover{color:var(--button-color-text)!important;background-color:var(--main-color)!important}
+.w3-tsudalabtablesubheader {
+  color:var(--table-text-subheader)!important;
+  background-color:var(--table-background-subheader)!important;
+}
+
+
 .w3-light-grey,.w3-hover-light-grey:hover,.w3-light-gray,.w3-hover-light-gray:hover{color:var(--gray-color-text)!important;background-color:var(--gray-color-background)!important}
 
 .w3-amber,.w3-hover-amber:hover{color:#000!important;background-color:#ffc107!important}
@@ -266,6 +288,11 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-border-pale-red,.w3-hover-border-pale-red:hover{border-color:#ffe7e7!important}.w3-border-pale-green,.w3-hover-border-pale-green:hover{border-color:#e7ffe7!important}
 .w3-border-pale-yellow,.w3-hover-border-pale-yellow:hover{border-color:#ffffcc!important}.w3-border-pale-blue,.w3-hover-border-pale-blue:hover{border-color:#e7ffff!important}
 
+.w3-button-centered{
+  margin: 0;
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, -0%);
+}
 
 @media screen and (prefers-color-scheme: dark) {
 	body {
@@ -275,7 +302,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 }
 
 /* Add media queries for responsiveness */
-@media screen and (max-width: 400px) {
+@media (max-width:400px) {
   .w3-jumbo {
     font-size:48px!important;
   }
@@ -389,4 +416,59 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
   transition: max-height 0.2s ease-out;
   background-color: var(--gray-color-background);
   color: var(--gray-color-text);
+}
+
+/* Floating back button */
+.w3-floating-button {
+  display: 'block'; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 2; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 15px; /* Rounded corners */
+  font-size: 16px; /* Increase font size */
+}
+
+.w3-floating-button:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+
+.filterDiv {
+  display: "";
+}
+
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: var(--gray-color-background);
+  color: var(--gray-color);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--collapsable-select-color);
+}
+
+.btn.activeType {
+  background-color: var(--collapsable-select-color);
+}
+
+.btn.activeAuthor {
+  background-color: var(--collapsable-select-color);
+}
+
+.btn.activeYear {
+  background-color: var(--collapsable-select-color);
+}
+
+.wrapper {
+  text-align: center;
 }
