@@ -154,6 +154,13 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-transparent,.w3-hover-none:hover{background-color:transparent!important}
 .w3-hover-none:hover{box-shadow:none!important}
 
+
+@media (max-width:1222px) {.w3-publications{margin-right:16px!important; float:left!important; width:30%}}
+@media (min-width:601px) {.w3-publications{margin-right:16px!important; float:left!important; width:30%}}
+@media (min-width:1223px) {.w3-publications{margin-right:16px!important; float:left!important; width:20%}}
+@media (max-width:601px) {.w3-publications{width:100%}}
+
+
 :root {
   --theme-background-color:#fff;
   --theme-font-color: #000;
