@@ -26,6 +26,9 @@ body.dark-mode img {
   box-sizing: border-box;
 }
 
+.centerImage img{cursor:pointer}
+
+
 .box {
   float: left;
   width: 50%;
@@ -136,6 +139,19 @@ p.thick {
 <a href="../../homepage_JA.html#publications" onclick="w3_close()" class="w3-button w3-tsudalabblue-button w3-floating-button w3-hide-medium w3-hide-large" id="myBtnSmall" title="Go back to main page" style="margin-left: -75px;"><i class="fa fa-arrow-left"></i></a> 
 <a href="../../homepage_JA.html#publications" onclick="w3_close()" class="w3-button w3-tsudalabblue-button w3-floating-button w3-hide-small" id="myBtnBig" title="Go back to main page" style="margin-left: -75px;"><i class="fa fa-arrow-left"></i> Back to main page</a> 
 
+<!-- Scroll up floating button -->
+<button onclick="topFunction()" class="w3-button w3-tsudalabblue-button w3-floating-button w3-button-centered w3-hide-small" id="myBtnTopBig" style="display:none; left:50%" title="Go to top"><i class="fa fa-arrow-up"></i> Go to top</button> 
+<button onclick="topFunction()" class="w3-button w3-tsudalabblue-button w3-floating-button w3-button-centered w3-hide-medium w3-hide-large" id="myBtnTopSmall" style="display:none; left:50%" title="Go to top"><i class="fa fa-arrow-up"></i></button> 
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:340px;margin-right:40px">
 
@@ -145,34 +161,122 @@ p.thick {
     <h1 class="w3-xxxlarge w3-text-tsudalabblue"><b>Astrodynamics.</b></h1>
     <hr style="width:50px;border:5px solid var(--main-color)" class="w3-round">
     <p>
+      In recent years, different trends in space development are occurring. From one side, there is
+      a push for re-usability and to design systems that enable repeatable access to space. On the
+      other side, there have been numerous one-off missions, as
+      well as closely related missions (Hayabusa and Hayabusa 2) to various celestial bodies. With the
+      expansion of these trends and the developing of newer missions (OKEANOS, DESTINY +), the
+      question about a low-cost recurring architecture for deep space exploration missions and its possible
+      benefits arises.
+      The main design focus is the location of a Deep Space Orbit Transfer Vehicle (DS-OTV) in the
+      Earth’s vicinity that would allow exploration missions to rendezvous and dock with it, re-fuel, and
+      continue towards their main objective, including a possible Earth swing-by. This architecture can
+      benefit from lower mass at launch for the successive missions, allowing for smaller and lower-cost
+      launchers like the Epsilon or the future H3 to be used, higher availability of launch windows and
+      flexibility against delays and unforeseen circumstances. The design of its parking orbit is crucial,
+      as it needs to be accessible while keeping low stationkeeping costs. A preliminary analysis on the
+      characteristics and feasibility of the candidate orbit families in the Sun-(Earth+Moon) system is
+      carried out in this investigation.
 
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec leo nunc, ultricies sed neque at, bibendum lobortis nisl. Ut fermentum vitae mi ac tincidunt. Sed id purus nec sapien cursus scelerisque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum ullamcorper velit a luctus. Suspendisse molestie urna at convallis accumsan. Donec sollicitudin felis faucibus tortor placerat lobortis vestibulum at ipsum. Cras ullamcorper ac sapien ut accumsan. Duis et nisi quis arcu dictum rhoncus eget gravida nisi. Mauris diam felis, lacinia eu ante at, consequat egestas sapien. Donec posuere mauris in nulla pharetra bibendum. Praesent ut felis ullamcorper massa laoreet pretium. Cras magna lorem, viverra a nunc a, efficitur mollis libero. Praesent convallis libero et ipsum hendrerit, eu iaculis leo ullamcorper. Etiam sagittis sollicitudin nulla, eget elementum sapien viverra eget.
-      
-      Praesent vulputate lobortis suscipit. Aliquam quis dui cursus, feugiat orci in, finibus nisl. Maecenas quis risus quam. In semper interdum velit, sit amet consectetur ex mollis non. Ut vitae massa quis dolor efficitur fermentum. Aliquam eu dolor et nulla condimentum fringilla. Nulla ac urna feugiat massa porttitor interdum quis sit amet felis. Vestibulum mattis, neque eu dictum varius, risus orci vulputate sem, et lacinia dui tortor vitae elit. Fusce quis tellus placerat, auctor est imperdiet, mattis dolor.
-      
-      Mauris aliquam neque sit amet massa vehicula dictum. Aliquam non lorem quis nisi fermentum sodales eu eleifend erat. Quisque at lacus id tellus maximus ultrices sed in velit. Maecenas in egestas tellus, vitae viverra turpis. Curabitur vitae purus sodales, iaculis tortor in, cursus augue. Maecenas sed leo a erat tincidunt euismod non in eros. Nulla porttitor id ante non faucibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-      
-      Aliquam suscipit nisl in risus suscipit, at sagittis felis vehicula. Aliquam tincidunt accumsan dui ut iaculis. Fusce eu accumsan lacus, id vehicula neque. Sed dignissim consectetur erat, quis vehicula arcu imperdiet a. Suspendisse pharetra interdum eros, vitae efficitur nunc suscipit ut. Phasellus egestas dolor neque, sed semper mi maximus tincidunt. Pellentesque auctor placerat urna, non fringilla tellus ullamcorper non. Maecenas condimentum massa eu dui iaculis tincidunt. Nullam a arcu felis.
-      
-      Vivamus lacinia magna quis dui tincidunt pharetra. Pellentesque eu bibendum diam. Phasellus volutpat malesuada erat, quis vehicula leo faucibus non. Aliquam convallis ornare enim porttitor dictum. Sed justo ligula, ultrices sed enim sed, blandit finibus purus. Nunc dapibus quis sapien at placerat. Pellentesque faucibus, dolor a tincidunt porttitor, turpis turpis rutrum sem, eu pulvinar felis dui eget lorem. 
-       
-    
+       <div class="w3-margin-bottom w3-light-grey centerImage">
+        <img src="../Images/astro_familyTransfer.png" style="width:100%" onclick="onClick(this)" alt="Transfer between two orbits of different families." class="image">
+        <div class="w3-container w3-center">
+          <p><span style="font-size:20px;">Transfer between two orbits of different families.</span></p>
+        </a>
+        </div>
+      </div>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed suscipit vulputate nisl eu lacinia. Donec in nunc egestas, tempor ex ut, gravida ipsum. Fusce et libero vel nibh imperdiet euismod ac et lectus. Fusce id ex sed purus porttitor tristique. Maecenas a tempor justo. Suspendisse fringilla suscipit magna id tempus. Aenean auctor nisi ut ex lacinia lacinia. Maecenas ultricies cursus lorem, sit amet euismod justo consectetur nec. Nunc molestie hendrerit magna, quis lacinia justo porta at. Sed eros tortor, interdum et tortor et, porttitor sagittis metus. Fusce est turpis, aliquet at nunc in, efficitur luctus arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras molestie justo in est scelerisque, semper dictum sapien bibendum. Donec venenatis felis ac justo semper tincidunt. Sed placerat, nibh quis scelerisque tincidunt, nisl arcu rhoncus turpis, a consectetur orci velit id dui.
 
-Etiam lectus purus, dapibus lobortis quam vitae, porta consectetur ex. Phasellus placerat enim ac justo mollis, ut pellentesque lacus molestie. Mauris interdum et justo sit amet venenatis. Vivamus tempor auctor tristique. Mauris ultrices maximus odio, non venenatis purus vehicula et. Maecenas ut orci elementum, accumsan quam ut, porta purus. Mauris in sapien malesuada, convallis dolor non, porta quam. Maecenas lorem ex, suscipit et faucibus ut, efficitur vel lacus. Suspendisse convallis consectetur est, sed volutpat leo tempor vel. Nulla imperdiet, orci at laoreet gravida, mi mauris eleifend mi, eu euismod ligula massa ut metus. Donec rhoncus orci est. Maecenas tempor ipsum at fringilla porta. Ut luctus tincidunt ullamcorper. Praesent venenatis orci at tellus tincidunt, facilisis vestibulum ante consequat.
+      Lagrange point orbits have long been considered for similar purposes and have been extensively
+      studied in the literature. Of special interest are orbits around points L<sub>1,2</sub> and the transfers
+      between them, as their topological structure allows for the existence of stable/unstable manifolds
+      emanating from them that can be used for transfer trajectories. These include planar and vertical
+      Lyapunov, Halo and Near Rectilinear Halo Orbits (NRHO). Other orbits centered in the smaller
+      primary of the system (Earth), such as Distant Retrograde Orbits (DRO), Low Prograde Orbits 
+      and other bifurcation families from them are also interesting as intermediate trajectories.
+      The study consists of the generation of period orbit families of interest in the Sun-(Earth+Moon)
+      CR3BP system by numerical methods such as pseudo-arclength continuation and the classification
+      of the orbits and families with respect to the period, stability, geometry and energy level with the
+      aid of classical dynamical system tools. First, a stability-energy plot that condenses all the previ-
+      ous properties is presented. Here, promising orbits in similar levels of energy can be singled out
+      from their families. Low-energy and impulsive transfer maneuvers are designed between promising
+      members of the families by a search of possible intersection of the stable/unstable manifolds of the orbits. 
+      From selected orbit combinations, useful resonant orbit pairs or groups will be generated on
+      the basis of maximizing rendezvous opportunities between the DS-OTV and the exploration space-
+      craft. A similar framework is used for the design of the transfer trajectories leaving the parking
+      orbit. Emphasis is placed in the creation of chains of orbits that allow the DS-OTV to adapt to the
+      different requirements of successive missions, including energy levels at launch and at the objec-
+      tive, time-of-flight, and fuel consumption. Finally, an on-orbit re-fueling architecture is proposed
+      incorporating the different elements previously studied, and an estimation of the feasibility of the
+      project is carried out.
 
-Etiam tincidunt suscipit neque vitae tempus. Sed euismod imperdiet dui eu scelerisque. Aliquam vel elit a enim tempor bibendum vel eget tellus. Sed tristique quam suscipit ligula pharetra porta. Integer cursus eleifend dui, ut ultricies ligula vehicula sed. Suspendisse bibendum pharetra dui, non ultricies nisl varius sit amet. Morbi ut tincidunt odio. Aliquam erat volutpat. Nullam mattis quam posuere nibh posuere pulvinar. Integer condimentum tortor lorem, at placerat tellus mattis eget. Ut lacus leo, aliquam in odio sed, suscipit semper mi. Vestibulum finibus sapien quis sapien eleifend hendrerit. Donec fermentum eu ex sit amet porta. Duis porttitor fermentum nulla. Suspendisse lorem purus, venenatis vel consequat eu, gravida at libero.
 
-Phasellus eu malesuada dui. Proin pellentesque ante eu nunc varius, eget tincidunt ante lacinia. Aliquam aliquam nulla varius urna ornare hendrerit. Nullam rhoncus, tortor nec venenatis convallis, magna erat interdum augue, eu vestibulum eros urna laoreet nibh. Donec eget eleifend augue. Morbi non justo porttitor, lacinia purus vitae, mattis leo. Duis ut nunc eu erat condimentum interdum. Nunc id tempor nibh. Fusce sagittis ante ipsum, ac dapibus nibh efficitur non. In non vehicula est. Suspendisse ullamcorper massa metus, ac pellentesque justo vestibulum eu. Aliquam placerat lacinia mi, eget ullamcorper velit facilisis id. Cras non finibus magna.
+      <div class="w3-margin-bottom w3-light-grey centerImage">
+        <img src="../Images/astro_dsotvMissionSequence.png" style="width:100%" onclick="onClick(this)" alt="Deep Space Orbit Transfer Vehicle Sequence Proposal." class="image">
+        <div class="w3-container w3-center">
+          <p><span style="font-size:20px;">Deep Space Orbit Transfer Vehicle Sequence Proposal.</span></p>
+        </a>
+        </div>
+      </div>
 
-Suspendisse ultrices orci ipsum, lacinia pulvinar tellus laoreet quis. Nam bibendum vitae libero ac mattis. Vivamus eu fermentum purus, vel ornare velit. Proin laoreet consequat ligula, non posuere magna elementum eu. Aenean ut lacinia turpis. Praesent in placerat urna. Integer suscipit id nulla et tristique. Vestibulum at mi id nunc mattis vestibulum nec non leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam auctor lectus ut sem porttitor, et porttitor nunc mattis. Fusce placerat nec quam nec fringilla. 
-    </p>
+
+      In recent years, different trends in space development are occurring. From one side, there is
+a push for re-usability and to design systems that enable repeatable access to space. 1–3 On the
+other side, there have been numerous one-off missions (Rosetta, OSIRIS-Rex, IKAROS), as
+well as closely related missions (Hayabusa and Hayabusa 2 ) to various celestial bodies. With the
+expansion of these trends and the developing of newer missions (OKEANOS, DESTINY +), the
+question about a low-cost recurring architecture for deep space exploration missions and its possible
+benefits arises.
+The main design focus is the location of a Deep Space Orbit Transfer Vehicle (DS-OTV) in the
+Earth’s vicinity. This allows exploration missions to rendezvous and dock with it, re-fuel, and con-
+tinue towards their main objectives, including a possible Earth swing-by. This
+architecture benefits from lower mass at launch for the successive missions, allowing for smaller
+and lower-cost launchers like the Epsilon or the future H3 to be used, higher availability of launch
+windows and flexibility against delays and unforeseen circumstances. The design of its parking
+orbit is crucial, as it needs to be accessible while keeping low stationkeeping costs.
+Lagrange or Libration point orbits have long been considered for similar purposes and have been
+extensively studied in the literature. Of special interest are orbits around points L<sub>1,2</sub> and the
+transfers between them, as their topological structure allows for the existence of stable/unstable
+manifolds emanating from them that can be used for transfer trajectories. These include planar and
+vertical Lyapunov, Halo and Near Rectilinear Halo Orbits (NRHO). Other orbits centered in the smaller primary of the system (Earth), such as Distant Retrograde Orbits (DRO), Low Prograde
+Orbits and other bifurcation families from them are also significant as intermediate trajectories.
+The study presents the generation of period orbit families of interest in the Sun-Earth CR3BP
+system and the classification of the orbits with respect to different characteristics. First, a stability-
+energy plot that condenses information about energy level, stability and geometry is presented,
+where the candidate orbits in similar energy levels are picked from their families. Low-energy and
+impulsive transfer maneuvers are designed between members of the families by searching inter-
+sections of the stable/unstable manifolds of the orbits. From selected orbit combinations, useful
+resonant orbit pairs or groups will be generated on the basis of maximizing rendezvous opportu-
+nities between the DS-OTV and the exploration spacecraft. A similar framework is used for the
+design of the transfer trajectories leaving the parking orbit. Fuel consumption of the manoeuvers
+is also taken into account. Finally, an on-orbit re-fueling architecture is proposed incorporating the
+different elements previously studied, and an estimation of the feasibility of the project is carried
+out.
+
+<div class="w3-margin-bottom w3-light-grey centerImage">
+  <img src="../Images/astro_haya2status.jpg" style="width:100%" onclick="onClick(this)" alt="Hayabusa 2 planned mission sequence and trajectory." class="image">
+  <div class="w3-container w3-center">
+    <p><span style="font-size:20px;">Hayabusa 2 planned mission sequence and trajectory.</span></p>
+  </a>
+  </div>
+</div>
+
+
+The Kawaguchi Laboratory, located on the ISAS / JAXA campus, welcomes active students from all over the world.
+
+Focusing on guidance, navigation and control of space systems, we are developing advanced space technologies. At Kawaguchi Lab, students are not only able to study mission-oriented research topics, but also to join large-scale space projects organized by ISAS & JSPEC / JAXA. Our research programs are supervised by Professor Jun’ichiro Kawaguchi and world-class researchers.
+
+We study varieties of mission-oriented topics such as spacecraft astrodynamics, solar sail dynamics, spacecraft guidance, navigation and control, and planetary science. Another unique feature at Kawaguchi Lab is that we have also a lot of opportunities to test our results in real conditions; thus, we can learn not only from theoretical analysis but also have chances to experiment.
+
+We are currently involved in the solar power sail demonstration project IKAROS (Interplanetary Kite-craft Accelerated by Radiation Of the Sun), which uses Sun light to generate electrical power and accelerate. Kawaguchi Laboratory has had a center role in creating the technology of the propulsion system. Moreover, we contribute to proposing new ideas about structure and materials for the spacecraft.
+
+For an introduction to our laboratory (in Japanese), please click here. 
+
+   </p>
    
   </div>
 
 </div>
-
 
 
 <!-- W3.CSS Container -->
@@ -253,17 +357,21 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
+// Back and scroll button
 //Get the button:
-mybutton = document.getElementById("myBtnTop");
+mybuttonsmall = document.getElementById("myBtnTopSmall");
+mybuttonbig = document.getElementById("myBtnTopBig");
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
+    mybuttonsmall.style.display = "block";
+    mybuttonbig.style.display = "block";
   } else {
-    mybutton.style.display = "none";
+    mybuttonsmall.style.display = "none";
+    mybuttonbig.style.display = "none";
   }
 }
 
@@ -272,6 +380,14 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 } 
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
 
 </script>
 
