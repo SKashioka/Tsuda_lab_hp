@@ -375,3 +375,7 @@ table tr td
 .dropdown:hover .dropdown-content {
     display: block;
   }
+
+  * {
+    box-sizing: border-box;
+  }
