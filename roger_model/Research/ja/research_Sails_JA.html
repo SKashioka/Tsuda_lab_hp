@@ -26,6 +26,9 @@ body.dark-mode img {
   box-sizing: border-box;
 }
 
+.centerImage img{cursor:pointer}
+
+
 .box {
   float: left;
   width: 50%;
@@ -98,7 +101,8 @@ p.thick {
   <div class="w3-bar-block">
     <a href="../../homepage_JA.html#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
     <a href="../../homepage_JA.html#introduction" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Introduction</a> 
-    <a href="../../homepage_JA.html#research" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Research</a> 
+    <a href="../../homepage_JA.html#research" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Research</a>
+    <a href="../../homepage_JA.html#tsudabio" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Prof. Yuichi Tsuda Bio</a> 
     <a href="../../homepage_JA.html#members" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Members</a> 
      <a href="../../homepage_JA.html#publications" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Publications</a> 
     <a href="../../homepage_JA.html#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact Us</a> 
@@ -132,8 +136,21 @@ p.thick {
 
   <!-- Back floating button -->
 <!-- Back floating button -->
-<a href="../../homepage_JA.html#publications" onclick="w3_close()" class="w3-button w3-tsudalabblue-button w3-floating-button w3-hide-medium w3-hide-large" id="myBtnSmall" title="Go back to main page" style="margin-left: -75px;"><i class="fa fa-arrow-left"></i></a> 
-<a href="../../homepage_JA.html#publications" onclick="w3_close()" class="w3-button w3-tsudalabblue-button w3-floating-button w3-hide-small" id="myBtnBig" title="Go back to main page" style="margin-left: -75px;"><i class="fa fa-arrow-left"></i> Back to main page</a> 
+<a href="../../homepage_JA.html#research" onclick="w3_close()" class="w3-button w3-tsudalabblue-button w3-floating-button w3-hide-medium w3-hide-large" id="myBtnSmall" title="Go back to main page" style="margin-left: -75px;"><i class="fa fa-arrow-left"></i></a> 
+<a href="../../homepage_JA.html#research" onclick="w3_close()" class="w3-button w3-tsudalabblue-button w3-floating-button w3-hide-small" id="myBtnBig" title="Go back to main page" style="margin-left: -75px;"><i class="fa fa-arrow-left"></i> Back to main page</a> 
+
+<!-- Scroll up floating button -->
+<button onclick="topFunction()" class="w3-button w3-tsudalabblue-button w3-floating-button w3-button-centered w3-hide-small" id="myBtnTopBig" style="display:none; left:50%" title="Go to top"><i class="fa fa-arrow-up"></i> Go to top</button> 
+<button onclick="topFunction()" class="w3-button w3-tsudalabblue-button w3-floating-button w3-button-centered w3-hide-medium w3-hide-large" id="myBtnTopSmall" style="display:none; left:50%" title="Go to top"><i class="fa fa-arrow-up"></i></button> 
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
 
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:340px;margin-right:40px">
@@ -145,33 +162,116 @@ p.thick {
     <hr style="width:50px;border:5px solid var(--main-color)" class="w3-round">
     <p>
 
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec leo nunc, ultricies sed neque at, bibendum lobortis nisl. Ut fermentum vitae mi ac tincidunt. Sed id purus nec sapien cursus scelerisque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum ullamcorper velit a luctus. Suspendisse molestie urna at convallis accumsan. Donec sollicitudin felis faucibus tortor placerat lobortis vestibulum at ipsum. Cras ullamcorper ac sapien ut accumsan. Duis et nisi quis arcu dictum rhoncus eget gravida nisi. Mauris diam felis, lacinia eu ante at, consequat egestas sapien. Donec posuere mauris in nulla pharetra bibendum. Praesent ut felis ullamcorper massa laoreet pretium. Cras magna lorem, viverra a nunc a, efficitur mollis libero. Praesent convallis libero et ipsum hendrerit, eu iaculis leo ullamcorper. Etiam sagittis sollicitudin nulla, eget elementum sapien viverra eget.
-      
-      Praesent vulputate lobortis suscipit. Aliquam quis dui cursus, feugiat orci in, finibus nisl. Maecenas quis risus quam. In semper interdum velit, sit amet consectetur ex mollis non. Ut vitae massa quis dolor efficitur fermentum. Aliquam eu dolor et nulla condimentum fringilla. Nulla ac urna feugiat massa porttitor interdum quis sit amet felis. Vestibulum mattis, neque eu dictum varius, risus orci vulputate sem, et lacinia dui tortor vitae elit. Fusce quis tellus placerat, auctor est imperdiet, mattis dolor.
-      
-      Mauris aliquam neque sit amet massa vehicula dictum. Aliquam non lorem quis nisi fermentum sodales eu eleifend erat. Quisque at lacus id tellus maximus ultrices sed in velit. Maecenas in egestas tellus, vitae viverra turpis. Curabitur vitae purus sodales, iaculis tortor in, cursus augue. Maecenas sed leo a erat tincidunt euismod non in eros. Nulla porttitor id ante non faucibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-      
-      Aliquam suscipit nisl in risus suscipit, at sagittis felis vehicula. Aliquam tincidunt accumsan dui ut iaculis. Fusce eu accumsan lacus, id vehicula neque. Sed dignissim consectetur erat, quis vehicula arcu imperdiet a. Suspendisse pharetra interdum eros, vitae efficitur nunc suscipit ut. Phasellus egestas dolor neque, sed semper mi maximus tincidunt. Pellentesque auctor placerat urna, non fringilla tellus ullamcorper non. Maecenas condimentum massa eu dui iaculis tincidunt. Nullam a arcu felis.
-      
-      Vivamus lacinia magna quis dui tincidunt pharetra. Pellentesque eu bibendum diam. Phasellus volutpat malesuada erat, quis vehicula leo faucibus non. Aliquam convallis ornare enim porttitor dictum. Sed justo ligula, ultrices sed enim sed, blandit finibus purus. Nunc dapibus quis sapien at placerat. Pellentesque faucibus, dolor a tincidunt porttitor, turpis turpis rutrum sem, eu pulvinar felis dui eget lorem. 
-       
+      Our research focuses on the application of Astrodynamics (Space Flight Mechanics) to real exploration
+      missions. These include, but are not limited to, orbital design of deep space exploration satellites and
+      probes, research of Solar System exploration methods and guidance, navigation and control systems for
+      spacecraft. 
+
+      </p>
+
+      <h1 class="w3-xxlarge w3-text-tsudalabblue"><b>Hayabusa 2 Mission Design.</b></h1>
+
+      <p>
+      Prof. Tsuda and the laboratory have been the main designers for the Hayabusa 2 trajectory and operations. By 
+      utilizing a combination of mathematical and engineering techniques, we have studied possible scenarios and Solar 
+      System bodies that could become targets for the Hayabusa 2 mission. Using a wide array of techniques, from 
+      Porkchop plots to optimization methods taking into account launch and communications windows, the asteroid Ryugu 
+      was selected. The members of the laboratory, together with Hayabusa 2 project members and experts in the industry
+      designed the trajectory that took the spacecraft from Earth to the asteroid and back.     
+    </p>
+
+    <div class="w3-margin-bottom w3-light-grey centerImage">
+      <img src="../Images/astro_haya2status.jpg" style="width:100%" onclick="onClick(this)" alt="Hayabusa 2 planned mission sequence and trajectory." class="image">
+      <div class="w3-container w3-center">
+        <p><span style="font-size:20px;">Hayabusa 2 planned mission sequence and trajectory.</span></p>
+      </a>
+      </div>
+    </div>
+
+    <p>
+      Tsuda Laboratory is also one of the main research centers regarding navigation in the vicinity of small Solar 
+      System Bodies. The studies that led to the design of the maneuvers and operations in the vicinity of Ryugu were 
+      conducted by the members of the laboratory and close associates. These include, but are not limited to, 
+      maneuvering bodies with low gravity, risk assessment studies when navigating such bodies, impact of hazardous 
+      debris left over orbiting in the vicinity of the body, and studies of the dynamics involving the depolyment of 
+      small landers/rovers on the surface of these bodies. 
+    </p>
+
+    <p>
+     Another closely related topic to the Hayabusa 2 mission is the capsule reentry studies. Tsuda laboratory has also 
+     collaborated in the studies regarding the reentry maneuver, including the design of the trajectory, risk analysis 
+     for the capsule's landing, and overall planetary protection considerations.
+    </p>
+
+
+    <h1 class="w3-xxlarge w3-text-tsudalabblue"><b>Novel Space Architecture Concepts.</b></h1>
+
+      <p>
+      Moreover, in recent years, different trends in space development are occurring. From one side, there is
+      a push for re-usability and to design systems that enable repeatable access to space. On the other side, there 
+      have been numerous one-off missions, as well as closely related missions (Hayabusa and the previosly mentioned 
+      Hayabusa 2) to various celestial bodies. With the expansion of these trends and the developing of newer missions 
+      (OKEANOS, DESTINY +), the question about a low-cost recurring architecture for deep space exploration missions 
+      and its possible benefits has been debated in ISAS and JAXA for some time. Tsuda laboratory is the main proponent
+      behind some new space architectures related to these topics.
+    </p>
     
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed suscipit vulputate nisl eu lacinia. Donec in nunc egestas, tempor ex ut, gravida ipsum. Fusce et libero vel nibh imperdiet euismod ac et lectus. Fusce id ex sed purus porttitor tristique. Maecenas a tempor justo. Suspendisse fringilla suscipit magna id tempus. Aenean auctor nisi ut ex lacinia lacinia. Maecenas ultricies cursus lorem, sit amet euismod justo consectetur nec. Nunc molestie hendrerit magna, quis lacinia justo porta at. Sed eros tortor, interdum et tortor et, porttitor sagittis metus. Fusce est turpis, aliquet at nunc in, efficitur luctus arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras molestie justo in est scelerisque, semper dictum sapien bibendum. Donec venenatis felis ac justo semper tincidunt. Sed placerat, nibh quis scelerisque tincidunt, nisl arcu rhoncus turpis, a consectetur orci velit id dui.
+       <div class="w3-margin-bottom w3-light-grey centerImage">
+        <img src="../Images/astro_familyTransfer.png" style="width:100%" onclick="onClick(this)" alt="Transfer between two orbits of different families." class="image">
+        <div class="w3-container w3-center">
+          <p><span style="font-size:20px;">Transfer between two orbits of different families.</span></p>
+        </a>
+        </div>
+      </div>
 
-Etiam lectus purus, dapibus lobortis quam vitae, porta consectetur ex. Phasellus placerat enim ac justo mollis, ut pellentesque lacus molestie. Mauris interdum et justo sit amet venenatis. Vivamus tempor auctor tristique. Mauris ultrices maximus odio, non venenatis purus vehicula et. Maecenas ut orci elementum, accumsan quam ut, porta purus. Mauris in sapien malesuada, convallis dolor non, porta quam. Maecenas lorem ex, suscipit et faucibus ut, efficitur vel lacus. Suspendisse convallis consectetur est, sed volutpat leo tempor vel. Nulla imperdiet, orci at laoreet gravida, mi mauris eleifend mi, eu euismod ligula massa ut metus. Donec rhoncus orci est. Maecenas tempor ipsum at fringilla porta. Ut luctus tincidunt ullamcorper. Praesent venenatis orci at tellus tincidunt, facilisis vestibulum ante consequat.
+      <p>
+      One of the most recent architectures being studied is the so-called Deep Space Orbit Transfer Vehicle (DS-OTV). 
+      The Deep Space Orbit Transfer Vehicle (DS-OTV) will be a spacecraft placed in the Earth’s vicinity that will allow 
+      exploration missions to rendezvous and dock with it, re-fuel, and continue towards their main objective, including 
+      a possible Earth swing-by. This architecture benefits from lower mass at launch for the successive missions, 
+      allowing for smaller and lower-cost launchers like the Epsilon or the future H3 to be used, higher availability of 
+      launch windows and flexibility against delays and unforeseen circumstances. The design of its parking orbit is 
+      crucial, as it needs to be accessible while keeping low stationkeeping costs.
+    </p>
 
-Etiam tincidunt suscipit neque vitae tempus. Sed euismod imperdiet dui eu scelerisque. Aliquam vel elit a enim tempor bibendum vel eget tellus. Sed tristique quam suscipit ligula pharetra porta. Integer cursus eleifend dui, ut ultricies ligula vehicula sed. Suspendisse bibendum pharetra dui, non ultricies nisl varius sit amet. Morbi ut tincidunt odio. Aliquam erat volutpat. Nullam mattis quam posuere nibh posuere pulvinar. Integer condimentum tortor lorem, at placerat tellus mattis eget. Ut lacus leo, aliquam in odio sed, suscipit semper mi. Vestibulum finibus sapien quis sapien eleifend hendrerit. Donec fermentum eu ex sit amet porta. Duis porttitor fermentum nulla. Suspendisse lorem purus, venenatis vel consequat eu, gravida at libero.
+    <p>
+      Some early ideas include the usage of Lagrange or Libration point orbits for such a parking orbit, being of
+      special interest the orbits around points L<sub>1,2</sub> and the transfers between them, as their topological 
+      structure allows for the existence of stable/unstable manifolds emanating from them that can be used for transfer 
+      trajectories. Current studies in the laboratory include the generation of these orbit families, the classification,
+      characterization and evaluation of the suitability of the orbits for the DS-OTV purposes. Included in these studies
+      is the design of the transfers between parking and transfer orbits, the optimization of such maneuvers and the 
+      conceptualization and design of the rendezvous and docking procedures. In order to tackle this problem, the two
+      spacecraft need to come to the same orbital position at the same time, and the creation and design of a framework
+      that allows this with as much flexibility as possible in regards to the time, fuel consumption and frequency of 
+      the maneuver availability is one of the cornerstones of this novel concept.
 
-Phasellus eu malesuada dui. Proin pellentesque ante eu nunc varius, eget tincidunt ante lacinia. Aliquam aliquam nulla varius urna ornare hendrerit. Nullam rhoncus, tortor nec venenatis convallis, magna erat interdum augue, eu vestibulum eros urna laoreet nibh. Donec eget eleifend augue. Morbi non justo porttitor, lacinia purus vitae, mattis leo. Duis ut nunc eu erat condimentum interdum. Nunc id tempor nibh. Fusce sagittis ante ipsum, ac dapibus nibh efficitur non. In non vehicula est. Suspendisse ullamcorper massa metus, ac pellentesque justo vestibulum eu. Aliquam placerat lacinia mi, eget ullamcorper velit facilisis id. Cras non finibus magna.
+    </p>
+      
+      
 
-Suspendisse ultrices orci ipsum, lacinia pulvinar tellus laoreet quis. Nam bibendum vitae libero ac mattis. Vivamus eu fermentum purus, vel ornare velit. Proin laoreet consequat ligula, non posuere magna elementum eu. Aenean ut lacinia turpis. Praesent in placerat urna. Integer suscipit id nulla et tristique. Vestibulum at mi id nunc mattis vestibulum nec non leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam auctor lectus ut sem porttitor, et porttitor nunc mattis. Fusce placerat nec quam nec fringilla. 
+      <div class="w3-margin-bottom w3-light-grey centerImage">
+        <img src="../Images/astro_dsotvMissionSequence.png" style="width:100%" onclick="onClick(this)" alt="Deep Space Orbit Transfer Vehicle Sequence Proposal." class="image">
+        <div class="w3-container w3-center">
+          <p><span style="font-size:20px;">Deep Space Orbit Transfer Vehicle Sequence Proposal.</span></p>
+        </a>
+        </div>
+      </div>
+
+
+      <p>
+    As an applied-focused laboratory, we are also concerned with the holistic view of space mission design. As such, our 
+    research always includes studies on the applicability of our ideas and concepts, including the design of whole
+    missions that showcase our findings. This keeps our research grounded in reality and allows for our novel concepts to
+    be iterated quickly and included in real life missions in a short amount of time. This philosophy has been one of the
+    basics tenets of Prof. Tsuda and the laboratory, allowing for the design, construction and operation of some of the
+    most important japanese space missions in history by our members and collaborators.
     </p>
    
   </div>
 
 </div>
-
 
 
 <!-- W3.CSS Container -->
@@ -252,17 +352,21 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
+// Back and scroll button
 //Get the button:
-mybutton = document.getElementById("myBtnTop");
+mybuttonsmall = document.getElementById("myBtnTopSmall");
+mybuttonbig = document.getElementById("myBtnTopBig");
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
+    mybuttonsmall.style.display = "block";
+    mybuttonbig.style.display = "block";
   } else {
-    mybutton.style.display = "none";
+    mybuttonsmall.style.display = "none";
+    mybuttonbig.style.display = "none";
   }
 }
 
@@ -271,6 +375,14 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 } 
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
 
 </script>
 
