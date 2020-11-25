@@ -160,112 +160,29 @@ p.thick {
     <hr style="width:50px;border:5px solid var(--main-color)" class="w3-round">
     <h1 class="w3-xxlarge w3-text-tsudalabblue"><b>Attitude model for spacecraft under solar radiation pressure with anisotropic reﬂection.</b></h1>
     <p>
-
-      This research focused on a modelling technique of the Solar Radiation Pressure (SRP) exerted on spacecraft which can incorporate general surface with anisotropic reﬂectance property. The SRP torque is a major disturbance for the attitude of spacecraft especially in deep space missions. It depends not only on the shape and attitude of spacecraft, but also on their surface optical reﬂectance property. Some missions even attempted to exploit the SRP to stabilize and reorient spacecraft attitude rather than compensating it. Two such typical missions are the JAXA’s solar sail technology demonstration spacecraft IKAROS and the asteroid explorer Hayabusa2. They modelled very precise SRP torque exerted on the spacecraft bodies (GSDM: Generalized Solar-sail Dynamics Model) and successfully extracted a useful behavior to control the spacecraft attitude. On the other hand, owing to precise SRP modeling used in the operation of IKAROS and Hayabusa2, at least 3% of directional inconsistency has found between the SRP torque estimated from the conventional SRP model used in the GSDM and the actual ﬂight data. Our detailed sensitivity analysis implies the error should be due to unmodelled anisotropic optical reﬂectance of a large area on the spacecraft, such as solar array panels (SAPs). Therefore, the aim of this research is to create a precise reﬂectance distribution model by measurement of a bidirectional reﬂection distribution functions (BRDF). A BRDF, a technique originally developed in the ﬁeld of Computer Graphics, describes a reﬂectance map between arbitrary incident and emitted rays in a general mathematical form.
-
-      </p>
-      <div class="column">
-        
+      This research focused on a modeling technique of the solar radiation pressure (SRP) exerted on spacecraft which can incorporate general surface with anisotropic reﬂectance property. The SRP torque is a major disturbance for the attitude of spacecraft especially in deep space missions. It depends not only on the shape and attitude of spacecraft, but also on their surface optical reﬂectance property. The aim of this paper is to create a precise reﬂectance distribution model by measurement of a bidirectional reﬂection distribution functions(BRDF). A BRDF, a technique originally developed in the ﬁeld of Computer Graphics, describes a reﬂectance map between arbitrary incident and emitted rays in a general mathematical form. 
+      The SRP torque is a major disturbance for the attitude of spacecraft especially in deep space missions. It depends not only on the shape and attitude of spacecraft, but also on their surface optical reﬂectance property. Some missions even attempted to exploit the SRP to stabilize and reorient spacecraft attitude rather than compensating it. Two such typical missions are the JAXA’s solar sail technology demonstration spacecraft IKAROS and the asteroid explorer Hayabusa2. They modelled very precise SRP torque exerted on the spacecraft bodies (GSDM: Generalized Solar-sail Dynamics Model) and successfully extracted a useful behavior to control the spacecraft attitude. On the other hand, owing to precise SRP modeling used in the operation of IKAROS and Hayabusa2, at least 3% of directional inconsistency has found between the SRP torque estimated from the conventional SRP model used in the GSDM and the actual ﬂight data.
+      
+      <div class="w3-margin-bottom w3-light-grey centerImage">
+        <img src="../Images/attitude_hayabusa2.png" style="width:100%" onclick="onClick(this)" alt="Generalized Solar-sail Dynamics Model." class="image">
+        <div class="w3-container w3-center">
+          <p><span style="font-size:20px;">Generalized Solar-sail Dynamics Model.</span></p>
+        </a>
+        </div>
       </div>
-      <h1 class="w3-xxlarge w3-text-tsudalabblue"><b>Hayabusa2 Attitude.</b></h1>
 
-      <p>
+    <p>
+      Our detailed sensitivity analysis implies the error should be due to unmodelled anisotropic optical reﬂectance of a large area on the spacecraft, such as solar array panels (SAPs). Therefore, the aim of this research is to create a precise reﬂectance distribution model by measurement of a bidirectional reﬂection distribution functions (BRDF). A BRDF, a technique originally developed in the ﬁeld of Computer Graphics, describes a reﬂectance map between arbitrary incident and emitted rays in a general mathematical form.
       The BRDF measurement was performed for test cells of the Hayabusa2 SAPs. As a result, a distinctive anisotropic reﬂectance property was found which hadn’t been modelled in the conventional model. It was also suggested that this reﬂection should be due to the microscopic structure of the solar cell. Then a compact mathematical model of the reﬂection which reproduces the anisotropic property observed in the BRDF measurement has been developed. This model successfully describes the inconsistency between the conventional SRP torque and the ﬂight data and relates material’s microscopic structure to the optical property.
-
-      <h1 class="w3-xxlarge w3-text-tsudalabblue"><b>Hayabusa2 Attitude.</b></h1>
-
     </p>
 
     <div class="w3-margin-bottom w3-light-grey centerImage">
-      <img src="../Images/astro_haya2status.jpg" style="width:100%" onclick="onClick(this)" alt="Hayabusa 2 planned mission sequence and trajectory." class="image">
+      <img src="../Images/attitude_brdf.png" style="width:100%" onclick="onClick(this)" alt="experimental result of BRDF measurement of hayabusa2 materials." class="image">
       <div class="w3-container w3-center">
-        <p><span style="font-size:20px;">Hayabusa 2 planned mission sequence and trajectory.</span></p>
+        <p><span style="font-size:20px;">Anisotropic Reflection in SAP in Hayabusa2 used.</span></p>
       </a>
       </div>
     </div>
-
-    <p>
-      Tsuda Laboratory is also one of the main research centers regarding navigation in the vicinity of small Solar 
-      System Bodies. The studies that led to the design of the maneuvers and operations in the vicinity of Ryugu were 
-      conducted by the members of the laboratory and close associates. These include, but are not limited to, 
-      maneuvering bodies with low gravity, risk assessment studies when navigating such bodies, impact of hazardous 
-      debris left over orbiting in the vicinity of the body, and studies of the dynamics involving the depolyment of 
-      small landers/rovers on the surface of these bodies. 
-    </p>
-
-    <p>
-     Another closely related topic to the Hayabusa 2 mission is the capsule reentry studies. Tsuda laboratory has also 
-     collaborated in the studies regarding the reentry maneuver, including the design of the trajectory, risk analysis 
-     for the capsule's landing, and overall planetary protection considerations.
-    </p>
-
-
-    <h1 class="w3-xxlarge w3-text-tsudalabblue"><b>Novel Space Architecture Concepts.</b></h1>
-
-      <p>
-      Moreover, in recent years, different trends in space development are occurring. From one side, there is
-      a push for re-usability and to design systems that enable repeatable access to space. On the other side, there 
-      have been numerous one-off missions, as well as closely related missions (Hayabusa and the previosly mentioned 
-      Hayabusa 2) to various celestial bodies. With the expansion of these trends and the developing of newer missions 
-      (OKEANOS, DESTINY +), the question about a low-cost recurring architecture for deep space exploration missions 
-      and its possible benefits has been debated in ISAS and JAXA for some time. Tsuda laboratory is the main proponent
-      behind some new space architectures related to these topics.
-    </p>
-    
-
-       <div class="w3-margin-bottom w3-light-grey centerImage">
-        <img src="../Images/astro_familyTransfer.png" style="width:100%" onclick="onClick(this)" alt="Transfer between two orbits of different families." class="image">
-        <div class="w3-container w3-center">
-          <p><span style="font-size:20px;">Transfer between two orbits of different families.</span></p>
-        </a>
-        </div>
-      </div>
-
-      <p>
-      One of the most recent architectures being studied is the so-called Deep Space Orbit Transfer Vehicle (DS-OTV). 
-      The Deep Space Orbit Transfer Vehicle (DS-OTV) will be a spacecraft placed in the Earth’s vicinity that will allow 
-      exploration missions to rendezvous and dock with it, re-fuel, and continue towards their main objective, including 
-      a possible Earth swing-by. This architecture benefits from lower mass at launch for the successive missions, 
-      allowing for smaller and lower-cost launchers like the Epsilon or the future H3 to be used, higher availability of 
-      launch windows and flexibility against delays and unforeseen circumstances. The design of its parking orbit is 
-      crucial, as it needs to be accessible while keeping low stationkeeping costs.
-    </p>
-
-    <p>
-      Some early ideas include the usage of Lagrange or Libration point orbits for such a parking orbit, being of
-      special interest the orbits around points L<sub>1,2</sub> and the transfers between them, as their topological 
-      structure allows for the existence of stable/unstable manifolds emanating from them that can be used for transfer 
-      trajectories. Current studies in the laboratory include the generation of these orbit families, the classification,
-      characterization and evaluation of the suitability of the orbits for the DS-OTV purposes. Included in these studies
-      is the design of the transfers between parking and transfer orbits, the optimization of such maneuvers and the 
-      conceptualization and design of the rendezvous and docking procedures. In order to tackle this problem, the two
-      spacecraft need to come to the same orbital position at the same time, and the creation and design of a framework
-      that allows this with as much flexibility as possible in regards to the time, fuel consumption and frequency of 
-      the maneuver availability is one of the cornerstones of this novel concept.
-
-    </p>
-      
-      
-
-      <div class="w3-margin-bottom w3-light-grey centerImage">
-        <img src="../Images/astro_dsotvMissionSequence.png" style="width:100%" onclick="onClick(this)" alt="Deep Space Orbit Transfer Vehicle Sequence Proposal." class="image">
-        <div class="w3-container w3-center">
-          <p><span style="font-size:20px;">Deep Space Orbit Transfer Vehicle Sequence Proposal.</span></p>
-        </a>
-        </div>
-      </div>
-
-
-      <p>
-    As an applied-focused laboratory, we are also concerned with the holistic view of space mission design. As such, our 
-    research always includes studies on the applicability of our ideas and concepts, including the design of whole
-    missions that showcase our findings. This keeps our research grounded in reality and allows for our novel concepts to
-    be iterated quickly and included in real life missions in a short amount of time. This philosophy has been one of the
-    basics tenets of Prof. Tsuda and the laboratory, allowing for the design, construction and operation of some of the
-    most important japanese space missions in history by our members and collaborators.
-    </p>
-   
-  </div>
 
 </div>
 
