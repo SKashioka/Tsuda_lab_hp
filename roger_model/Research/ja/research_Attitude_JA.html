@@ -7,55 +7,76 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 <link rel="stylesheet" href="../../Style/Fonts/fontawesome/css/all.css">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-crossorigin=""/>
+  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+  crossorigin="" />
 <style>
-body,h1,h2,h3,h4,h5 {font-size:16px; font-family: "Poppins", sans-serif}
-body {
-  background-color: var(--theme-background-color);
-    color:  var(--theme-font-color);
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif
   }
 
-body.dark-mode img {
-  filter: brightness(.8) contrast(1.2);
-}
+  body {
+    background-color: var(--theme-background-color);
+    color: var(--theme-font-color);
+  }
 
-.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
-.w3-half img:hover{opacity:1}
-* {
-  box-sizing: border-box;
-}
+  body.dark-mode img {
+    filter: brightness(.8) contrast(1.2);
+  }
 
-.centerImage img{cursor:pointer}
+  .w3-half img {
+    margin-bottom: -6px;
+    margin-top: 16px;
+    opacity: 0.8;
+    cursor: pointer
+  }
+
+  .w3-half img:hover {
+    opacity: 1
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .centerImage img {
+    cursor: pointer
+  }
 
 
-.box {
-  float: left;
-  width: 50%;
-  padding: 10px;
-}
+  .box {
+    float: left;
+    width: 50%;
+    padding: 10px;
+  }
 
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-p.thick {
-  font-weight: bold;
-}
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  p.thick {
+    font-weight: bold;
+  }
 
   /* Overla Image */
   .container {
     position: relative;
     width: 50%;
   }
-  
+
   .image {
     display: block;
     width: 100%;
     height: auto;
   }
-  
+
   .overlay {
     position: absolute;
     top: 0;
@@ -68,11 +89,11 @@ p.thick {
     transition: .5s ease;
     background-color: #008CBA;
   }
-  
+
   .container:hover .overlay {
     opacity: 1;
   }
-  
+
   .text {
     color: white;
     font-size: 20px;
@@ -85,63 +106,87 @@ p.thick {
 </style>
 
 
- <!-- Make sure you put this AFTER Leaflet's CSS -->
- <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-   crossorigin=""></script>
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+  integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+  crossorigin=""></script>
 
 <body>
 
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-tsudalabblue w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft w3-hover-white" style="width:100%;font-size:22px">Close Menu</a>
-  <div class="w3-container">
-    <h3 class="w3-padding-64"><b>Tsuda<br>Laboratory</b></h3>
-  </div>
-  <div class="w3-bar-block">
-    <a href="../../homepage_JA.html#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
-    <a href="../../homepage_JA.html#introduction" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Introduction</a> 
-    <a href="../../homepage_JA.html#research" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Research</a>
-    <a href="../../homepage_JA.html#tsudabio" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Prof. Yuichi Tsuda Bio</a> 
-    <a href="../../homepage_JA.html#members" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Members</a> 
-     <a href="../../homepage_JA.html#publications" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Publications</a> 
-    <a href="../../homepage_JA.html#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact Us</a> 
-    <a href="../../homepage_JA.html#access" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Access</a> 
-    <a href="../../homepage_JA.html#links" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Links</a> 
-    <div class="w3-dropdown-hover w3-mobile">
-     <button onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Language <img class="w3-image-menu" src="../../Style/japan_language.png" alt="日本語"><i class="fa fa-caret-down"></i></button>
-      <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
-              <a href="../../Research/ja/research_Attitude_JA.html" onclick="w3_close()" class="w3-bar-item w3-button w3-mobile w3-hover-white">日本語 <img class="w3-image-menu"  src="../../Style/japan_language.png" alt="日本語"> </a>
-              <a href="../../Research/en/research_Attitude_EN.html" onclick="w3_close()" class="w3-bar-item w3-button w3-mobile w3-hover-white">English <img class="w3-image-menu" src="../../Style/english_language.png" alt="English"></a>
-            </div>
+  <!-- Sidebar/menu -->
+  <nav class="w3-sidebar w3-tsudalabblue w3-collapse w3-top w3-large w3-padding"
+    style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft w3-hover-white"
+      style="width:100%;font-size:22px">Close Menu</a>
+    <div class="w3-container">
+      <h3 class="w3-padding-64"><b>Tsuda<br>Laboratory</b></h3>
     </div>
-    <!-- Rounded switch -->
-    <a class="w3-bar-item">Dark mode   
-      <label class="switch">
-      <input type="checkbox" onclick="darkMode()">
-      <span class="slider round"></span>
-    </label></a>
+    <div class="w3-bar-block">
+      <a href="../../homepage_JA.html#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
+      <a href="../../homepage_JA.html#introduction" onclick="w3_close()"
+        class="w3-bar-item w3-button w3-hover-white">Introduction</a>
+      <a href="../../homepage_JA.html#research" onclick="w3_close()"
+        class="w3-bar-item w3-button w3-hover-white">Research</a>
+      <a href="../../homepage_JA.html#tsudabio" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Prof.
+        Yuichi Tsuda Bio</a>
+      <a href="../../homepage_JA.html#members" onclick="w3_close()"
+        class="w3-bar-item w3-button w3-hover-white">Members</a>
+      <a href="../../homepage_JA.html#publications" onclick="w3_close()"
+        class="w3-bar-item w3-button w3-hover-white">Publications</a>
+      <a href="../../homepage_JA.html#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact
+        Us</a>
+      <a href="../../homepage_JA.html#access" onclick="w3_close()"
+        class="w3-bar-item w3-button w3-hover-white">Access</a>
+      <a href="../../homepage_JA.html#links" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Links</a>
+      <div class="w3-dropdown-hover w3-mobile">
+        <button onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Language <img class="w3-image-menu"
+            src="../../Style/japan_language.png" alt="日本語"><i class="fa fa-caret-down"></i></button>
+        <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+          <a href="../../Research/ja/research_Attitude_JA.html" onclick="w3_close()"
+            class="w3-bar-item w3-button w3-mobile w3-hover-white">日本語 <img class="w3-image-menu"
+              src="../../Style/japan_language.png" alt="日本語"> </a>
+          <a href="../../Research/en/research_Attitude_EN.html" onclick="w3_close()"
+            class="w3-bar-item w3-button w3-mobile w3-hover-white">English <img class="w3-image-menu"
+              src="../../Style/english_language.png" alt="English"></a>
+        </div>
+      </div>
+      <!-- Rounded switch -->
+      <a class="w3-bar-item">Dark mode
+        <label class="switch">
+          <input type="checkbox" onclick="darkMode()">
+          <span class="slider round"></span>
+        </label></a>
 
-  </div>
-</nav>
+    </div>
+  </nav>
 
-<!-- Top menu on small screens -->
-<header class="w3-container w3-top w3-hide-large w3-tsudalabblue w3-xlarge w3-padding">
-  <a href="javascript:void(0)" class="w3-button w3-tsudalabblue w3-margin-right w3-hover-white" onclick="w3_open()">☰</a>
-  <span>Tsuda Laboratory</span>
-</header>
+  <!-- Top menu on small screens -->
+  <header class="w3-container w3-top w3-hide-large w3-tsudalabblue w3-xlarge w3-padding">
+    <a href="javascript:void(0)" class="w3-button w3-tsudalabblue w3-margin-right w3-hover-white"
+      onclick="w3_open()">☰</a>
+    <span>Tsuda Laboratory</span>
+  </header>
 
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+    id="myOverlay"></div>
 
   <!-- Back floating button -->
-<!-- Back floating button -->
-<a href="../../homepage_JA.html#research" onclick="w3_close()" class="w3-button w3-tsudalabblue-button w3-floating-button w3-hide-medium w3-hide-large" id="myBtnSmall" title="Go back to main page" style="margin-left: -75px;"><i class="fa fa-arrow-left"></i></a> 
-<a href="../../homepage_JA.html#research" onclick="w3_close()" class="w3-button w3-tsudalabblue-button w3-floating-button w3-hide-small" id="myBtnBig" title="Go back to main page" style="margin-left: -75px;"><i class="fa fa-arrow-left"></i> Back to main page</a> 
+  <!-- Back floating button -->
+  <a href="../../homepage_JA.html#research" onclick="w3_close()"
+    class="w3-button w3-tsudalabblue-button w3-floating-button w3-hide-medium w3-hide-large" id="myBtnSmall"
+    title="Go back to main page" style="margin-left: -75px;"><i class="fa fa-arrow-left"></i></a>
+  <a href="../../homepage_JA.html#research" onclick="w3_close()"
+    class="w3-button w3-tsudalabblue-button w3-floating-button w3-hide-small" id="myBtnBig" title="Go back to main page"
+    style="margin-left: -75px;"><i class="fa fa-arrow-left"></i> Back to main page</a>
 
-<!-- Scroll up floating button -->
-<button onclick="topFunction()" class="w3-button w3-tsudalabblue-button w3-floating-button w3-button-centered w3-hide-small" id="myBtnTopBig" style="display:none; left:50%" title="Go to top"><i class="fa fa-arrow-up"></i> Go to top</button> 
-<button onclick="topFunction()" class="w3-button w3-tsudalabblue-button w3-floating-button w3-button-centered w3-hide-medium w3-hide-large" id="myBtnTopSmall" style="display:none; left:50%" title="Go to top"><i class="fa fa-arrow-up"></i></button> 
+  <!-- Scroll up floating button -->
+  <button onclick="topFunction()"
+    class="w3-button w3-tsudalabblue-button w3-floating-button w3-button-centered w3-hide-small" id="myBtnTopBig"
+    style="display:none; left:50%" title="Go to top"><i class="fa fa-arrow-up"></i> Go to top</button>
+  <button onclick="topFunction()"
+    class="w3-button w3-tsudalabblue-button w3-floating-button w3-button-centered w3-hide-medium w3-hide-large"
+    id="myBtnTopSmall" style="display:none; left:50%" title="Go to top"><i class="fa fa-arrow-up"></i></button>
 
   <!-- Modal for full size images on click-->
   <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
@@ -152,160 +197,190 @@ p.thick {
     </div>
   </div>
 
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:340px;margin-right:40px">
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main" style="margin-left:340px;margin-right:40px">
 
-  <!-- Header -->
-  <div class="w3-container" style="margin-top:80px" id="introduction">
-    <h1 class="w3-jumbo"><b>Spaceflight Mechanics and Exploration Systems Laboratory</b></h1>
-    <h1 class="w3-xxxlarge w3-text-tsudalabblue"><b>Solar Sails.</b></h1>
-    <hr style="width:50px;border:5px solid var(--main-color)" class="w3-round">
-    <p>
-      本研究室では、宇宙航空力学（宇宙飛行力学）を実際の探査ミッションに応用することに重点を置いて研究を行っています。これには、深宇宙探査衛星や探査機の軌道設計、太陽系探査方法や誘導の研究、宇宙船の航行・制御システムなどが含まれますが、これらに限定されるものではありません。
-      </p>
+    <!-- Header -->
+    <div class="w3-container" style="margin-top:80px" id="introduction">
+      <h1 class="w3-jumbo"><b>Spaceflight Mechanics and Exploration Systems Laboratory</b></h1>
+      <h1 class="w3-xxxlarge w3-text-tsudalabblue"><b>Solar Sails.</b></h1>
+      <hr style="width:50px;border:5px solid var(--main-color)" class="w3-round">
 
-      <h1 class="w3-xxlarge w3-text-tsudalabblue"><b>Attitude model for spacecraft under solar radiation pressure with anisotropic reﬂection.</b></h1>
+      <h1 class="w3-xxlarge w3-text-tsudalabblue"><b>Attitude model for spacecraft under solar radiation pressure with
+          anisotropic reﬂection.</b></h1>
       <p>
-        This research focused on a modeling technique of the solar radiation pressure (SRP) exerted on spacecraft which can incorporate general surface with anisotropic reﬂectance property. The SRP torque is a major disturbance for the attitude of spacecraft especially in deep space missions. It depends not only on the shape and attitude of spacecraft, but also on their surface optical reﬂectance property. The aim of this paper is to create a precise reﬂectance distribution model by measurement of a bidirectional reﬂection distribution functions(BRDF). A BRDF, a technique originally developed in the ﬁeld of Computer Graphics, describes a reﬂectance map between arbitrary incident and emitted rays in a general mathematical form. 
-        The SRP torque is a major disturbance for the attitude of spacecraft especially in deep space missions. It depends not only on the shape and attitude of spacecraft, but also on their surface optical reﬂectance property. Some missions even attempted to exploit the SRP to stabilize and reorient spacecraft attitude rather than compensating it. Two such typical missions are the JAXA’s solar sail technology demonstration spacecraft IKAROS and the asteroid explorer Hayabusa2. They modelled very precise SRP torque exerted on the spacecraft bodies (GSDM: Generalized Solar-sail Dynamics Model) and successfully extracted a useful behavior to control the spacecraft attitude. On the other hand, owing to precise SRP modeling used in the operation of IKAROS and Hayabusa2, at least 3% of directional inconsistency has found between the SRP torque estimated from the conventional SRP model used in the GSDM and the actual ﬂight data.
-        
-        <div class="w3-margin-bottom w3-light-grey centerImage">
-          <img src="../Images/attitude_hayabusa2.jpg" style="width:100%" onclick="onClick(this)" alt="Generalized Solar-sail Dynamics Model." class="image">
-          <div class="w3-container w3-center">
-            <p><span style="font-size:20px;">Generalized Solar-sail Dynamics Model.</span></p>
-          </a>
-          </div>
-        </div>
-      <p>
-        Our detailed sensitivity analysis implies the error should be due to unmodelled anisotropic optical reﬂectance of a large area on the spacecraft, such as solar array panels (SAPs). Therefore, the aim of this research is to create a precise reﬂectance distribution model by measurement of a bidirectional reﬂection distribution functions (BRDF). A BRDF, a technique originally developed in the ﬁeld of Computer Graphics, describes a reﬂectance map between arbitrary incident and emitted rays in a general mathematical form.
-        The BRDF measurement was performed for test cells of the Hayabusa2 SAPs. As a result, a distinctive anisotropic reﬂectance property was found which hadn’t been modelled in the conventional model. It was also suggested that this reﬂection should be due to the microscopic structure of the solar cell. Then a compact mathematical model of the reﬂection which reproduces the anisotropic property observed in the BRDF measurement has been developed. This model successfully describes the inconsistency between the conventional SRP torque and the ﬂight data and relates material’s microscopic structure to the optical property.
+        This research focused on a modeling technique of the solar radiation pressure (SRP) exerted on spacecraft which
+        can incorporate general surface with anisotropic reﬂectance property. The SRP torque is a major disturbance for
+        the attitude of spacecraft especially in deep space missions. It depends not only on the shape and attitude of
+        spacecraft, but also on their surface optical reﬂectance property. The aim of this paper is to create a precise
+        reﬂectance distribution model by measurement of a bidirectional reﬂection distribution functions(BRDF). A BRDF,
+        a technique originally developed in the ﬁeld of Computer Graphics, describes a reﬂectance map between arbitrary
+        incident and emitted rays in a general mathematical form.
+        </p>
+        <p>
+        The SRP torque is a major disturbance for the attitude of spacecraft especially in deep space missions. It
+        depends not only on the shape and attitude of spacecraft, but also on their surface optical reﬂectance property.
+        Some missions even attempted to exploit the SRP to stabilize and reorient spacecraft attitude rather than
+        compensating it. Two such typical missions are the JAXA’s solar sail technology demonstration spacecraft IKAROS
+        and the asteroid explorer Hayabusa2. They modelled very precise SRP torque exerted on the spacecraft bodies
+        (GSDM: Generalized Solar-sail Dynamics Model) and successfully extracted a useful behavior to control the
+        spacecraft attitude. On the other hand, owing to precise SRP modeling used in the operation of IKAROS and
+        Hayabusa2, at least 3% of directional inconsistency has found between the SRP torque estimated from the
+        conventional SRP model used in the GSDM and the actual ﬂight data.
       </p>
-  
       <div class="w3-margin-bottom w3-light-grey centerImage">
-        <img src="../Images/attitude_brdf.png" style="width:100%" onclick="onClick(this)" alt="experimental result of BRDF measurement of hayabusa2 materials." class="image">
+        <img src="../Images/attitude_hayabusa2.jpg" style="width:100%" onclick="onClick(this)"
+          alt="Generalized Solar-sail Dynamics Model." class="image">
+        <div class="w3-container w3-center">
+          <p><span style="font-size:20px;">Generalized Solar-sail Dynamics Model.</span></p>
+          </a>
+        </div>
+      </div>
+      <p>
+        Our detailed sensitivity analysis implies the error should be due to unmodelled anisotropic optical reﬂectance
+        of a large area on the spacecraft, such as solar array panels (SAPs). Therefore, the aim of this research is to
+        create a precise reﬂectance distribution model by measurement of a bidirectional reﬂection distribution
+        functions (BRDF). A BRDF, a technique originally developed in the ﬁeld of Computer Graphics, describes a
+        reﬂectance map between arbitrary incident and emitted rays in a general mathematical form.
+      </p>
+      <p>
+        The BRDF measurement was performed for test cells of the Hayabusa2 SAPs. As a result, a distinctive anisotropic
+        reﬂectance property was found which hadn’t been modelled in the conventional model. It was also suggested that
+        this reﬂection should be due to the microscopic structure of the solar cell. Then a compact mathematical model
+        of the reﬂection which reproduces the anisotropic property observed in the BRDF measurement has been developed.
+        This model successfully describes the inconsistency between the conventional SRP torque and the ﬂight data and
+        relates material’s microscopic structure to the optical property.
+      </p>
+
+      <div class="w3-margin-bottom w3-light-grey centerImage">
+        <img src="../Images/attitude_brdf.jpg" style="width:100%" onclick="onClick(this)"
+          alt="experimental result of BRDF measurement of hayabusa2 materials." class="image">
         <div class="w3-container w3-center">
           <p><span style="font-size:20px;">Anisotropic Reflection in SAP in Hayabusa2 used.</span></p>
-        </a>
+          </a>
         </div>
       </div>
     </div>
   </div>
-  
 
-<!-- W3.CSS Container -->
-<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
 
-<script>
+  <!-- W3.CSS Container -->
+  <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px">
+    <p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
+        class="w3-hover-opacity">w3.css</a></p>
+  </div>
 
-// Script to open and close sidebar
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
-}
+  <script>
 
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
+    // Script to open and close sidebar
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+    }
 
-// Toggle Dark mode
-const toggleSwitch = document.querySelector('.switch input[type="checkbox"]');
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+    }
 
-function switchTheme(e) {
-    if (e.target.checked) {
+    // Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+
+    // Toggle Dark mode
+    const toggleSwitch = document.querySelector('.switch input[type="checkbox"]');
+
+    function switchTheme(e) {
+      if (e.target.checked) {
         document.documentElement.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark'); //add this
-    }
-    else {
+      }
+      else {
         document.documentElement.setAttribute('data-theme', 'light');
         localStorage.setItem('theme', 'light'); //add this
-    }    
-}
-
-toggleSwitch.addEventListener('change', switchTheme, false);
-
-
-// Check for user preference
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-  document.documentElement.setAttribute('data-theme', 'dark');
-  toggleSwitch.checked = true;
-} else {
-  document.documentElement.setAttribute('data-theme', 'light');
-  toggleSwitch.checked = false;
-}
-
-// Check for stored user preference
-const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
-
-if (currentTheme) {
-    document.documentElement.setAttribute('data-theme', currentTheme);
-    toggleSwitch.checked = false;
-
-    if (currentTheme === 'dark') {
-        toggleSwitch.checked = true;
+      }
     }
-}
 
-// Collapsible
-var coll = document.getElementsByClassName("collapsible");
-var i;
+    toggleSwitch.addEventListener('change', switchTheme, false);
 
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
+
+    // Check for user preference
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      toggleSwitch.checked = true;
     } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    } 
-  });
-}
+      document.documentElement.setAttribute('data-theme', 'light');
+      toggleSwitch.checked = false;
+    }
 
-// Back and scroll button
-//Get the button:
-mybuttonsmall = document.getElementById("myBtnTopSmall");
-mybuttonbig = document.getElementById("myBtnTopBig");
+    // Check for stored user preference
+    const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+    if (currentTheme) {
+      document.documentElement.setAttribute('data-theme', currentTheme);
+      toggleSwitch.checked = false;
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybuttonsmall.style.display = "block";
-    mybuttonbig.style.display = "block";
-  } else {
-    mybuttonsmall.style.display = "none";
-    mybuttonbig.style.display = "none";
-  }
-}
+      if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
+      }
+    }
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-} 
+    // Collapsible
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
 
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    }
 
-</script>
+    // Back and scroll button
+    //Get the button:
+    mybuttonsmall = document.getElementById("myBtnTopSmall");
+    mybuttonbig = document.getElementById("myBtnTopBig");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybuttonsmall.style.display = "block";
+        mybuttonbig.style.display = "block";
+      } else {
+        mybuttonsmall.style.display = "none";
+        mybuttonbig.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+
+    // Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+
+  </script>
 
 
 
 </body>
-</html>
 
+</html>
