@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Tsuda Laboratory</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../Style/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="../../Style/Fonts/fontawesome/css/all.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+  crossorigin="" />
+<style>
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif
+  }
+
+  body {
+    background-color: var(--theme-background-color);
+    color: var(--theme-font-color);
+  }
+
+  body.dark-mode img {
+    filter: brightness(.8) contrast(1.2);
+  }
+
+  .w3-half img {
+    margin-bottom: -6px;
+    margin-top: 16px;
+    opacity: 0.8;
+    cursor: pointer
+  }
+
+  .w3-half img:hover {
+    opacity: 1
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .centerImage img {
+    cursor: pointer
+  }
+
+
+  .box {
+    float: left;
+    width: 50%;
+    padding: 10px;
+  }
+
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  p.thick {
+    font-weight: bold;
+  }
+
+  /* Overla Image */
+  .container {
+    position: relative;
+    width: 50%;
+  }
+
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+  }
+
+  .container:hover .overlay {
+    opacity: 1;
+  }
+
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+</style>
+
+
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+  integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+  crossorigin=""></script>
+
+<body>
+
+  <!-- Sidebar/menu -->
+  <nav class="w3-sidebar w3-tsudalabblue w3-collapse w3-top w3-large w3-padding"
+    style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft w3-hover-white"
+      style="width:100%;font-size:22px">Close Menu</a>
+    <div class="w3-container">
+      <h3 class="w3-padding-64"><b>Tsuda<br>Laboratory</b></h3>
+    </div>
+    <div class="w3-bar-block">
+      <a href="../../homepage_JA.html#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
+      <a href="../../homepage_JA.html#introduction" onclick="w3_close()"
+        class="w3-bar-item w3-button w3-hover-white">Introduction</a>
+      <a href="../../homepage_JA.html#research" onclick="w3_close()"
+        class="w3-bar-item w3-button w3-hover-white">Research</a>
+      <a href="../../homepage_JA.html#tsudabio" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Prof.
+        Yuichi Tsuda Bio</a>
+      <a href="../../homepage_JA.html#members" onclick="w3_close()"
+        class="w3-bar-item w3-button w3-hover-white">Members</a>
+      <a href="../../homepage_JA.html#publications" onclick="w3_close()"
+        class="w3-bar-item w3-button w3-hover-white">Publications</a>
+      <a href="../../homepage_JA.html#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact
+        Us</a>
+      <a href="../../homepage_JA.html#access" onclick="w3_close()"
+        class="w3-bar-item w3-button w3-hover-white">Access</a>
+      <a href="../../homepage_JA.html#links" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Links</a>
+      <div class="w3-dropdown-hover w3-mobile">
+        <button onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Language <img class="w3-image-menu"
+            src="../../Style/japan_language.png" alt="日本語"><i class="fa fa-caret-down"></i></button>
+        <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+          <a href="../../Research/ja/research_Scattering_JA.html" onclick="w3_close()"
+            class="w3-bar-item w3-button w3-mobile w3-hover-white">日本語 <img class="w3-image-menu"
+              src="../../Style/japan_language.png" alt="日本語"> </a>
+          <a href="../../Research/en/research_Scattering_EN.html" onclick="w3_close()"
+            class="w3-bar-item w3-button w3-mobile w3-hover-white">English <img class="w3-image-menu"
+              src="../../Style/english_language.png" alt="English"></a>
+        </div>
+      </div>
+      <!-- Rounded switch -->
+      <a class="w3-bar-item">Dark mode
+        <label class="switch">
+          <input type="checkbox" onclick="darkMode()">
+          <span class="slider round"></span>
+        </label></a>
+
+    </div>
+  </nav>
+
+  <!-- Top menu on small screens -->
+  <header class="w3-container w3-top w3-hide-large w3-tsudalabblue w3-xlarge w3-padding">
+    <a href="javascript:void(0)" class="w3-button w3-tsudalabblue w3-margin-right w3-hover-white"
+      onclick="w3_open()">☰</a>
+    <span>Tsuda Laboratory</span>
+  </header>
+
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+    id="myOverlay"></div>
+
+  <!-- Back floating button -->
+  <!-- Back floating button -->
+  <a href="../../homepage_JA.html#research" onclick="w3_close()"
+    class="w3-button w3-tsudalabblue-button w3-floating-button w3-hide-medium w3-hide-large" id="myBtnSmall"
+    title="Go back to main page" style="margin-left: -75px;"><i class="fa fa-arrow-left"></i></a>
+  <a href="../../homepage_JA.html#research" onclick="w3_close()"
+    class="w3-button w3-tsudalabblue-button w3-floating-button w3-hide-small" id="myBtnBig" title="Go back to main page"
+    style="margin-left: -75px;"><i class="fa fa-arrow-left"></i> Back to main page</a>
+
+  <!-- Scroll up floating button -->
+  <button onclick="topFunction()"
+    class="w3-button w3-tsudalabblue-button w3-floating-button w3-button-centered w3-hide-small" id="myBtnTopBig"
+    style="display:none; left:50%" title="Go to top"><i class="fa fa-arrow-up"></i> Go to top</button>
+  <button onclick="topFunction()"
+    class="w3-button w3-tsudalabblue-button w3-floating-button w3-button-centered w3-hide-medium w3-hide-large"
+    id="myBtnTopSmall" style="display:none; left:50%" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+    <!-- Header -->
+    <div class="w3-container" style="margin-top:80px" id="introduction">
+      <h1 class="w3-jumbo"><b>Spaceflight Mechanics and Exploration Systems Laboratory</b></h1>
+      <h1 class="w3-xxxlarge w3-text-tsudalabblue"><b>Scattering in Microgravity.</b></h1>
+      <hr style="width:50px;border:5px solid var(--main-color)" class="w3-round">
+
+      <h1 class="w3-xxlarge w3-text-tsudalabblue"><b>Powder Scattering on Asteroid Surfaces by Thrusting under
+          Microgravity.</b></h1>
+      <p>
+
+        The asteroid explorer Hayabusa2 touched down on the asteroid Ryugu twice. During the touchdown of Hayabusa2,
+        some objects on the surface of the asteroid were scattered toward the vehicle. The following image shows the
+        area around the
+        touchdown point taken by Hayabusa2 immediately after touchdown.
+      </p>
+      <div class="w3-margin-bottom w3-light-grey centerImage">
+        <img src="../Images/proximity_Scattering.png" style="width:100%" onclick="onClick(this)"
+          alt="Scattering of the asteroid Ryugu surface object." class="image">
+        <div class="w3-container w3-center">
+          <p><span style="font-size:20px;">Scattering of the asteroid Ryugu surface object.</span></p>
+          </a>
+        </div>
+      </div>
+
+      <p>
+        The possible causes of this phenomenon are that Hayabusa2 shot the projectile into the surface of the asteroid
+        when it was sampling, and that Hayabusa2 fired the thruster when it left the surface. Although the scattering of
+        celestial objects due to projectile injection is a unique problem for Hayabusa2, the scattering of celestial
+        objects due to thruster injection is likely to increase in all future missions which includes landings. If the
+        scattering celestial surface objects hit the spacecraft, the spacecraft may be destroyed. In addition, if it
+        adheres to the rangefinder and the observation equipment, it may interfere with the mission execution.
+      </p>
+      <p>
+        Therefore, it is very important to understand the dispersal mechanism and behavior of objects on the surface of
+        a celestial body by thrusters. This is because the impact of surface objects lifted by thrusters on a spacecraft
+        will greatly degrade the engineering and physical results required of the spacecraft, and thus the success or
+        failure of the exploration mission itself will be greatly affected.
+      </p>
+      <p>
+        There are three possible reasons for the thrusters to be rolled up on the surface of an object. The first is
+        that the thrusters are digging craters in the ground, and the second is the effect of the original terrain. The
+        third is that the thruster plumes from multiple thrusters collide with each other, creating an upward force.
+      </p>
+      <p>
+        We conduct 1G and micro gravity experiments of gas injection into simulated soil under vacuum in order to
+        investigate the interaction between thruster plume and asteroidal regolith. We also aim to reproduce the sand
+        lift during touchdown for various astronomical and spacecraft combinations by performing DEM-CFD simulations for
+        similar conditions.
+      </p>
+
+      <div class="w3-margin-bottom w3-light-grey centerImage">
+        <img src="../Images/proximity_Experiment.jpg" style="width:100%" onclick="onClick(this)"
+          alt="Sand scattering experiment." class="image">
+        <div class="w3-container w3-center">
+          <p><span style="font-size:20px;">Sand scattering experiment.</span></p>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- W3.CSS Container -->
+    <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px">
+      <p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS"
+          target="_blank" class="w3-hover-opacity">w3.css</a></p>
+    </div>
+
+    <script>
+
+      // Script to open and close sidebar
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+      }
+
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+      }
+
+      // Modal Image Gallery
+      function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+      }
+
+      // Toggle Dark mode
+      const toggleSwitch = document.querySelector('.switch input[type="checkbox"]');
+
+      function switchTheme(e) {
+        if (e.target.checked) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          localStorage.setItem('theme', 'dark'); //add this
+        }
+        else {
+          document.documentElement.setAttribute('data-theme', 'light');
+          localStorage.setItem('theme', 'light'); //add this
+        }
+      }
+
+      toggleSwitch.addEventListener('change', switchTheme, false);
+
+
+      // Check for user preference
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        toggleSwitch.checked = true;
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        toggleSwitch.checked = false;
+      }
+
+      // Check for stored user preference
+      const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+      if (currentTheme) {
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        toggleSwitch.checked = false;
+
+        if (currentTheme === 'dark') {
+          toggleSwitch.checked = true;
+        }
+      }
+
+      // Collapsible
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+          }
+        });
+      }
+
+      // Back and scroll button
+      //Get the button:
+      mybuttonsmall = document.getElementById("myBtnTopSmall");
+      mybuttonbig = document.getElementById("myBtnTopBig");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () { scrollFunction() };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybuttonsmall.style.display = "block";
+          mybuttonbig.style.display = "block";
+        } else {
+          mybuttonsmall.style.display = "none";
+          mybuttonbig.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      }
+
+      // Modal Image Gallery
+      function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+      }
+
+    </script>
+
+
+
+</body>
+
+</html>

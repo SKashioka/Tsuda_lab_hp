@@ -49,6 +49,7 @@
     cursor: pointer
   }
 
+
   .box {
     float: left;
     width: 50%;
@@ -142,10 +143,10 @@
         <button onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Language <img class="w3-image-menu"
             src="../../Style/english_language.png" alt="English"><i class="fa fa-caret-down"></i></button>
         <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
-          <a href="../../Research/ja/research_Attitude_JA.html" onclick="w3_close()"
+          <a href="../../Research/ja/research_Scattering_JA.html" onclick="w3_close()"
             class="w3-bar-item w3-button w3-mobile w3-hover-white">日本語 <img class="w3-image-menu"
               src="../../Style/japan_language.png" alt="日本語"> </a>
-          <a href="../../Research/en/research_Attitude_EN.html" onclick="w3_close()"
+          <a href="../../Research/en/research_Scattering_EN.html" onclick="w3_close()"
             class="w3-bar-item w3-button w3-mobile w3-hover-white">English <img class="w3-image-menu"
               src="../../Style/english_language.png" alt="English"></a>
         </div>
@@ -203,65 +204,65 @@
     <!-- Header -->
     <div class="w3-container" style="margin-top:80px" id="introduction">
       <h1 class="w3-jumbo"><b>Spaceflight Mechanics and Exploration Systems Laboratory</b></h1>
-      <h1 class="w3-xxxlarge w3-text-tsudalabblue"><b>Attitude Dynamics.</b></h1>
+      <h1 class="w3-xxxlarge w3-text-tsudalabblue"><b>Scattering in Microgravity.</b></h1>
       <hr style="width:50px;border:5px solid var(--main-color)" class="w3-round">
 
-      <h1 class="w3-xxlarge w3-text-tsudalabblue"><b>Attitude model for spacecraft under solar radiation pressure with
-          anisotropic reﬂection.</b></h1>
+      <h1 class="w3-xxlarge w3-text-tsudalabblue"><b>Powder Scattering on Asteroid Surfaces by Thrusting under
+          Microgravity.</b></h1>
       <p>
-        This research focused on a modeling technique of the solar radiation pressure (SRP) exerted on spacecraft which
-        can incorporate general surface with anisotropic reﬂectance property. The SRP torque is a major disturbance for
-        the attitude of spacecraft especially in deep space missions. It depends not only on the shape and attitude of
-        spacecraft, but also on their surface optical reﬂectance property. The aim of this paper is to create a precise
-        reﬂectance distribution model by measurement of a bidirectional reﬂection distribution functions(BRDF). A BRDF,
-        a technique originally developed in the ﬁeld of Computer Graphics, describes a reﬂectance map between arbitrary
-        incident and emitted rays in a general mathematical form.
-        </p>
-        <p>
-        The SRP torque is a major disturbance for the attitude of spacecraft especially in deep space missions. It
-        depends not only on the shape and attitude of spacecraft, but also on their surface optical reﬂectance property.
-        Some missions even attempted to exploit the SRP to stabilize and reorient spacecraft attitude rather than
-        compensating it. Two such typical missions are the JAXA’s solar sail technology demonstration spacecraft IKAROS
-        and the asteroid explorer Hayabusa2. They modelled very precise SRP torque exerted on the spacecraft bodies
-        (GSDM: Generalized Solar-sail Dynamics Model) and successfully extracted a useful behavior to control the
-        spacecraft attitude. On the other hand, owing to precise SRP modeling used in the operation of IKAROS and
-        Hayabusa2, at least 3% of directional inconsistency has found between the SRP torque estimated from the
-        conventional SRP model used in the GSDM and the actual ﬂight data.
-        </p>
 
+        The asteroid explorer Hayabusa2 touched down on the asteroid Ryugu twice. During the touchdown of Hayabusa2,
+        some objects on the surface of the asteroid were scattered toward the vehicle. The following image shows the area around the
+        touchdown point taken by Hayabusa2 immediately after touchdown.
+
+        </p>
       <div class="w3-margin-bottom w3-light-grey centerImage">
-        <img src="../Images/attitude_hayabusa2.jpg" style="width:100%" onclick="onClick(this)"
-          alt="Generalized Solar-sail Dynamics Model." class="image">
+        <img src="../Images/proximity_Scattering.png" style="width:100%" onclick="onClick(this)"
+          alt="Scattering of the asteroid Ryugu surface object." class="image">
         <div class="w3-container w3-center">
-          <p><span style="font-size:20px;">Generalized Solar-sail Dynamics Model.</span></p>
+          <p><span style="font-size:20px;">Scattering of the asteroid Ryugu surface object.</span></p>
           </a>
         </div>
       </div>
+
       <p>
-        Our detailed sensitivity analysis implies the error should be due to unmodelled anisotropic optical reﬂectance
-        of a large area on the spacecraft, such as solar array panels (SAPs). Therefore, the aim of this research is to
-        create a precise reﬂectance distribution model by measurement of a bidirectional reﬂection distribution
-        functions (BRDF). A BRDF, a technique originally developed in the ﬁeld of Computer Graphics, describes a
-        reﬂectance map between arbitrary incident and emitted rays in a general mathematical form.
+        The possible causes of this phenomenon are that Hayabusa2 shot the projectile into the surface of the asteroid
+        when it was sampling, and that Hayabusa2 fired the thruster when it left the surface. Although the scattering of
+        celestial objects due to projectile injection is a unique problem for Hayabusa2, the scattering of celestial
+        objects due to thruster injection is likely to increase in all future missions which includes landings. If the
+        scattering celestial surface objects hit the spacecraft, the spacecraft may be destroyed. In addition, if it
+        adheres to the rangefinder and the observation equipment, it may interfere with the mission execution.
       </p>
       <p>
-        The BRDF measurement was performed for test cells of the Hayabusa2 SAPs. As a result, a distinctive anisotropic
-        reﬂectance property was found which hadn’t been modelled in the conventional model. It was also suggested that
-        this reﬂection should be due to the microscopic structure of the solar cell. Then a compact mathematical model
-        of the reﬂection which reproduces the anisotropic property observed in the BRDF measurement has been developed.
-        This model successfully describes the inconsistency between the conventional SRP torque and the ﬂight data and
-        relates material’s microscopic structure to the optical property.
+        Therefore, it is very important to understand the dispersal mechanism and behavior of objects on the surface of
+        a celestial body by thrusters. This is because the impact of surface objects lifted by thrusters on a spacecraft
+        will greatly degrade the engineering and physical results required of the spacecraft, and thus the success or
+        failure of the exploration mission itself will be greatly affected.
+      </p>
+      <p>
+        There are three possible reasons for the thrusters to be rolled up on the surface of an object. The first is
+        that the thrusters are digging craters in the ground, and the second is the effect of the original terrain. The
+        third is that the thruster plumes from multiple thrusters collide with each other, creating an upward force.
+      </p>
+      <p>
+        We conduct 1G and micro gravity experiments of gas injection into simulated soil under vacuum in order to
+        investigate the interaction between thruster plume and asteroidal regolith. We also aim to reproduce the sand
+        lift during touchdown for various astronomical and spacecraft combinations by performing DEM-CFD simulations for
+        similar conditions.
       </p>
 
       <div class="w3-margin-bottom w3-light-grey centerImage">
-        <img src="../Images/attitude_brdf.png" style="width:100%" onclick="onClick(this)"
-          alt="Experimental result of BRDF measurement of hayabusa2 materials." class="image">
+        <img src="../Images/proximity_Experiment.jpg" style="width:100%" onclick="onClick(this)"
+          alt="Sand scattering experiment." class="image">
         <div class="w3-container w3-center">
-          <p><span style="font-size:20px;">Anisotropic Reflection in SAP in Hayabusa2 used.</span></p>
+          <p><span style="font-size:20px;">Sand scattering experiment.</span></p>
           </a>
         </div>
       </div>
+
     </div>
+
+
   </div>
 
 
