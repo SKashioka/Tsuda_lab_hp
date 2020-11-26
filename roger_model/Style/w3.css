@@ -196,7 +196,8 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 }
 
 /* Colors */
-.w3-tsudalabblue,.w3-hover-tsudalabblue:hover{color:#fff!important;background-color:#333366!important}
+/* .w3-tsudalabblue,.w3-hover-tsudalabblue:hover{color:#fff!important;background-color:#333366!important} */
+.w3-tsudalabblue,.w3-hover-tsudalabblue:hover{color:#fff!important;background-color:#292970!important}
 /*.w3-tsudalabblue,.w3-hover-tsudalabblue:hover{color:var(--button-color-text)!important;background-color:var(--main-color)!important}*/
 
 .w3-tsudalabblue-button,.w3-hover-tsudalabblue-button:hover{color:var(--button-color-text)!important;background-color:var(--main-color)!important}
